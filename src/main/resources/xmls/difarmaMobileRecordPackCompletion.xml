@@ -1,0 +1,11 @@
+<Shipment DocumentType="0001" ShipNode="" ShipmentKey="" ShipmentNo="">
+	<Containers>
+		<Container>
+			<ContainerDetails>
+				<ContainerDetail Quantity="" ShipmentLineKey="">
+					<ShipmentLine PrimeLineNo="" ShipmentLineNo="1" SubLineNo="1"/>
+				</ContainerDetail>
+			</ContainerDetails>
+		</Container>
+	</Containers>
+</Shipment>

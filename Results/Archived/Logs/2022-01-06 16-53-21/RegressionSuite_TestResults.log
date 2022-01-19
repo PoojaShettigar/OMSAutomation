@@ -1,0 +1,1015 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_COM_RegisteredUser_SFS_OrderFulfillment
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVChile" OrderHeaderKey="" OrderNo="CCC1004589"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 4551
+Date: Thu, 06 Jan 2022 11:22:46 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00398015" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="correo@pruebas11.cl" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVChile" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="Y" HoldReasonCode="SYSTEM" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-06T11:18:44+00:00" OrderHeaderKey="2022010611184466787150" OrderName="" OrderNo="CCC1004589" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="10943.00" OtherCharges="2990.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV" ShipToID="00398015" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="CLP" EnterpriseCurrency="CLP" ReportingConversionDate="2022-01-06T11:18:44+00:00" ReportingConversionRate="1.00" TotalAmount="10943.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2022-01-06" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="1" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="-927.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2022-01-06T11:00:00+00:00" ReservationID="SHP_CCC1004589" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="466" ShipToID="00398015" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="102417" CustomerItemDesc="Cerca de 48.000 pequeÃ±os tenderos en BogotÃ¡, que trabajan en tiendas de barrio, peluquerÃ­as, papelerÃ­as, miscelÃ¡neas y otros negocios que han ayudado prestando su servicio, estÃ¡n en crisis y necesitan nuestra mano solidaria. Por esta razÃ³n, la FundaciÃ³n Solidaridad por Chile, FENALCO, Cruz Verde, Fenaltiendas, Fundecomercio, tuboleta, ProbogotÃ¡ y Punto Red se unen a esta iniciativa." ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Cerca de 48.000 pequeÃ±os tenderos en BogotÃ¡, que trabajan en tiendas de barrio, peluquerÃ­as, papelerÃ­as, miscelÃ¡neas y otros negocios que han ayudado prestando su servicio, estÃ¡n en crisis y necesitan nuestra mano solidaria. Por esta razÃ³n, la FundaciÃ³n Solidaridad por Chile, FENALCO, Cruz Verde, Fenaltiendas, Fundecomercio, tuboleta, ProbogotÃ¡ y Punto Red se unen a esta iniciativa." ItemID="102417" ItemShortDesc="DonaciÃ³n Coronaton â€“ FundaciÃ³n Solidaridad por Chile" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="FUNDACIÃ“N SOLIDARIDAD POR Chile" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="2163.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="3090.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2022-01-06T11:00:00+00:00" ExpectedShipmentDate="2022-01-06T11:00:00+00:00" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061121193966787204" Quantity="1" ScheduleNo="3" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="927.00" ExtendedPrice="3090.00" LineTotal="2163.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="3090.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="927.00" ExtendedPrice="3090.00" LineTotal="2163.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="3090.00"/>
+      <LineCharges>
+        <LineCharge ChargeAmount="927.00" ChargeCategory="DISCOUNT" ChargeName="PDT_DISCOUNT" ChargeNameKey="201911051206381838379" ChargePerLine="927.00" ChargePerUnit="0.00" InvoicedChargeAmount="0.00" InvoicedChargePerLine="0.00" InvoicedChargePerUnit="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="927.00" RemainingChargePerLine="927.00" RemainingChargePerUnit="0.00"/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200217045213576867911" InvoicedTax="0.00" Reference_1="standard" Reference_2="" Reference_3="" RemainingTax="345.00" Tax="345.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="345.00" RemainingTax="345.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061121193966787204" OrderReleaseStatusKey="202201061184213166788089" PipelineKey="202004200522321016156546" ShipNode="466" Status="1100" StatusDate="2022-01-06T11:21:31+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2022-01-06T11:00:00+00:00" ExpectedShipmentDate="2022-01-06T11:00:00+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2022-01-06" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="1" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="1" ReqShipDate="2022-01-06T11:00:00+00:00" ReservationID="SHP_CCC1004589" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="466" ShipToID="00398015" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="111160" CustomerItemDesc="Fluarix Tetra 2020 Vacuna Influenza" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Fluarix Tetra 2020 Vacuna Influenza" ItemID="111160" ItemShortDesc="Fluarix Tetra 2020 Vacuna contra Influenza 1 Jeringa" ItemWeight="10.00" ItemWeightUOM="GRAM" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="5790.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="5790.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2022-01-06T11:00:00+00:00" ExpectedShipmentDate="2022-01-06T11:00:00+00:00" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061187193966787223" Quantity="1" ScheduleNo="3" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="5790.00" LineTotal="5790.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="5790.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="5790.00" LineTotal="5790.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="5790.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200217045213576867911" InvoicedTax="0.00" Reference_1="standard" Reference_2="" Reference_3="" RemainingTax="924.00" Tax="924.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="924.00" RemainingTax="924.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061187193966787223" OrderReleaseStatusKey="202201061117213166788090" PipelineKey="202004200522321016156546" ShipNode="466" Status="1100" StatusDate="2022-01-06T11:21:31+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2022-01-06T11:00:00+00:00" ExpectedShipmentDate="2022-01-06T11:00:00+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Providencia 1144, Providencia, Chile" AddressLine2="" AddressLine3="" AddressLine4="Providencia" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Providencia" Company="" Country="CL" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Sole" JobTitle="" LastName="Pruebas" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021111205145760313008" State="Región Metropolitana" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Providencia 1144, Providencia, Chile" AddressLine2="" AddressLine3="" AddressLine4="Providencia" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Providencia" Company="" Country="CL" DayFaxNo="" DayPhone="" Department="" EMailID="correo@pruebas11.cl" EveningFaxNo="" EveningPhone="" FirstName="Sole" JobTitle="" LastName="Pruebas" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021111205095760312239" State="Región Metropolitana" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References>
+    <Reference Name="MERCADOPAGO_PREFID" Value="488645542-744e0b4e-b487-4bd5-9f32-38ec9ac5819f"/>
+  </References>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="112025" CreditCardName="test" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="111111111" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="10943.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="10943.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-06T11:21:26+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022010611212666788084" ChargeType="CHARGE" CollectionDate="2022-01-06T11:21:26+00:00" CreditAmount="10943.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022010611184466787150" OrderInvoiceKey="" PaymentKey="202201061122212666788083" RequestAmount="10943.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2022-01-06T11:21:46+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-06T11:21:31+00:00" AuthorizationID="" BookAmount="10943.00" ChargeTransactionKey="2022010611213166788085" ChargeType="CREATE_ORDER" CollectionDate="2022-01-06T11:21:31+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022010611184466787150" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2022-01-06T11:21:46+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="927.00" GrandTax="0.00" GrandTotal="10943.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="8880.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="927.00" GrandTax="0.00" GrandTotal="10943.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="8880.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="201911051207401838388" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="201911051206481838382" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200217045236576870517" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061121193966787204" OrderReleaseStatusKey="202201061184213166788089" PipelineKey="202004200522321016156546" ShipNode="466" Status="1100" StatusDate="2022-01-06T11:21:31+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2022-01-06T11:00:00+00:00" ExpectedShipmentDate="2022-01-06T11:00:00+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061187193966787223" OrderReleaseStatusKey="202201061117213166788090" PipelineKey="202004200522321016156546" ShipNode="466" Status="1100" StatusDate="2022-01-06T11:21:31+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2022-01-06T11:00:00+00:00" ExpectedShipmentDate="2022-01-06T11:00:00+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Pre-condition for Test: Get the Order Hold Details
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderHoldTypeList
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderHoldTypeList
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<OrderHoldType OrderHeaderKey="2022010611184466787150" Status="1100"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 347
+Date: Thu, 06 Jan 2022 11:22:49 GMT
+
+<OrderHoldTypes>
+  <OrderHoldType HoldType="INVOICE_CALL_FAILURE" LastHoldTypeDate="2022-01-06T11:21:46+00:00" Modifyuserid="admin" OrderAuditKey="2022010611214666788110" OrderHeaderKey="2022010611184466787150" ReasonText="" Status="1100" StatusDescription="Created" TransactionId="ORDER_CHANGE" TransactionName="Change Order">
+    <Order DocumentType="0001" EnterpriseCode="FCVChile" OrderHeaderKey="2022010611184466787150" OrderNo="CCC1004589"/>
+  </OrderHoldType>
+</OrderHoldTypes>
+
+Pre-condition for Test: Change Order for resolving the holds
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/changeOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/changeOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order Action="MODIFY" DocumentType="0001" EnterpriseCode="FCVChile" OrderNo="CCC1004589">
+  <OrderHoldTypes>
+    <OrderHoldType HoldType="INVOICE_CALL_FAILURE" Status="1300"/>
+  </OrderHoldTypes>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 161
+Date: Thu, 06 Jan 2022 11:22:50 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVChile" OrderHeaderKey="2022010611184466787150" OrderNo="CCC1004589"/>
+
+Pre-condition for Test: Change Order for resolving the holds
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/scheduleOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/scheduleOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ScheduleOrder CheckInventory="Y" DocumentType="0001" EnterpriseCode="FCVChile" OrderHeaderKey="" OrderNo="CCC1004589"/>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 06 Jan 2022 11:22:51 GMT
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVChile" OrderHeaderKey="" OrderNo="CCC1004589"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 4556
+Date: Thu, 06 Jan 2022 11:22:52 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-06T11:22:50+00:00" BillToID="00398015" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="correo@pruebas11.cl" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVChile" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1500" MaxOrderStatusDesc="Scheduled" MinOrderStatus="1500" MinOrderStatusDesc="Scheduled" NotifyAfterShipmentFlag="N" OrderDate="2022-01-06T11:18:44+00:00" OrderHeaderKey="2022010611184466787150" OrderName="" OrderNo="CCC1004589" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="10943.00" OtherCharges="2990.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV" ShipToID="00398015" Status="Scheduled" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="Y"/>
+  </AllowedModifications>
+  <PriceInfo Currency="CLP" EnterpriseCurrency="CLP" ReportingConversionDate="2022-01-06T11:18:44+00:00" ReportingConversionRate="1.00" TotalAmount="10943.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2022-01-06" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="1" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="-927.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2022-01-06T11:00:00+00:00" ReservationID="SHP_CCC1004589" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="466" ShipToID="00398015" ShipTogetherNo="" SplitQty="0" Status="Scheduled" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="102417" CustomerItemDesc="Cerca de 48.000 pequeÃ±os tenderos en BogotÃ¡, que trabajan en tiendas de barrio, peluquerÃ­as, papelerÃ­as, miscelÃ¡neas y otros negocios que han ayudado prestando su servicio, estÃ¡n en crisis y necesitan nuestra mano solidaria. Por esta razÃ³n, la FundaciÃ³n Solidaridad por Chile, FENALCO, Cruz Verde, Fenaltiendas, Fundecomercio, tuboleta, ProbogotÃ¡ y Punto Red se unen a esta iniciativa." ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Cerca de 48.000 pequeÃ±os tenderos en BogotÃ¡, que trabajan en tiendas de barrio, peluquerÃ­as, papelerÃ­as, miscelÃ¡neas y otros negocios que han ayudado prestando su servicio, estÃ¡n en crisis y necesitan nuestra mano solidaria. Por esta razÃ³n, la FundaciÃ³n Solidaridad por Chile, FENALCO, Cruz Verde, Fenaltiendas, Fundecomercio, tuboleta, ProbogotÃ¡ y Punto Red se unen a esta iniciativa." ItemID="102417" ItemShortDesc="DonaciÃ³n Coronaton â€“ FundaciÃ³n Solidaridad por Chile" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="FUNDACIÃ“N SOLIDARIDAD POR Chile" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="2163.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="3090.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" Quantity="1" ScheduleNo="4" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="927.00" ExtendedPrice="3090.00" LineTotal="2163.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="3090.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="927.00" ExtendedPrice="3090.00" LineTotal="2163.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="3090.00"/>
+      <LineCharges>
+        <LineCharge ChargeAmount="927.00" ChargeCategory="DISCOUNT" ChargeName="PDT_DISCOUNT" ChargeNameKey="201911051206381838379" ChargePerLine="927.00" ChargePerUnit="0.00" InvoicedChargeAmount="0.00" InvoicedChargePerLine="0.00" InvoicedChargePerUnit="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="927.00" RemainingChargePerLine="927.00" RemainingChargePerUnit="0.00"/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200217045213576867911" InvoicedTax="0.00" Reference_1="standard" Reference_2="" Reference_3="" RemainingTax="345.00" Tax="345.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="345.00" RemainingTax="345.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" OrderReleaseStatusKey="202201061117225166788179" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2022-01-06" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="1" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="1" ReqShipDate="2022-01-06T11:00:00+00:00" ReservationID="SHP_CCC1004589" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="466" ShipToID="00398015" ShipTogetherNo="" SplitQty="0" Status="Scheduled" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="111160" CustomerItemDesc="Fluarix Tetra 2020 Vacuna Influenza" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Fluarix Tetra 2020 Vacuna Influenza" ItemID="111160" ItemShortDesc="Fluarix Tetra 2020 Vacuna contra Influenza 1 Jeringa" ItemWeight="10.00" ItemWeightUOM="GRAM" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="5790.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="5790.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" Quantity="1" ScheduleNo="4" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="5790.00" LineTotal="5790.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="5790.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="5790.00" LineTotal="5790.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="5790.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200217045213576867911" InvoicedTax="0.00" Reference_1="standard" Reference_2="" Reference_3="" RemainingTax="924.00" Tax="924.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="924.00" RemainingTax="924.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" OrderReleaseStatusKey="202201061107225166788176" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Providencia 1144, Providencia, Chile" AddressLine2="" AddressLine3="" AddressLine4="Providencia" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Providencia" Company="" Country="CL" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Sole" JobTitle="" LastName="Pruebas" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021111205145760313008" State="Región Metropolitana" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Providencia 1144, Providencia, Chile" AddressLine2="" AddressLine3="" AddressLine4="Providencia" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Providencia" Company="" Country="CL" DayFaxNo="" DayPhone="" Department="" EMailID="correo@pruebas11.cl" EveningFaxNo="" EveningPhone="" FirstName="Sole" JobTitle="" LastName="Pruebas" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021111205095760312239" State="Región Metropolitana" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References>
+    <Reference Name="MERCADOPAGO_PREFID" Value="488645542-744e0b4e-b487-4bd5-9f32-38ec9ac5819f"/>
+  </References>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="112025" CreditCardName="test" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="111111111" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="10943.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="10943.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-06T11:21:26+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022010611212666788084" ChargeType="CHARGE" CollectionDate="2022-01-06T11:21:26+00:00" CreditAmount="10943.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022010611184466787150" OrderInvoiceKey="" PaymentKey="202201061122212666788083" RequestAmount="10943.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2022-01-06T11:21:46+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-06T11:21:31+00:00" AuthorizationID="" BookAmount="10943.00" ChargeTransactionKey="2022010611213166788085" ChargeType="CREATE_ORDER" CollectionDate="2022-01-06T11:21:31+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022010611184466787150" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2022-01-06T11:21:46+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="927.00" GrandTax="0.00" GrandTotal="10943.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="8880.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="927.00" GrandTax="0.00" GrandTotal="10943.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="8880.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="201911051207401838388" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="201911051206481838382" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200217045236576870517" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" OrderReleaseStatusKey="202201061117225166788179" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" OrderReleaseStatusKey="202201061107225166788176" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_COM_RegisteredUser_SFS_OrderFulfillment
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVChile" OrderHeaderKey="" OrderNo="CCC1004589"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 4556
+Date: Thu, 06 Jan 2022 11:23:06 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-06T11:22:50+00:00" BillToID="00398015" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="correo@pruebas11.cl" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVChile" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1500" MaxOrderStatusDesc="Scheduled" MinOrderStatus="1500" MinOrderStatusDesc="Scheduled" NotifyAfterShipmentFlag="N" OrderDate="2022-01-06T11:18:44+00:00" OrderHeaderKey="2022010611184466787150" OrderName="" OrderNo="CCC1004589" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="10943.00" OtherCharges="2990.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV" ShipToID="00398015" Status="Scheduled" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="Y"/>
+  </AllowedModifications>
+  <PriceInfo Currency="CLP" EnterpriseCurrency="CLP" ReportingConversionDate="2022-01-06T11:18:44+00:00" ReportingConversionRate="1.00" TotalAmount="10943.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2022-01-06" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="1" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="-927.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2022-01-06T11:00:00+00:00" ReservationID="SHP_CCC1004589" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="466" ShipToID="00398015" ShipTogetherNo="" SplitQty="0" Status="Scheduled" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="102417" CustomerItemDesc="Cerca de 48.000 pequeÃ±os tenderos en BogotÃ¡, que trabajan en tiendas de barrio, peluquerÃ­as, papelerÃ­as, miscelÃ¡neas y otros negocios que han ayudado prestando su servicio, estÃ¡n en crisis y necesitan nuestra mano solidaria. Por esta razÃ³n, la FundaciÃ³n Solidaridad por Chile, FENALCO, Cruz Verde, Fenaltiendas, Fundecomercio, tuboleta, ProbogotÃ¡ y Punto Red se unen a esta iniciativa." ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Cerca de 48.000 pequeÃ±os tenderos en BogotÃ¡, que trabajan en tiendas de barrio, peluquerÃ­as, papelerÃ­as, miscelÃ¡neas y otros negocios que han ayudado prestando su servicio, estÃ¡n en crisis y necesitan nuestra mano solidaria. Por esta razÃ³n, la FundaciÃ³n Solidaridad por Chile, FENALCO, Cruz Verde, Fenaltiendas, Fundecomercio, tuboleta, ProbogotÃ¡ y Punto Red se unen a esta iniciativa." ItemID="102417" ItemShortDesc="DonaciÃ³n Coronaton â€“ FundaciÃ³n Solidaridad por Chile" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="FUNDACIÃ“N SOLIDARIDAD POR Chile" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="2163.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="3090.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" Quantity="1" ScheduleNo="4" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="927.00" ExtendedPrice="3090.00" LineTotal="2163.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="3090.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="927.00" ExtendedPrice="3090.00" LineTotal="2163.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="3090.00"/>
+      <LineCharges>
+        <LineCharge ChargeAmount="927.00" ChargeCategory="DISCOUNT" ChargeName="PDT_DISCOUNT" ChargeNameKey="201911051206381838379" ChargePerLine="927.00" ChargePerUnit="0.00" InvoicedChargeAmount="0.00" InvoicedChargePerLine="0.00" InvoicedChargePerUnit="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="927.00" RemainingChargePerLine="927.00" RemainingChargePerUnit="0.00"/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200217045213576867911" InvoicedTax="0.00" Reference_1="standard" Reference_2="" Reference_3="" RemainingTax="345.00" Tax="345.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="345.00" RemainingTax="345.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" OrderReleaseStatusKey="202201061117225166788179" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2022-01-06" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="1" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="1" ReqShipDate="2022-01-06T11:00:00+00:00" ReservationID="SHP_CCC1004589" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="466" ShipToID="00398015" ShipTogetherNo="" SplitQty="0" Status="Scheduled" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="111160" CustomerItemDesc="Fluarix Tetra 2020 Vacuna Influenza" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Fluarix Tetra 2020 Vacuna Influenza" ItemID="111160" ItemShortDesc="Fluarix Tetra 2020 Vacuna contra Influenza 1 Jeringa" ItemWeight="10.00" ItemWeightUOM="GRAM" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="5790.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="5790.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" Quantity="1" ScheduleNo="4" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="5790.00" LineTotal="5790.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="5790.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="5790.00" LineTotal="5790.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="5790.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200217045213576867911" InvoicedTax="0.00" Reference_1="standard" Reference_2="" Reference_3="" RemainingTax="924.00" Tax="924.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="924.00" RemainingTax="924.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" OrderReleaseStatusKey="202201061107225166788176" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Providencia 1144, Providencia, Chile" AddressLine2="" AddressLine3="" AddressLine4="Providencia" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Providencia" Company="" Country="CL" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Sole" JobTitle="" LastName="Pruebas" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021111205145760313008" State="Región Metropolitana" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Providencia 1144, Providencia, Chile" AddressLine2="" AddressLine3="" AddressLine4="Providencia" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Providencia" Company="" Country="CL" DayFaxNo="" DayPhone="" Department="" EMailID="correo@pruebas11.cl" EveningFaxNo="" EveningPhone="" FirstName="Sole" JobTitle="" LastName="Pruebas" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021111205095760312239" State="Región Metropolitana" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References>
+    <Reference Name="MERCADOPAGO_PREFID" Value="488645542-744e0b4e-b487-4bd5-9f32-38ec9ac5819f"/>
+  </References>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="112025" CreditCardName="test" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="111111111" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="10943.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="10943.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-06T11:21:26+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022010611212666788084" ChargeType="CHARGE" CollectionDate="2022-01-06T11:21:26+00:00" CreditAmount="10943.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022010611184466787150" OrderInvoiceKey="" PaymentKey="202201061122212666788083" RequestAmount="10943.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2022-01-06T11:21:46+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-06T11:21:31+00:00" AuthorizationID="" BookAmount="10943.00" ChargeTransactionKey="2022010611213166788085" ChargeType="CREATE_ORDER" CollectionDate="2022-01-06T11:21:31+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022010611184466787150" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2022-01-06T11:21:46+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="927.00" GrandTax="0.00" GrandTotal="10943.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="8880.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="927.00" GrandTax="0.00" GrandTotal="10943.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="8880.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="201911051207401838388" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="201911051206481838382" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200217045236576870517" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" OrderReleaseStatusKey="202201061117225166788179" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" OrderReleaseStatusKey="202201061107225166788176" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Pre-condition for Test: Change Order for resolving the holds
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/scheduleOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/scheduleOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ScheduleOrder CheckInventory="Y" DocumentType="0001" EnterpriseCode="FCVChile" OrderHeaderKey="" OrderNo="CCC1004589"/>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 06 Jan 2022 11:23:09 GMT
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVChile" OrderHeaderKey="" OrderNo="CCC1004589"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 4556
+Date: Thu, 06 Jan 2022 11:23:10 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-06T11:22:50+00:00" BillToID="00398015" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="correo@pruebas11.cl" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVChile" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1500" MaxOrderStatusDesc="Scheduled" MinOrderStatus="1500" MinOrderStatusDesc="Scheduled" NotifyAfterShipmentFlag="N" OrderDate="2022-01-06T11:18:44+00:00" OrderHeaderKey="2022010611184466787150" OrderName="" OrderNo="CCC1004589" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="10943.00" OtherCharges="2990.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV" ShipToID="00398015" Status="Scheduled" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="Y"/>
+  </AllowedModifications>
+  <PriceInfo Currency="CLP" EnterpriseCurrency="CLP" ReportingConversionDate="2022-01-06T11:18:44+00:00" ReportingConversionRate="1.00" TotalAmount="10943.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2022-01-06" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="1" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="-927.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2022-01-06T11:00:00+00:00" ReservationID="SHP_CCC1004589" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="466" ShipToID="00398015" ShipTogetherNo="" SplitQty="0" Status="Scheduled" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="102417" CustomerItemDesc="Cerca de 48.000 pequeÃ±os tenderos en BogotÃ¡, que trabajan en tiendas de barrio, peluquerÃ­as, papelerÃ­as, miscelÃ¡neas y otros negocios que han ayudado prestando su servicio, estÃ¡n en crisis y necesitan nuestra mano solidaria. Por esta razÃ³n, la FundaciÃ³n Solidaridad por Chile, FENALCO, Cruz Verde, Fenaltiendas, Fundecomercio, tuboleta, ProbogotÃ¡ y Punto Red se unen a esta iniciativa." ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Cerca de 48.000 pequeÃ±os tenderos en BogotÃ¡, que trabajan en tiendas de barrio, peluquerÃ­as, papelerÃ­as, miscelÃ¡neas y otros negocios que han ayudado prestando su servicio, estÃ¡n en crisis y necesitan nuestra mano solidaria. Por esta razÃ³n, la FundaciÃ³n Solidaridad por Chile, FENALCO, Cruz Verde, Fenaltiendas, Fundecomercio, tuboleta, ProbogotÃ¡ y Punto Red se unen a esta iniciativa." ItemID="102417" ItemShortDesc="DonaciÃ³n Coronaton â€“ FundaciÃ³n Solidaridad por Chile" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="FUNDACIÃ“N SOLIDARIDAD POR Chile" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="2163.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="3090.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" Quantity="1" ScheduleNo="4" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="927.00" ExtendedPrice="3090.00" LineTotal="2163.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="3090.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="927.00" ExtendedPrice="3090.00" LineTotal="2163.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="3090.00"/>
+      <LineCharges>
+        <LineCharge ChargeAmount="927.00" ChargeCategory="DISCOUNT" ChargeName="PDT_DISCOUNT" ChargeNameKey="201911051206381838379" ChargePerLine="927.00" ChargePerUnit="0.00" InvoicedChargeAmount="0.00" InvoicedChargePerLine="0.00" InvoicedChargePerUnit="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="927.00" RemainingChargePerLine="927.00" RemainingChargePerUnit="0.00"/>
+      </LineCharges>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200217045213576867911" InvoicedTax="0.00" Reference_1="standard" Reference_2="" Reference_3="" RemainingTax="345.00" Tax="345.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="345.00" RemainingTax="345.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" OrderReleaseStatusKey="202201061117225166788179" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2022-01-06" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="1" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="1" ReqShipDate="2022-01-06T11:00:00+00:00" ReservationID="SHP_CCC1004589" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="466" ShipToID="00398015" ShipTogetherNo="" SplitQty="0" Status="Scheduled" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="111160" CustomerItemDesc="Fluarix Tetra 2020 Vacuna Influenza" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Fluarix Tetra 2020 Vacuna Influenza" ItemID="111160" ItemShortDesc="Fluarix Tetra 2020 Vacuna contra Influenza 1 Jeringa" ItemWeight="10.00" ItemWeightUOM="GRAM" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="5790.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="5790.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" Quantity="1" ScheduleNo="4" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="5790.00" LineTotal="5790.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="5790.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="5790.00" LineTotal="5790.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="5790.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200217045213576867911" InvoicedTax="0.00" Reference_1="standard" Reference_2="" Reference_3="" RemainingTax="924.00" Tax="924.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="924.00" RemainingTax="924.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" OrderReleaseStatusKey="202201061107225166788176" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Providencia 1144, Providencia, Chile" AddressLine2="" AddressLine3="" AddressLine4="Providencia" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Providencia" Company="" Country="CL" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Sole" JobTitle="" LastName="Pruebas" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021111205145760313008" State="Región Metropolitana" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Providencia 1144, Providencia, Chile" AddressLine2="" AddressLine3="" AddressLine4="Providencia" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Providencia" Company="" Country="CL" DayFaxNo="" DayPhone="" Department="" EMailID="correo@pruebas11.cl" EveningFaxNo="" EveningPhone="" FirstName="Sole" JobTitle="" LastName="Pruebas" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021111205095760312239" State="Región Metropolitana" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References>
+    <Reference Name="MERCADOPAGO_PREFID" Value="488645542-744e0b4e-b487-4bd5-9f32-38ec9ac5819f"/>
+  </References>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="112025" CreditCardName="test" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="111111111" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="10943.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="10943.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-06T11:21:26+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022010611212666788084" ChargeType="CHARGE" CollectionDate="2022-01-06T11:21:26+00:00" CreditAmount="10943.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022010611184466787150" OrderInvoiceKey="" PaymentKey="202201061122212666788083" RequestAmount="10943.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2022-01-06T11:21:46+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-06T11:21:31+00:00" AuthorizationID="" BookAmount="10943.00" ChargeTransactionKey="2022010611213166788085" ChargeType="CREATE_ORDER" CollectionDate="2022-01-06T11:21:31+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022010611184466787150" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2022-01-06T11:21:46+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="927.00" GrandTax="0.00" GrandTotal="10943.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="8880.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="927.00" GrandTax="0.00" GrandTotal="10943.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="8880.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="201911051207401838388" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="201911051206481838382" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200217045236576870517" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611190666787172" OrderLineScheduleKey="202201061106225166788178" OrderReleaseStatusKey="202201061117225166788179" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022010611184466787150" OrderLineKey="2022010611191566787181" OrderLineScheduleKey="202201061189225166788175" OrderReleaseStatusKey="202201061107225166788176" PipelineKey="202004200522321016156546" ShipNode="466" Status="1500" StatusDate="2022-01-06T11:22:51+00:00" StatusDescription="Scheduled" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2022-01-06T11:22:51+00:00" ExpectedShipmentDate="2022-01-06T11:22:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test failed : TC01_COM_RegisteredUser_SFS_OrderFulfillment
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[text()='View Order Summary']"}
+  (Session info: chrome=96.0.4664.110)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FEJVQKG', ip: '192.168.1.4', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_271'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.110, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64778}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 70ca4877c1594ae7c5af0df9137f2c3f
+*** Element info: {Using=xpath, value=//a[text()='View Order Summary']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.click(Unknown Source)
+	at com.perfaware.automation.oms.sterling.common.utils.UIUtilities.elementClick(UIUtilities.java:47)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_OrderSummary.clickViewOrderSummary(Page_OrderSummary.java:46)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.StoreOrderFulfillment(APIMethods.java:97)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC01_COM_RegisteredUser_SFS_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+

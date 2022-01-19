@@ -1,0 +1,2547 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Regression Suite - OMS Automation Execution Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Perfaware</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Saturday, November 27, 2021, 11:37 PM (IST)</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC01_COM_RegisteredUser_OrderCreation</p>
+            <p class="text-sm">
+              <span>11:37:23 PM</span> / <span>00:01:48:730</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">TC01_COM_RegisteredUser_OrderCreation</h5>
+<span class='badge badge-success'>11.27.2021 11:37:23 PM</span>
+<span class='badge badge-danger'>11.27.2021 11:39:12 PM</span>
+<span class='badge badge-default'>00:01:48:730</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:23 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:24 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:28 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:28 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3683
+Date: Sat, 27 Nov 2021 18:07:27 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1000" MaxOrderStatusDesc="Ready for Backroom pick" MinOrderStatus="3350.1000" MinOrderStatusDesc="Ready for Backroom pick" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Ready for Backroom pick" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1000" MaxLineStatusDesc="Ready for Backroom pick" MinLineStatus="3350.1000" MinLineStatusDesc="Ready for Backroom pick" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Ready for Backroom pick" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:28 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:37:30 PM</td>
+        <td>
+          Assertion Failed due to Order is not in valid status Ready for Backroom pick
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:30 PM</td>
+        <td>
+          Pre-condition: Change Order for resolving the holds
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:30 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/scheduleOrder
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:31 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/scheduleOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ScheduleOrder CheckInventory="Y" DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:31 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Language: en-US
+Content-Length: 0
+Date: Sat, 27 Nov 2021 18:07:31 GMT
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:31 PM</td>
+        <td>
+          API Status Code received: 204
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:31 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:31 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:32 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:32 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3683
+Date: Sat, 27 Nov 2021 18:07:31 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1000" MaxOrderStatusDesc="Ready for Backroom pick" MinOrderStatus="3350.1000" MinOrderStatusDesc="Ready for Backroom pick" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Ready for Backroom pick" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1000" MaxLineStatusDesc="Ready for Backroom pick" MinLineStatus="3350.1000" MinLineStatusDesc="Ready for Backroom pick" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Ready for Backroom pick" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:32 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>11:37:32 PM</td>
+        <td>
+          Assertion Failed due to Order is not in valid statusReady for Backroom pick
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:32 PM</td>
+        <td>
+          Pre-condition: Change Order for resolving the holds
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:32 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/releaseOrder
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:33 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/releaseOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ReleaseOrder CheckInventory="Y" DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:33 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Language: en-US
+Content-Length: 0
+Date: Sat, 27 Nov 2021 18:07:33 GMT
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:33 PM</td>
+        <td>
+          API Status Code received: 204
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:43 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:43 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:44 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:44 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3683
+Date: Sat, 27 Nov 2021 18:07:44 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1000" MaxOrderStatusDesc="Ready for Backroom pick" MinOrderStatus="3350.1000" MinOrderStatusDesc="Ready for Backroom pick" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Ready for Backroom pick" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1000" MaxLineStatusDesc="Ready for Backroom pick" MinLineStatus="3350.1000" MinLineStatusDesc="Ready for Backroom pick" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Ready for Backroom pick" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:44 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:54 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:54 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:55 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:37:55 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3683
+Date: Sat, 27 Nov 2021 18:07:55 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1000" MaxOrderStatusDesc="Ready for Backroom pick" MinOrderStatus="3350.1000" MinOrderStatusDesc="Ready for Backroom pick" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Ready for Backroom pick" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1000" MaxLineStatusDesc="Ready for Backroom pick" MinLineStatus="3350.1000" MinLineStatusDesc="Ready for Backroom pick" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Ready for Backroom pick" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:37:55 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:05 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:38:05 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:06 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:06 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3683
+Date: Sat, 27 Nov 2021 18:08:06 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1000" MaxOrderStatusDesc="Ready for Backroom pick" MinOrderStatus="3350.1000" MinOrderStatusDesc="Ready for Backroom pick" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Ready for Backroom pick" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1000" MaxLineStatusDesc="Ready for Backroom pick" MinLineStatus="3350.1000" MinLineStatusDesc="Ready for Backroom pick" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Ready for Backroom pick" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:38:06 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:17 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:38:17 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:18 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:18 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3683
+Date: Sat, 27 Nov 2021 18:08:18 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1000" MaxOrderStatusDesc="Ready for Backroom pick" MinOrderStatus="3350.1000" MinOrderStatusDesc="Ready for Backroom pick" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Ready for Backroom pick" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1000" MaxLineStatusDesc="Ready for Backroom pick" MinLineStatus="3350.1000" MinLineStatusDesc="Ready for Backroom pick" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Ready for Backroom pick" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:38:18 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:28 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:38:28 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:28 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:29 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3683
+Date: Sat, 27 Nov 2021 18:08:28 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1000" MaxOrderStatusDesc="Ready for Backroom pick" MinOrderStatus="3350.1000" MinOrderStatusDesc="Ready for Backroom pick" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Ready for Backroom pick" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1000" MaxLineStatusDesc="Ready for Backroom pick" MinLineStatus="3350.1000" MinLineStatusDesc="Ready for Backroom pick" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Ready for Backroom pick" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:38:29 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:38:59 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:38:59 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:00 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:00 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3683
+Date: Sat, 27 Nov 2021 18:09:00 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1000" MaxOrderStatusDesc="Ready for Backroom pick" MinOrderStatus="3350.1000" MinOrderStatusDesc="Ready for Backroom pick" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Ready for Backroom pick" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1000" MaxLineStatusDesc="Ready for Backroom pick" MinLineStatus="3350.1000" MinLineStatusDesc="Ready for Backroom pick" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Ready for Backroom pick" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271898034462204264" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1000" StatusDate="2021-11-27T18:03:44+00:00" StatusDescription="Ready for Backroom pick" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:00 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:00 PM</td>
+        <td>
+          Pre-condition: getOrderReleaseList
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:00 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/executeFlow/DifarmaGetShipmentListForOrder
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:01 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/executeFlow/DifarmaGetShipmentListForOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order OrderHeaderKey="2021112718001062203487"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:01 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 203
+Date: Sat, 27 Nov 2021 18:09:00 GMT
+
+<ShipmentList>
+  <Shipment DeliveryMethod="SHP" DocumentType="0001" EnterpriseCode="FCVColombia" ShipNode="551100" ShipmentKey="2021112718034462204257" Status="1100.70.06.10"/>
+</ShipmentList>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:01 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:01 PM</td>
+        <td>
+          Pre-condition: getOrderReleaseList
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:01 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/executeFlow/DifarmaGetShipmentList
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:02 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/executeFlow/DifarmaGetShipmentList
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Shipment ShipmentKey="2021112718034462204257"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:02 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 4098
+Date: Sat, 27 Nov 2021 18:09:02 GMT
+
+<Shipments>
+  <Shipment Action="" ActualFreightCharge="0.00" AllowOverage="N" AssociationAction="" BBNMinVolume="0.00" BBNMinWeight="0.00" BillToAddressKey="2021112519013261911074" BillToCustomerId="00147542" CODPayMethod="" CarrierAccountNo="" CarrierPickupTime="2021-11-27T18:03:44+00:00" CarrierServiceCode="" CarrierSortLocationId="" CarrierType="" Code="" CommercialValue="0.00" ContainerizedQuantity="0" Createprogid="CONSOLIDATE_TO_SHIPMENT_0001" Createts="2021-11-27T18:03:44+00:00" Createuserid="DifarmaConsolidateToShipmentAgentServer" Currency="COP" CustomerPoNo="" DeliveryCode="" DeliveryMethod="SHP" DeliveryTS="2021-11-27" DepartmentCode="" DestinationZone="" DoNotConsolidate="Y" DoNotVerifyCaseContent="N" DoNotVerifyPalletContent="N" DocumentType="0001" DownLoadCount="0" EnterpriseCode="FCVColombia" EspCheckRequired="N" EstimatedPrice="31900.00" ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedPickDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" ExportLicenseExpDate="2021-11-27" ExportLicenseNo="" ExportTaxpayerID="" FreightTerms="" FromAddressKey="2020082610483633170252" FromAppointment="2021-11-27" GiftFlag="N" HasNodeExceptions="N" HasOtherShipments="N" HazardousMaterialFlag="N" ITDate="2021-11-27" IsAppointmentReqd="N" IsPackProcessComplete="N" IsProductPlacingComplete="N" IsSingleOrder="N" ItemClassification="" LevelOfService="SameDay" LinesEntered="Y" LocationId="" Lockid="3" ManuallyEntered="N" Modifyprogid="CONSOLIDATE_TO_SHIPMENT_0001" Modifyts="2021-11-27T18:03:44+00:00" Modifyuserid="DifarmaConsolidateToShipmentAgentServer" MustShipBeforeDate="2021-11-27T18:02:51+00:00" NextAlertTs="1900-01-01T00:00:00+00:00" NotificationSent="N" NumOfCartons="1" NumOfPallets="0" OrderAvailableOnSystem="Y" OrderType="SHP" OriginZone="" OverrideManualShipmentEntry="N" PackAndHold="N" PackListType="" PipelineKey="20200219111103596469788" PlacedQuantity="0" PriorityCode="" ReleaseNo="0" RequestedCarrierServiceCode="SameDay" RequestedDeliveryDate="2021-11-27T18:02:51+00:00" RequestedShipmentDate="2021-11-27T18:02:51+00:00" RequiresApptConfirmation="N" RoutingContactInfo="" RoutingErrorCode="" RoutingGuideMaintained="03" RoutingSource="02" SCAC="MU" ScacIntegrationRequired="N" SellerOrganizationCode="FCV.CC" ShipDate="2021-11-27T18:02:51+00:00" ShipMode="" ShipNode="551100" ShipToCustomerId="00147542" ShipVia="" ShipmentClosedFlag="N" ShipmentConfirmUpdatesDone="N" ShipmentContainerizedFlag="01" ShipmentDeliverUpdatesDone="N" ShipmentGroupId="" ShipmentKey="2021112718034462204257" ShipmentNo="100013149" ShipmentPlannedFlag="N" ShipmentSortLocationId="" ShipmentType="" Status="1100.70.06.10" StatusDate="2021-11-27T18:03:44+00:00" ToAddressKey="2021112519461261915838" ToAppointment="2021-11-27" TotalActualCharge="0.00" TotalEstimatedCharge="0.00" TotalQuantity="1" TotalVolume="0.00" TotalVolumeUOM="CIN" TotalWeight="0.00" TotalWeightUOM="LBS" UnplacedQuantity="1" isHistory="N">
+    <Extn ExtnETFulfilment="N" ExtnOrderDate="2021-11-27T18:00:10+00:00"/>
+    <ShipmentLines>
+      <ShipmentLine Action="" BackroomPickedQuantity="" CountryOfOrigin="" Createprogid="CONSOLIDATE_TO_SHIPMENT_0001" Createts="2021-11-27T18:03:44+00:00" Createuserid="DifarmaConsolidateToShipmentAgentServer" CustomerPoLineNo="" CustomerPoNo="" DepartmentCode="" FifoNo="0" GiftFlag="N" IsPickable="Y" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" KitCode="" KitQty="0" LevelOfService="SameDay" Lockid="0" Modifyprogid="CONSOLIDATE_TO_SHIPMENT_0001" Modifyts="2021-11-27T18:03:44+00:00" Modifyuserid="DifarmaConsolidateToShipmentAgentServer" NetWeight="0.00" NetWeightUom="" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderNo="COCC10001314" OrderReleaseKey="2021112718025162204189" OrderType="SHP" OriginalQuantity="1" OverShipQuantity="0" PrimeLineNo="1" ProductClass="REGULAR" Quantity="1" ReleaseNo="1" RequestedSerialNo="" Segment="" SegmentType="" ShipToCustomerId="00147542" ShipmentKey="2021112718034462204257" ShipmentLineKey="2021112718034462204256" ShipmentLineNo="1" ShipmentSubLineNo="0" ShortageQty="0" SubLineNo="1" UnitOfMeasure="EACH" WaveNo="" isHistory="N">
+        <OrderLine AddToOrderReleaseKey="" ApptStatus="" BackorderNotificationQty="0" BasicCapacityRequired="0" CanAddServiceLines="N" CannotMeetAppt="" CapacityUOM="" CarrierAccountNo="" CarrierServiceCode="SameDay" ConditionVariable1="" ConditionVariable2="" Createprogid="ISCCSSYS001" Createts="2021-11-27T18:00:47+00:00" Createuserid="admin" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" DependencyRatio="0" EarliestDeliveryDate="2021-11-27T17:00:00+00:00" EarliestShipDate="2021-11-27T17:00:00+00:00" FillQuantity="0" FixedCapacityQtyPerLine="0" FixedPricingQtyPerLine="0" FreightTerms="" FulfillmentType="SHIP_TO_HOME" GiftFlag="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" IntentionalBackorder="N" InvoiceBasedOnActuals="N" InvoiceComplete="N" InvoicedExtendedPrice="0.00" InvoicedQuantity="0" IsCapacityOverridden="N" IsCostOverridden="Y" IsFirmPredefinedNode="Y" IsPriceMatched="N" IsStandaloneService="" ItemGroupCode="PROD" KitCode="" LevelOfService="SameDay" LineSeqNo="1.1" LineType="" Lockid="2" MaintainRatio="" Modifyprogid="ISCCSSYS001" Modifyts="2021-11-27T18:01:26+00:00" Modifyuserid="admin" OptionCapacityRequired="0" OrderClass="NEW" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OrderingUOM="EACH" OriginalOrderedQty="1" OtherCharges="0.00" OverReceiptQuantity="0" PackListType="" ParentOfDependentGroup="N" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PipelineKey="20200219064739595102932" PricingDate="2021-11-27" PrimeLineNo="1" PropagationQty="0" PropagationToParentRequired="" Purpose="" QuantityToSplit="0" ReceivedAsComponents="" ReceivedQty="0" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationMandatory="N" ReservationPool="" ReturnReason="" SCAC="" SchedFailureReasonCode="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" ShippedQuantity="0" SplitFromLineKey="" SplitFromPrimeLineNo="0" SplitFromSubLineNo="0" SplitQty="0" SubLineNo="1" Timezone="" TotalQtyToCancel="0" TranDiscrepancyQty="0" TransactionalLineId="" WaitForSeqLine="N" isHistory="N">
+          <Extn ExtnCrtDayTimeWOSLA="2021-11-27T18:01:05Z" ExtnCustomerPromiseDate="2021-11-27T18:59:05+00:00" ExtnIsBigStoreSch="N" ExtnIsJumpFlowSch="N" ExtnOriginalReqShipDate="2021-11-27T18:59:05+00:00"/>
+        </OrderLine>
+      </ShipmentLine>
+    </ShipmentLines>
+    <ShipNode AcceptanceRequired="N" ActivateFlag="" AdvanceNotificationTime="0.00" AgentCriteriaGroup="" BolPrefix="00" CanShipToAllNodes="Y" CanShipToOtherAddresses="Y" ContactAddressKey="2020082610483633170252" Createprogid="DifarmaStoreUploadServerCo" Createts="2020-08-26T13:39:20+00:00" Createuserid="DifarmaStoreUploadServerCo" CurrentBolNumber="" DcmIntegrationRealTime="N" DefaultDeclaredValue="0.00" DelayedInventoryAllocationSupport="N" Description="88001_CRUZ_VERDE_ACU?A_COUNTRY" ExportLicenseExpDate="" ExportLicenseNo="" ExportTaxpayerId="" GLN="" GenerateBolNumber="N" IdentifiedByParentAs="551100" IgnorePendingAllocation="N" InheritConfigFromShipNode="" InterfaceSubType="" InterfaceType="YFX" InventoryTracked="Y" Inventorytype="TRACK" IsFulfillmentNode="Y" IsItemBasedAllocationAllowed="Y" IsYard="N" Latitude="4.66979" Localecode="es_ES_COL" Lockid="3" Longitude="-74.05442" MaintainInventoryCost="N" MaxConcurrentWaves="0" MaxDaysToScheduleBefore="0" MinNotificationTime="0" Modifyprogid="DifarmaStoreCalServer_Calendar" Modifyts="2020-10-20T10:23:03+00:00" Modifyuserid="DifarmaStoreCalServer_Calendar" NodeOrgCode="551100" NodeType="Store" OwnerKey="FCVColombia" OwnerType="" PackAdjRsnCode="PACK" PicklistType="" ProcureToShipAllowed="Y" ReceiptProcessingTime="0.00" ReceiptProcessingTimeForForwarding="0.00" ReceiptProcessingTimeForFutureInventory="0" ReceiveAdjRsnCode="RECEIPT" ReceivingCalendarKey="2020102010230236523242" ReceivingNode="N" RequireTransferAcceptance="N" RequiresChangeRequest="" ReturnCenterFlag="N" ReturnsNode="N" SerialTrackedOnTransfer="Y" SerialTracking="N" ShipAdjRsnCode="SHIP" ShipNode="551100" ShipNodeAddressKey="2020082610483633170252" ShipNodeClass="0" ShipnodeKey="551100" ShipnodeType="" ShippingCalendarKey="2020102010230236523242" ShippingNode="Y" SubstitutionAllowed="" SupplierKey="" TagTrackedAtReceipt="Y" TagTrackedInInventory="Y" ThreePlNode="N" TimeDiff="0.00" UseEndOfShiftTime="" WorkOrderCreationAllowed="" XDocNode="">
+      <ShipNodePersonInfo AddressLine1="Calle 85 #14-08" AddressLine2="Calle 85 #14-08" AddressLine3="" AddressLine4="La Cabrera" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" Createprogid="DifarmaStoreUploadServerCo" Createts="2020-08-26T10:48:36+00:00" Createuserid="DifarmaStoreUploadServerCo" DayFaxNo="" DayPhone="314 2187442" Department="" EMailID="cvco.403@cruzverde.com.co" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="" HttpUrl="" JobTitle="" LastName="" Latitude="4.66979" Lockid="0" Longitude="-74.05442" MiddleName="" MobilePhone="" Modifyprogid="DifarmaStoreUploadServerCo" Modifyts="2020-08-26T10:48:36+00:00" Modifyuserid="DifarmaStoreUploadServerCo" OtherPhone="" PersonID="" PersonInfoKey="2020082610483633170252" PreferredShipAddress="" State="Bogota" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="" isHistory="N"/>
+    </ShipNode>
+    <ToAddress AddressID="ShipTo" AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" Createprogid="ISCCSSYS001" Createts="2021-11-25T19:46:12+00:00" Createuserid="admin" DayFaxNo="" DayPhone="" Department="" EMailID="" ErrorTxt="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" HttpUrl="" JobTitle="" LastName="Nieto" Latitude="4.7035367" Lockid="0" Longitude="-74.0429899" MiddleName="" MobilePhone="" Modifyprogid="ISCCSSYS001" Modifyts="2021-11-25T19:46:12+00:00" Modifyuserid="admin" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" PreferredShipAddress="" State="Bogota" Suffix="" Title="" UseCount="0" VerificationStatus="" ZipCode="" isHistory="N"/>
+    <Containers TotalNumberOfRecords="0"/>
+    <Status Createprogid="XMLMigrator" Createts="2019-07-03T00:17:10+00:00" Createuserid="SYSTEM" Description="Ready For Backroom Pick" Lockid="0" Modifyprogid="XMLMigrator" Modifyts="2019-07-03T00:17:10+00:00" Modifyuserid="SYSTEM" OwnerKey="DEFAULT" ProcessTypeKey="ORDER_DELIVERY" RequiresCollaboration="" Status="1100.70.06.10" StatusKey="YCD_READY_BACKROOM_PICK" StatusName="Ready For Backroom Pick" StatusType="USER"/>
+  </Shipment>
+</Shipments>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:02 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:02 PM</td>
+        <td>
+          Pre-condition: getOrderReleaseList
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:02 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/executeFlow/DifarmaMobileRecordPickCompletion
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:09 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/executeFlow/DifarmaMobileRecordPickCompletion
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Shipment DeliveryMethod="PICK" DocumentType="0001" ShipNode="551100" ShipmentKey="2021112718034462204257">
+  <ShipmentLines>
+    <ShipmentLine BackroomPickedQuantity="1" OrderHeaderKey="202111271330203370153208" OrderLineKey="2021112718004562203729" Quantity="1" ShipmentLineKey="2021112718034462204256" ShortageQty="0"/>
+  </ShipmentLines>
+</Shipment>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:09 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 134
+Date: Sat, 27 Nov 2021 18:09:09 GMT
+
+<Shipment ShipmentKey="2021112718034462204257" ShipmentValidationStatus="pickComplete"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:09 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:09 PM</td>
+        <td>
+          Assertion Passed for Order is in valid statusnull
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:09 PM</td>
+        <td>
+          Pre-condition: DifarmaMobileRecordPickCompletion
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:09 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/executeFlow/DifarmaMobileRecordPackCompletion
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:11 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/executeFlow/DifarmaMobileRecordPackCompletion
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Shipment DocumentType="0001" ShipNode="551100" ShipmentKey="2021112718034462204257" ShipmentNo="100013149">
+  <Containers>
+    <Container>
+      <ContainerDetails>
+        <ContainerDetail Quantity="1" ShipmentLineKey="2021112718034462204256">
+          <ShipmentLine PrimeLineNo="1" ShipmentLineNo="1" SubLineNo="1"/>
+        </ContainerDetail>
+      </ContainerDetails>
+    </Container>
+  </Containers>
+</Shipment>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:11 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 101
+Date: Sat, 27 Nov 2021 18:09:11 GMT
+
+<Shipment ShipmentKey="2021112718034462204257"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:11 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:11 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:11 PM</td>
+        <td>
+          Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:12 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC10001314"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>11:39:12 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Max-Age: 3600
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3675
+Date: Sat, 27 Nov 2021 18:09:12 GMT
+
+<Order AllocationRuleID="DIF_SCH" BillToID="00147542" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="rnieto@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="FCVColombia" EntryType="Call Center" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3350.1500.1000" MaxOrderStatusDesc="Packing Complete" MinOrderStatus="3350.1500.1000" MinOrderStatusDesc="Packing Complete" NotifyAfterShipmentFlag="N" OrderDate="2021-11-27T18:00:10+00:00" OrderHeaderKey="2021112718001062203487" OrderName="" OrderNo="COCC10001314" OrderType="SHP" OriginalTax="0.00" OriginalTotalAmount="31900.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CC" ShipToID="00147542" Status="Packing Complete" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2021-11-27T18:00:10+00:00" ReportingConversionRate="1.00" TotalAmount="31900.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-27" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="SameDay" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="SHIP_TO_HOME" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="" MaxLineStatus="3350.1500.1000" MaxLineStatusDesc="Packing Complete" MinLineStatus="3350.1500.1000" MinLineStatusDesc="Packing Complete" OpenQty="1" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="1" ReqShipDate="2021-11-27T17:00:00+00:00" ReservationID="SHP_COCC10001314" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="551100" ShipToID="00147542" ShipTogetherNo="" SplitQty="0" Status="Packing Complete" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="110457" CustomerItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemID="110457" ItemShortDesc="Procicar Nf  Crema  Tubo X 60 Gr" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="0.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="N" LineTotal="31900.00" ListPrice="0.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="Y" UnitPrice="31900.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" Quantity="1" ScheduleNo="5" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="31900.00" LineTotal="31900.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="31900.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="iva19" Reference_2="" Reference_3="" RemainingTax="5093.00" Tax="5093.00" TaxName="SALES_TAX" TaxPercentage="0.19"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="5093.00" RemainingTax="5093.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271838091162204634" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1500.1000" StatusDate="2021-11-27T18:09:11+00:00" StatusDescription="Packing Complete" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519461261915838" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Avenida Calle 100 ##69b-67, Bogotá, Colombia" AddressLine2="Floresta" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="" Department="" EMailID="rnieto@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Rafael" JobTitle="" LastName="Nieto" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112519013261911074" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="" CreditCardName="" CreditCardType="" CustomerPONo="" DisplayCreditCardNo="" DisplayCustomerAccountNo="" DisplayPaymentReference1="1314" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="COCC10001314" PaymentReference2="" PaymentReference3="" PaymentType="PAY_DELIVERY_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="31900.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="31900.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="31900.00" ChargeTransactionKey="2021112718014462204105" ChargeType="CREATE_ORDER" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:44+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2021-11-27T18:01:44+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2021112718014462204116" ChargeType="CHARGE" CollectionDate="2021-11-27T18:01:44+00:00" CreditAmount="31900.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2021112718001062203487" OrderInvoiceKey="" PaymentKey="202111271846013662204104" RequestAmount="31900.00" SettledAmount="0.00" Status="CHECKED" TransactionDate="2021-11-27T18:01:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="31900.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="31900.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="0.00"/>
+    <HeaderCharge ChargeAmount="0.00" ChargeCategory="DISCOUNT" ChargeName="SHIP_DISCOUNT" ChargeNameKey="20200210110926508935252" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="Y" Reference="" RemainingChargeAmount="0.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="N"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021112718001062203487" OrderLineKey="2021112718004562203729" OrderLineScheduleKey="202111271800025162204190" OrderReleaseKey="2021112718025162204189" OrderReleaseStatusKey="202111271838091162204634" PipelineKey="20200219064739595102932" ShipNode="551100" Status="3350.1500.1000" StatusDate="2021-11-27T18:09:11+00:00" StatusDescription="Packing Complete" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-27T18:02:51+00:00" ExpectedShipmentDate="2021-11-27T18:02:51+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:12 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:12 PM</td>
+        <td>
+          Assertion Passed for Order is in valid statusPacking Complete
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>11:39:12 PM</td>
+        <td>
+          Test Case: TC01_COM_RegisteredUser_OrderCreation is Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Saturday, November 27, 2021, 11:37 PM (IST)</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Saturday, November 27, 2021, 11:39 PM (IST)</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='41%'><b>33</b> events passed</small></div>
+<div>
+<small data-tooltip='2%'><b>2</b> events failed,
+<b data-tooltip='%'>45</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"TC01_COM_RegisteredUser_OrderCreation":108.73
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Executed on Environment: </td>
+<td>QA</td>
+</tr>
+<tr>
+<td>Executed on Browser: </td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Executed on OS: </td>
+<td>Windows 10</td>
+</tr>
+<tr>
+<td>Executed by User: </td>
+<td>Perfaware</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 33,
+failEvents: 2,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 45
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

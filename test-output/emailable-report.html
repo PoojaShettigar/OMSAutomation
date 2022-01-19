@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">OMS API Test Suite</th></tr>
+<tr><td><a href="#t0">OMS</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">108,841</td><td></td><td></td></tr>
+<tr><th colspan="8">OMS UI Test Suite</th></tr>
+<tr class="stripe"><td><a href="#t1">OMS</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">3</td><td class="num attn">1</td><td class="num">423,892</td><td></td><td></td></tr>
+<tr><th colspan="8">OMS Test Suite</th></tr>
+<tr><th>Total</th><th class="num">4</th><th class="num">0</th><th class="num attn">3</th><th class="num attn">1</th><th class="num">532,733</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">OMS API Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">OMS &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment</td><td><a href="#m0">TC01_XML_BOPIS_SL_OrderFulfillment</a></td><td rowspan="1">1642530346672</td><td rowspan="1">42994</td></tr><tr class="passedeven"><td><a href="#m1">TC02_XML_BOPIS_ML_OrderFulfillment</a></td><td rowspan="1">1642530389670</td><td rowspan="1">65673</td></tr></tbody>
+<tbody><tr><th colspan="4">OMS UI Test Suite</th></tr></tbody><tbody id="t1"><tr><th colspan="4">OMS &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality</td><td><a href="#m2">TC05_COM_LoginFunctionality</a></td><td rowspan="1">1642529948873</td><td rowspan="1">17822</td></tr><tr><th colspan="4">OMS &#8212; retried</th></tr><tr class="retriedeven"><td rowspan="1">com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality</td><td><a href="#m3">TC05_COM_LoginFunctionality</a></td><td rowspan="1">1642529923488</td><td rowspan="1">14784</td></tr><tr class="retriedodd"><td rowspan="2">com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td><td><a href="#m4">TC03_COM_RegisteredUser_SFS_SL_OrderFulfillment</a></td><td rowspan="1">1642529924051</td><td rowspan="1">74377</td></tr><tr class="retriedodd"><td><a href="#m5">TC04_COM_RegisteredUser_SFS_ML_OrderFulfillment</a></td><td rowspan="1">1642529922964</td><td rowspan="1">79268</td></tr><tr><th colspan="4">OMS &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td><td><a href="#m6">TC03_COM_RegisteredUser_SFS_SL_OrderFulfillment</a></td><td rowspan="1">1642530021351</td><td rowspan="1">308771</td></tr><tr class="passedeven"><td><a href="#m7">TC04_COM_RegisteredUser_SFS_ML_OrderFulfillment</a></td><td rowspan="1">1642530031287</td><td rowspan="1">300263</td></tr></tbody>
+<tbody><tr><th colspan="4">OMS Test Suite</th></tr></tbody></table>
+<h2>OMS</h2><h3 id="m0">com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment#TC01_XML_BOPIS_SL_OrderFulfillment</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment#TC02_XML_BOPIS_ML_OrderFulfillment</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>OMS</h2><h3 id="m2">com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality#TC05_COM_LoginFunctionality</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_COM_Login.captureLoginError(Page_COM_Login.java:72)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality.TC05_COM_LoginFunctionality(COM_LoginFunctionality.java:92)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality#TC05_COM_LoginFunctionality</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_COM_Login.captureLoginError(Page_COM_Login.java:72)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality.TC05_COM_LoginFunctionality(COM_LoginFunctionality.java:92)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 18 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment#TC03_COM_RegisteredUser_SFS_SL_OrderFulfillment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.selectShippingOptions(Page_FulfillmentSummary.java:58)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:75)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:115)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment#TC04_COM_RegisteredUser_SFS_ML_OrderFulfillment</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.selectShippingOptions(Page_FulfillmentSummary.java:58)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:75)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC04_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:131)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 12 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment#TC03_COM_RegisteredUser_SFS_SL_OrderFulfillment</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment#TC04_COM_RegisteredUser_SFS_ML_OrderFulfillment</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

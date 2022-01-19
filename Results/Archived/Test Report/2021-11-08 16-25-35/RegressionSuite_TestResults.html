@@ -1,0 +1,1509 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Regression Suite - OMS Automation Execution Report</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Perfaware</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Monday, November 08, 2021, 04:25 PM (IST)</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">TC01_create_schedule_release_Order</p>
+            <p class="text-sm">
+              <span>4:25:40 PM</span> / <span>00:00:10:811</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">TC01_create_schedule_release_Order</h5>
+<span class='badge badge-success'>11.08.2021 4:25:40 PM</span>
+<span class='badge badge-danger'>11.08.2021 4:25:51 PM</span>
+<span class='badge badge-default'>00:00:10:811</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:40 PM</td>
+        <td>
+          Pre-condition: Load Item
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:41 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/manageItem
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:45 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item ItemID="ATSTK_0254" OrganizationCode="DEFAULT" UnitOfMeasure="EACH">
+    <PrimaryInformation Description="Nike Shorts" IsDeliveryAllowed="Y" IsHazmat="N" IsParcelShippingAllowed=" " IsPickupAllowed="Y" IsShippingAllowed="Y" ItemType="PROD" ManufacturerName="Nike" ShortDescription="Nike Strike X Shorts Mens - Inner size: 24.5 cm" Status="3000" UnitHeight="0.05" UnitHeightUOM="METER" UnitLength="0.05" UnitLengthUOM="CM" UnitWeight="0.05" UnitWeightUOM="KG" UnitWidth="5.4" UnitWidthUOM="METER"/>
+    <InventoryParameters ATPRule="DEFAULT"/>
+    <ClassificationCodes VelocityCode="A"/>
+    <ItemAliasList>
+      <ItemAlias AliasName="UPC" AliasValue="025285180983"/>
+    </ItemAliasList>
+  </Item>
+  <Item ItemID="ATSTK_2988" OrganizationCode="DEFAULT" UnitOfMeasure="EACH">
+    <PrimaryInformation Description="Nike Shorts" IsDeliveryAllowed="Y" IsHazmat="N" IsParcelShippingAllowed=" " IsPickupAllowed="Y" IsShippingAllowed="Y" ItemType="PROD" ManufacturerName="Nike" ShortDescription="Nike Strike X Shorts Mens - Inner size: 24.5 cm" Status="3000" UnitHeight="0.05" UnitHeightUOM="METER" UnitLength="0.05" UnitLengthUOM="CM" UnitWeight="0.05" UnitWeightUOM="KG" UnitWidth="5.4" UnitWidthUOM="METER"/>
+    <InventoryParameters ATPRule="DEFAULT"/>
+    <ClassificationCodes VelocityCode="A"/>
+    <ItemAliasList>
+      <ItemAlias AliasName="UPC" AliasValue="052215895993"/>
+    </ItemAliasList>
+  </Item>
+</ItemList>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:45 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 204 No Content
+Date: Mon, 08 Nov 2021 10:55:45 GMT
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:45 PM</td>
+        <td>
+          API Status Code received: 204
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          Pre-condition: Adjust Inventory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/adjustInventory
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="ATSTK_0254" OrganizationCode="DEFAULT" Quantity="2" ShipNode="Matrix_WH1" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="ATSTK_2988" OrganizationCode="DEFAULT" Quantity="2" ShipNode="Matrix_WH1" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 204 No Content
+Date: Mon, 08 Nov 2021 10:55:46 GMT
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          API Status Code received: 204
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          Pre-condition: Create Order
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/createOrder
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="98646908" ShipNode="Matrix_WH1">
+  <PersonInfoShipTo AddressID="" AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" City="Mississauga" Country="CA" EMailID="perfaware@gmail.com" FirstName="Perfaware" LastName="User" MobilePhone="9481601389" State="ON" ZipCode="L5R3T8"/>
+  <PersonInfoBillTo AddressID="" AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" City="Mississauga" Country="CA" EMailID="perfaware@gmail.com" FirstName="Perfaware" LastName="User" MobilePhone="9481601389" State="ON" ZipCode="L5R3T8"/>
+  <OrderLines>
+    <OrderLine LineType="SHP" OrderedQty="2" PrimeLineNo="1">
+      <Item ItemID="ATSTK_0254" UnitCost="10" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsLinePriceForInformationOnly="N" IsPriceLocked="Y" ListPrice="0" PricingQuantityStrategy="FIX" RetailPrice="0" UnitPrice="0"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="SHIPPING_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="CITY_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="COUNTY_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="DISTRICT_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="STATE_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="SALES_TAX"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine LineType="SHP" OrderedQty="2" PrimeLineNo="2">
+      <Item ItemID="ATSTK_2988" UnitCost="10" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsLinePriceForInformationOnly="N" IsPriceLocked="Y" ListPrice="0" PricingQuantityStrategy="FIX" RetailPrice="0" UnitPrice="0"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="SHIPPING_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="CITY_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="COUNTY_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="DISTRICT_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="STATE_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="SALES_TAX"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentDetails CVVAuthCode="476" ChargeType="CHARGE"/>
+    <PaymentMethod CreditCardExpDate="10/2025" CreditCardName="HDFC" CreditCardNo="478367543892" CreditCardType="VISA" FirstName="Perfaware" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+Date: Mon, 08 Nov 2021 10:55:46 GMT
+Content-Length: 155
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderHeaderKey="2021110816254646925" OrderNo="98646908"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:46 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:48 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:48 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:48 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="98646908"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:48 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+Date: Mon, 08 Nov 2021 10:55:48 GMT
+Content-Length: 3295
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Order AuthorizationExpirationDate="2021-11-08T16:25:45-05:00" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="perfaware@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="DEFAULT" EntryType="" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2021-11-08T16:25:45-05:00" OrderHeaderKey="2021110816254646925" OrderName="" OrderNo="98646908" OrderType="" OriginalTax="0.00" OriginalTotalAmount="0.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="DEFAULT" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="USD" EnterpriseCurrency="USD" ReportingConversionDate="2021-11-08T16:25:45-05:00" ReportingConversionRate="1.00" TotalAmount="0.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-08" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="SHP" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="2.00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Created" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_0254" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_0254" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-08T16:25:45-05:00" ExpectedShipmentDate="2021-11-08T16:25:45-05:00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081685254646929" Quantity="2.00" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081685254646929" OrderReleaseStatusKey="202111081670254646930" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1100" StatusDate="2021-11-08T16:25:45-05:00" StatusDescription="Created" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-08T16:25:45-05:00" ExpectedShipmentDate="2021-11-08T16:25:45-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-08" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="SHP" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="2.00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Created" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_2988" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_2988" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-08T16:25:45-05:00" ExpectedShipmentDate="2021-11-08T16:25:45-05:00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081610254646931" Quantity="2.00" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081610254646931" OrderReleaseStatusKey="202111081679254646932" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1100" StatusDate="2021-11-08T16:25:45-05:00" StatusDescription="Created" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-08T16:25:45-05:00" ExpectedShipmentDate="2021-11-08T16:25:45-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <PersonInfoBillTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="10/2025" CreditCardName="HDFC" CreditCardNo="478367543892" CreditCardType="VISA" CustomerPONo="" DisplayCreditCardNo="3892" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="0.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="0.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00"/>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <HeaderCharges/>
+  <HeaderTaxes/>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081685254646929" OrderReleaseStatusKey="202111081670254646930" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1100" StatusDate="2021-11-08T16:25:45-05:00" StatusDescription="Created" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-08T16:25:45-05:00" ExpectedShipmentDate="2021-11-08T16:25:45-05:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081610254646931" OrderReleaseStatusKey="202111081679254646932" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1100" StatusDate="2021-11-08T16:25:45-05:00" StatusDescription="Created" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-08T16:25:45-05:00" ExpectedShipmentDate="2021-11-08T16:25:45-05:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:48 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:48 PM</td>
+        <td>
+          Assertion Passed for Order is in valid statusCreated
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:48 PM</td>
+        <td>
+          Pre-condition: Change Order for resolving the holds
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:48 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/scheduleOrder
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/scheduleOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ScheduleOrder CheckInventory="Y" DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="98646908"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 204 No Content
+Date: Mon, 08 Nov 2021 10:55:48 GMT
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          API Status Code received: 204
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="98646908"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+Date: Mon, 08 Nov 2021 10:55:49 GMT
+Content-Length: 3285
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Order AuthorizationExpirationDate="2021-11-08T16:25:48-05:00" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="perfaware@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="DEFAULT" EntryType="" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1500" MaxOrderStatusDesc="Scheduled" MinOrderStatus="1500" MinOrderStatusDesc="Scheduled" NotifyAfterShipmentFlag="N" OrderDate="2021-11-08T16:25:45-05:00" OrderHeaderKey="2021110816254646925" OrderName="" OrderNo="98646908" OrderType="" OriginalTax="0.00" OriginalTotalAmount="0.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="DEFAULT" Status="Scheduled" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="Y"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="Y"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="Y"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="Y"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="Y"/>
+  </AllowedModifications>
+  <PriceInfo Currency="USD" EnterpriseCurrency="USD" ReportingConversionDate="2021-11-08T16:25:45-05:00" ReportingConversionRate="1.00" TotalAmount="0.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-08" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="SHP" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="0.00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Scheduled" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_0254" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_0254" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-08T16:25:48-05:00" ExpectedShipmentDate="2021-11-08T16:25:48-05:00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081677254946948" Quantity="2.00" ScheduleNo="2" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081677254946948" OrderReleaseStatusKey="202111081614254946949" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1500" StatusDate="2021-11-08T16:25:48-05:00" StatusDescription="Scheduled" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-08T16:25:48-05:00" ExpectedShipmentDate="2021-11-08T16:25:48-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-08" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="SHP" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="0.00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Scheduled" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_2988" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_2988" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-08T16:25:48-05:00" ExpectedShipmentDate="2021-11-08T16:25:48-05:00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081677254946950" Quantity="2.00" ScheduleNo="2" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081677254946950" OrderReleaseStatusKey="202111081686254946951" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1500" StatusDate="2021-11-08T16:25:48-05:00" StatusDescription="Scheduled" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-08T16:25:48-05:00" ExpectedShipmentDate="2021-11-08T16:25:48-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <PersonInfoBillTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="10/2025" CreditCardName="HDFC" CreditCardNo="478367543892" CreditCardType="VISA" CustomerPONo="" DisplayCreditCardNo="3892" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="0.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="0.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00"/>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <HeaderCharges/>
+  <HeaderTaxes/>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081677254946948" OrderReleaseStatusKey="202111081614254946949" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1500" StatusDate="2021-11-08T16:25:48-05:00" StatusDescription="Scheduled" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-08T16:25:48-05:00" ExpectedShipmentDate="2021-11-08T16:25:48-05:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081677254946950" OrderReleaseStatusKey="202111081686254946951" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1500" StatusDate="2021-11-08T16:25:48-05:00" StatusDescription="Scheduled" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-08T16:25:48-05:00" ExpectedShipmentDate="2021-11-08T16:25:48-05:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          Assertion Passed for Order is in valid statusScheduled
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          Pre-condition: Change Order for resolving the holds
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/releaseOrder
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/releaseOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ReleaseOrder CheckInventory="Y" DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="98646908"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 204 No Content
+Date: Mon, 08 Nov 2021 10:55:49 GMT
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          API Status Code received: 204
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          Pre-condition: getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:49 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="98646908"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+Date: Mon, 08 Nov 2021 10:55:50 GMT
+Content-Length: 3294
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Order AuthorizationExpirationDate="2021-11-08T16:25:49-05:00" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="perfaware@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="DEFAULT" EntryType="" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3200" MaxOrderStatusDesc="Released" MinOrderStatus="3200" MinOrderStatusDesc="Released" NotifyAfterShipmentFlag="N" OrderDate="2021-11-08T16:25:45-05:00" OrderHeaderKey="2021110816254646925" OrderName="" OrderNo="98646908" OrderType="" OriginalTax="0.00" OriginalTotalAmount="0.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="DEFAULT" Status="Released" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="Y"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="Y"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="Y"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="Y"/>
+  </AllowedModifications>
+  <PriceInfo Currency="USD" EnterpriseCurrency="USD" ReportingConversionDate="2021-11-08T16:25:45-05:00" ReportingConversionRate="1.00" TotalAmount="0.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-08" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="SHP" MaxLineStatus="3200" MaxLineStatusDesc="Released" MinLineStatus="3200" MinLineStatusDesc="Released" OpenQty="0.00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Released" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_0254" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_0254" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-08T16:25:49-05:00" ExpectedShipmentDate="2021-11-08T16:25:49-05:00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081650254946959" Quantity="2.00" ScheduleNo="3" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081650254946959" OrderReleaseKey="2021110816254946958" OrderReleaseStatusKey="202111081656254946960" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="3200" StatusDate="2021-11-08T16:25:49-05:00" StatusDescription="Released" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-08T16:25:49-05:00" ExpectedShipmentDate="2021-11-08T16:25:49-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-08" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="SHP" MaxLineStatus="3200" MaxLineStatusDesc="Released" MinLineStatus="3200" MinLineStatusDesc="Released" OpenQty="0.00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Released" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_2988" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_2988" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-08T16:25:49-05:00" ExpectedShipmentDate="2021-11-08T16:25:49-05:00" OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081676254946961" Quantity="2.00" ScheduleNo="3" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081676254946961" OrderReleaseKey="2021110816254946958" OrderReleaseStatusKey="202111081662254946962" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="3200" StatusDate="2021-11-08T16:25:49-05:00" StatusDescription="Released" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-08T16:25:49-05:00" ExpectedShipmentDate="2021-11-08T16:25:49-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <PersonInfoBillTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="10/2025" CreditCardName="HDFC" CreditCardNo="478367543892" CreditCardType="VISA" CustomerPONo="" DisplayCreditCardNo="3892" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="0.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="0.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00"/>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <HeaderCharges/>
+  <HeaderTaxes/>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646926" OrderLineScheduleKey="202111081650254946959" OrderReleaseKey="2021110816254946958" OrderReleaseStatusKey="202111081656254946960" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="3200" StatusDate="2021-11-08T16:25:49-05:00" StatusDescription="Released" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-08T16:25:49-05:00" ExpectedShipmentDate="2021-11-08T16:25:49-05:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2021110816254646925" OrderLineKey="2021110816254646927" OrderLineScheduleKey="202111081676254946961" OrderReleaseKey="2021110816254946958" OrderReleaseStatusKey="202111081662254946962" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="3200" StatusDate="2021-11-08T16:25:49-05:00" StatusDescription="Released" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-08T16:25:49-05:00" ExpectedShipmentDate="2021-11-08T16:25:49-05:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          Assertion Passed for Validated Order status as  Released
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          Pre-condition: getOrderReleaseList
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/getOrderReleaseList
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/getOrderReleaseList
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<OrderRelease OrderHeaderKey="2021110816254646925"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+Date: Mon, 08 Nov 2021 10:55:50 GMT
+Content-Length: 1135
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<OrderReleaseList LastOrderReleaseKey="2021110816254946958" LastRecordSet="Y" ReadFromHistory="" TotalOrderReleaseList="1">
+  <OrderRelease CarrierAccountNo="" CarrierServiceCode="" Currency="" CustomerPoNo="" DeliveryCode="" Division="" DocumentType="0001" EnterpriseCode="DEFAULT" FOB="" HoldFlag="N" HoldReasonCode="" MaxOrderReleaseStatus="3200" MaxOrderReleaseStatusDesc="Released" MinOrderReleaseStatus="3200" MinOrderReleaseStatusDesc="Released" NotifyAfterShipmentFlag="N" OrderDate="2021-11-08T16:25:45-05:00" OrderHeaderKey="2021110816254646925" OrderName="" OrderReleaseKey="2021110816254946958" OrderType="" OtherCharges="0.00" PacklistType="" PersonalizeCode="" PriorityCode="" Purpose="" ReleaseNo="1" ReleaseSeqNo="0" ReqCancelDate="2500-01-01T00:00:00-05:00" ReqDeliveryDate="2021-11-08T16:25:49-05:00" ReqShipDate="2021-11-08T16:25:49-05:00" SCAC="" SalesOrderNo="98646908" SellerOrganizationCode="DEFAULT" ShipAdviceNo="98646908_1" ShipCompleteFlag="N" ShipLineComplete="" ShipNode="Matrix_WH1" ShipNodeClass="" ShipOrderComplete="" ShipToKey="2021102116413335818" Status="Released" SupplierCode="Matrix_WH1" SupplierName="MatrixR" TaxpayerId="" isHistory="N">
+    <Order AuthorizationExpirationDate="2021-11-08T16:25:49-05:00" CarrierAccountNo="" CarrierServiceCode="" ChargeActualFreightFlag="N" CustomerEMailID="perfaware@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" EnterpriseCode="DEFAULT" EntryType="" FreightTerms="" HoldFlag="N" HoldReasonCode="" NotifyAfterShipmentFlag="N" OrderDate="2021-11-08T16:25:45-05:00" OrderHeaderKey="2021110816254646925" OrderName="" OrderNo="98646908" OrderType="" OriginalTax="0.00" OriginalTotalAmount="0.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="DEFAULT" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N"/>
+    <PersonInfoShipTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  </OrderRelease>
+</OrderReleaseList>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          Assertion Passed for No Of releases of the order is 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          Pre-condition: Mock Confirm Shipment
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:50 PM</td>
+        <td>
+          Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/confirmShipment
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:51 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/confirmShipment
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Shipment Action="Create" DocumentType="0001" EnterpriseCode="DEFAULT" ShipNode="Matrix_WH1">
+  <ShipmentLines>
+    <ShipmentLine DocumentType="0001" OrderNo="98646908" OrderReleaseKey="2021110816254946958" PrimeLineNo="1" Quantity="2" SubLineNo="1"/>
+    <ShipmentLine DocumentType="0001" OrderNo="98646908" OrderReleaseKey="2021110816254946958" PrimeLineNo="2" Quantity="2" SubLineNo="1"/>
+  </ShipmentLines>
+</Shipment>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>4:25:51 PM</td>
+        <td>
+          <div class='row'>
+ <div class='col-md-12'>
+  <textarea readonly class='code-block'>HTTP/1.1 200 OK
+Date: Mon, 08 Nov 2021 10:55:50 GMT
+Content-Length: 162
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Shipment SellerOrganizationCode="DEFAULT" ShipNode="Matrix_WH1" ShipmentKey="2021110816255046971" ShipmentNo="100000030"/>
+</textarea>
+ </div>
+</div>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:51 PM</td>
+        <td>
+          API Status Code received: 200
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>4:25:51 PM</td>
+        <td>
+          Test Case: TC01_create_schedule_release_Order is Passed.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Monday, November 08, 2021, 04:25 PM (IST)</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Monday, November 08, 2021, 04:25 PM (IST)</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>1</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>0</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='100%'>
+<b>1</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='0%'><b>0</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='47%'><b>26</b> events passed</small></div>
+<div>
+<small data-tooltip='0%'><b>0</b> events failed,
+<b data-tooltip='%'>29</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"TC01_create_schedule_release_Order":10.811
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Executed on Environment: </td>
+<td>QA</td>
+</tr>
+<tr>
+<td>Executed on Browser: </td>
+<td>chrome</td>
+</tr>
+<tr>
+<td>Executed on OS: </td>
+<td>Windows 10</td>
+</tr>
+<tr>
+<td>Executed by User: </td>
+<td>Perfaware</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 1,
+failParent: 0,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 26,
+failEvents: 0,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 29
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>

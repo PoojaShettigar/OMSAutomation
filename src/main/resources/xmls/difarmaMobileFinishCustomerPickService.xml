@@ -1,0 +1,8 @@
+<Shipment AddVerificationMethod="Y" SellerOrganizationCode="FCV.CO" ShipNode="" ShipmentKey="" ShipmentNo="" TransactionId="CONFIRM_SHIPMENT">
+	<ShipmentLines>
+		<ShipmentLine PickedQty="" Quantity="" ReasonCode="" ShipmentLineKey="" ShipmentLineNo="1" ShipmentSubLineNo="1" ShortageQuantity="0" ShortageReason=""/>
+	</ShipmentLines>
+	<Notes>
+		<Note ContactReference="" ContactType="" ContactUser="" NoteText="Customer Picked the products" Priority="0" ReasonCode="YCD_CUSTOMER_VERIFICATION" VisibleToAll="Y"/>
+	</Notes>
+</Shipment>

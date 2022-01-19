@@ -1,0 +1,5 @@
+Using chromedriver 94.0.4606.61 (resolved driver for Chrome 94)
+Exporting webdriver.chrome.driver as C:\Users\Admin\.cache\selenium\chromedriver\win32\94.0.4606.61\chromedriver.exe
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :name
+Test successfully passed : name[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.DemoTestcase1]

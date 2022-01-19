@@ -1,0 +1,15 @@
+<Order Action="Modify" OrderHeaderKey="" Override="Y">
+	<OrderLines>
+		<OrderLine OrderLineKey="">
+			<OrderHoldTypes>
+				<OrderHoldType HoldType="" LastHoldTypeDate=""
+					Modifyuserid="omsadmin" OrderAuditKey="" OrderHeaderKey=""
+					OrderLineKey="" ReasonText="" Status="1300"
+					StatusDescription="Resolved">
+					<OrderHoldTypeLogs />
+				</OrderHoldType>
+			</OrderHoldTypes>
+		</OrderLine>
+	</OrderLines>
+</Order>
+

@@ -1,0 +1,28 @@
+Pre-condition for Test: Load Item 
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item ItemID="ATSTK_4285:" OrganizationCode="DEFAULT" UnitOfMeasure="EACH">
+    <PrimaryInformation Description="Nike Shorts" IsDeliveryAllowed="Y" IsHazmat="N" IsParcelShippingAllowed=" " IsPickupAllowed="Y" IsShippingAllowed="Y" ItemType="PROD" ManufacturerName="Nike" ShortDescription="Nike Strike X Shorts Mens - Inner size: 24.5 cm" Status="3000" UnitHeight="0.05" UnitHeightUOM="METER" UnitLength="0.05" UnitLengthUOM="CM" UnitWeight="0.05" UnitWeightUOM="KG" UnitWidth="5.4" UnitWidthUOM="METER"/>
+    <InventoryParameters ATPRule="DEFAULT"/>
+    <ClassificationCodes VelocityCode="A"/>
+    <ItemAliasList>
+      <ItemAlias AliasName="UPC" AliasValue="286413466062"/>
+    </ItemAliasList>
+  </Item>
+</ItemList>
+
+Error while sending manageItem request.

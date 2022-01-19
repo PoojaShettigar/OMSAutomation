@@ -1,0 +1,5 @@
+Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
+Exporting webdriver.chrome.driver as C:\Users\Admin\.cache\selenium\chromedriver\win32\96.0.4664.45\chromedriver.exe
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_COM_RegisteredUser_OrderCreation
+Test successfully passed : TC01_COM_RegisteredUser_OrderCreation[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.Testcases_COM_OrderCreation]

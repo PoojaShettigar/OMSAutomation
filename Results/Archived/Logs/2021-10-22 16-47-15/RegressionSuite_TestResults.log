@@ -1,0 +1,3 @@
+Pre-condition for Test: Load Item 
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/manageItem
+Error while sending manageItem request.

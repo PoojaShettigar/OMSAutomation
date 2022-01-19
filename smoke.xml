@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="OMS Smoke Suite">	
+	<groups>	
+		<run>	
+		   	<include name="Smoke" /> 	
+		</run>	
+	</groups>
+  	<test thread-count="5" name="OMS" parallel="classes" >
+	    <classes> 
+		    <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment"/>
+		    <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality"/>
+		    <class name="com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment"/>
+		    
+	    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

@@ -1,0 +1,73 @@
+Pre-condition for Test: Load Item 
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item ItemID="ATSTK_4148:" OrganizationCode="DEFAULT" UnitOfMeasure="EACH">
+    <PrimaryInformation Description="Nike Shorts" IsDeliveryAllowed="Y" IsHazmat="N" IsParcelShippingAllowed=" " IsPickupAllowed="Y" IsShippingAllowed="Y" ItemType="PROD" ManufacturerName="Nike" ShortDescription="Nike Strike X Shorts Mens - Inner size: 24.5 cm" Status="3000" UnitHeight="0.05" UnitHeightUOM="METER" UnitLength="0.05" UnitLengthUOM="CM" UnitWeight="0.05" UnitWeightUOM="KG" UnitWidth="5.4" UnitWidthUOM="METER"/>
+    <InventoryParameters ATPRule="DEFAULT"/>
+    <ClassificationCodes VelocityCode="A"/>
+    <ItemAliasList>
+      <ItemAlias AliasName="UPC" AliasValue="620242995020"/>
+    </ItemAliasList>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 401 Unauthorized
+Date: Fri, 22 Oct 2021 11:28:19 GMT
+Content-Length: 1468
+Content-Type: text/html; charset=UTF-8
+WWW-Authenticate: Basic realm="weblogic"
+X-ORACLE-DMS-RID: 0
+X-ORACLE-DMS-ECID: bf0f2f19-4cf0-4570-9637-f096c40eb705-00000092
+
+<html>
+  <head>
+    <title>Error 401--Unauthorized</title>
+  </head>
+  <body bgcolor="white">
+    <font face="Helvetica">
+      <br clear="all"/>
+    </font>
+    <table border="0" cellspacing="5">
+      <tr>
+        <td colspan="1" rowspan="1">
+          <br clear="all"/>
+          <font face="Helvetica" color="black" size="3"/>
+          <h2>Error 401--Unauthorized</h2>
+        </td>
+      </tr>
+    </table>
+    <table border="0" width="100%" cellpadding="10">
+      <tr>
+        <td colspan="1" rowspan="1" valign="top" width="100%" bgcolor="white">
+          <font face="Courier New">
+            <font face="Helvetica" size="3"/>
+          </font>
+          <h3>
+From RFC 2068             <i>Hypertext Transfer Protocol -- HTTP/1.1</i>
+:          </h3>
+          <font face="Helvetica" size="3"/>
+          <h4>10.4.2 401 Unauthorized</h4>
+          <p>
+            <font face="Courier New">The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.46) containing a challenge applicable to the requested resource. The client MAY repeat the request with a suitable Authorization header field (section 14.8). If the request already included Authorization credentials, then the 401 response indicates that authorization has been refused for those credentials. If the 401 response contains the same challenge as the prior response, and the user agent has already attempted authentication at least once, then the user SHOULD be presented the entity that was given in the response, since that entity MAY include relevant diagnostic information. HTTP access authentication is explained in section 11.</font>
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
+

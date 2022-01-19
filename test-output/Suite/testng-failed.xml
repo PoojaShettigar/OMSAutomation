@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="OMS(failed)" parallel="classes">
+    <groups>
+      <run>
+        <include name="Regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality">
+        <methods>
+          <include name="TC01_COM_LoginFunctionality"/>
+          <include name="sendReports"/>
+          <include name="initialSetup"/>
+          <include name="initiate"/>
+          <include name="driverInitialization"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality -->
+    </classes>
+  </test> <!-- OMS(failed) -->
+</suite> <!-- Failed suite [Suite] -->

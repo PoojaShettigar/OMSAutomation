@@ -1,0 +1,6 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Test successfully completed : TC01_XML_BOPIS_SL_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC02_XML_BOPIS_ML_OrderFulfillment
+Test successfully completed : TC02_XML_BOPIS_ML_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]

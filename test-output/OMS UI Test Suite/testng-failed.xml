@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [OMS UI Test Suite]">
+  <test thread-count="5" name="OMS(failed)" parallel="methods">
+    <classes>
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment">
+        <methods>
+          <include name="sendReports"/>
+          <include name="initialSetup"/>
+          <include name="tearDown"/>
+          <include name="TC03_COM_RegisteredUser_SFS_SL_OrderFulfillment"/>
+          <include name="initiate"/>
+          <include name="driverInitialization"/>
+          <include name="TC04_COM_RegisteredUser_SFS_ML_OrderFulfillment"/>
+        </methods>
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment -->
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality">
+        <methods>
+          <include name="sendReports"/>
+          <include name="initialSetup"/>
+          <include name="initiate"/>
+          <include name="driverInitialization"/>
+          <include name="tearDown"/>
+          <include name="TC05_COM_LoginFunctionality"/>
+        </methods>
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality -->
+    </classes>
+  </test> <!-- OMS(failed) -->
+</suite> <!-- Failed suite [OMS UI Test Suite] -->

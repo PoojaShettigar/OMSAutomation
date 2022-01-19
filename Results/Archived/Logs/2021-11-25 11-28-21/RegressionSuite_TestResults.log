@@ -1,0 +1,73 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_create_schedule_release_Order
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item ItemID="ATSTK_3151" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation Description="Nike Shorts" IsDeliveryAllowed="Y" IsHazmat="N" IsParcelShippingAllowed="Y" IsPickupAllowed="Y" IsShippingAllowed=" " ItemType="PROD" ManufacturerName="Nike" ShortDescription="Nike Strike X Shorts Mens - Inner size: 24.5 cm" Status="3000" UnitHeight="0.05" UnitHeightUOM="METER" UnitLength="0.05" UnitLengthUOM="CM" UnitWeight="0.05" UnitWeightUOM="KG" UnitWidth="5.4" UnitWidthUOM="METER"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ClassificationCodes VelocityCode="A"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="142386439455"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 25 Nov 2021 05:58:19 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="ATSTK_3151" OrganizationCode="FCVColombiaInc" Quantity="3" ShipNode="115" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 25 Nov 2021 05:58:21 GMT
+
+Test successfully passed : TC01_create_schedule_release_Order[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.RestAPI]

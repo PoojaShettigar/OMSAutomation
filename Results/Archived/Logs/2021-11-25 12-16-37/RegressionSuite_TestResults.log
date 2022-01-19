@@ -1,0 +1,41 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_create_schedule_release_Order
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic T01TUkVTVEFQSVVTRVI6b21zcmVzdGFwaXVzZXI=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="ATSTK_9809" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="660633201594"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 25 Nov 2021 06:46:36 GMT
+
+Test successfully passed : TC01_create_schedule_release_Order[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.RestAPI]

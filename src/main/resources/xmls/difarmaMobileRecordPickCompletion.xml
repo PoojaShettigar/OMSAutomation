@@ -1,0 +1,5 @@
+<Shipment DeliveryMethod="PICK" DocumentType="0001" ShipNode="" ShipmentKey="">
+<ShipmentLines>
+<ShipmentLine BackroomPickedQuantity="" OrderHeaderKey="" OrderLineKey="" Quantity="" ShipmentLineKey="" ShortageQty="0"/>
+</ShipmentLines>
+</Shipment>

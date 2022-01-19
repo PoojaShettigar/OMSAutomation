@@ -1,0 +1,4 @@
+Using chromedriver 95.0.4638.69 (resolved driver for Chrome 95)
+Exporting webdriver.chrome.driver as C:\Users\Admin\.cache\selenium\chromedriver\win32\95.0.4638.69\chromedriver.exe
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_SOM

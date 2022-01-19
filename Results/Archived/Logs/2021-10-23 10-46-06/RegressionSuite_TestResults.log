@@ -1,0 +1,30 @@
+Error reading commands.properties, using local instead
+Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_94 to get latest version of chromedriver (chromedriver.storage.googleapis.com)
+Error reading versions.properties, using local instead
+Using chromedriver 94.0.4606.41 (resolved driver for Chrome 94)
+Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+Clearing WebDriverManager resolution cache
+There was an error managing chromedriver 94.0.4606.41 (java.net.UnknownHostException: chromedriver.storage.googleapis.com) ... trying again avoiding reading release from repository
+Using chromedriver 94.0.4606.41 (resolved driver for Chrome 94)
+Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+There was an error managing chromedriver 94.0.4606.41 (java.net.UnknownHostException: chromedriver.storage.googleapis.com) ... trying again using latest driver stored in cache
+Using chromedriver 94.0.4606.41 (resolved driver for Chrome 94)
+Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+There was an error managing chromedriver 94.0.4606.41 (java.net.UnknownHostException: chromedriver.storage.googleapis.com)
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_LoginCheck_ValidCredentials
+Error reading commands.properties, using local instead
+Exception reading https://chromedriver.storage.googleapis.com/LATEST_RELEASE_94 to get latest version of chromedriver (chromedriver.storage.googleapis.com)
+Error reading versions.properties, using local instead
+Using chromedriver 94.0.4606.41 (resolved driver for Chrome 94)
+Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+Clearing WebDriverManager resolution cache
+There was an error managing chromedriver 94.0.4606.41 (java.net.UnknownHostException: chromedriver.storage.googleapis.com) ... trying again avoiding reading release from repository
+Using chromedriver 94.0.4606.41 (resolved driver for Chrome 94)
+Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+There was an error managing chromedriver 94.0.4606.41 (java.net.UnknownHostException: chromedriver.storage.googleapis.com) ... trying again using latest driver stored in cache
+Using chromedriver 94.0.4606.41 (resolved driver for Chrome 94)
+Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+There was an error managing chromedriver 94.0.4606.41 (java.net.UnknownHostException: chromedriver.storage.googleapis.com)
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC02_LoginCheck_InvalidCredentials

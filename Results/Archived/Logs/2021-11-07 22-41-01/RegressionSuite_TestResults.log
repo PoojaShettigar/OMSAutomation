@@ -1,0 +1,790 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_create_schedule_release_Order
+Pre-condition for Test: Load Item 
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item ItemID="ATSTK_1326" OrganizationCode="DEFAULT" UnitOfMeasure="EACH">
+    <PrimaryInformation Description="Nike Shorts" IsDeliveryAllowed="Y" IsHazmat="N" IsParcelShippingAllowed=" " IsPickupAllowed="Y" IsShippingAllowed="Y" ItemType="PROD" ManufacturerName="Nike" ShortDescription="Nike Strike X Shorts Mens - Inner size: 24.5 cm" Status="3000" UnitHeight="0.05" UnitHeightUOM="METER" UnitLength="0.05" UnitLengthUOM="CM" UnitWeight="0.05" UnitWeightUOM="KG" UnitWidth="5.4" UnitWidthUOM="METER"/>
+    <InventoryParameters ATPRule="DEFAULT"/>
+    <ClassificationCodes VelocityCode="A"/>
+    <ItemAliasList>
+      <ItemAlias AliasName="UPC" AliasValue="483938259521"/>
+    </ItemAliasList>
+  </Item>
+  <Item ItemID="ATSTK_6256" OrganizationCode="DEFAULT" UnitOfMeasure="EACH">
+    <PrimaryInformation Description="Nike Shorts" IsDeliveryAllowed="Y" IsHazmat="N" IsParcelShippingAllowed=" " IsPickupAllowed="Y" IsShippingAllowed="Y" ItemType="PROD" ManufacturerName="Nike" ShortDescription="Nike Strike X Shorts Mens - Inner size: 24.5 cm" Status="3000" UnitHeight="0.05" UnitHeightUOM="METER" UnitLength="0.05" UnitLengthUOM="CM" UnitWeight="0.05" UnitWeightUOM="KG" UnitWidth="5.4" UnitWidthUOM="METER"/>
+    <InventoryParameters ATPRule="DEFAULT"/>
+    <ClassificationCodes VelocityCode="A"/>
+    <ItemAliasList>
+      <ItemAlias AliasName="UPC" AliasValue="383846096088"/>
+    </ItemAliasList>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+Date: Sun, 07 Nov 2021 17:10:57 GMT
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="ATSTK_1326" OrganizationCode="DEFAULT" Quantity="2" ShipNode="Matrix_WH1" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="ATSTK_6256" OrganizationCode="DEFAULT" Quantity="4" ShipNode="Matrix_WH1" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+Date: Sun, 07 Nov 2021 17:10:57 GMT
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="05339415" ShipNode="Matrix_WH1">
+  <PersonInfoShipTo AddressID="" AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" City="Mississauga" Country="CA" EMailID="perfaware@gmail.com" FirstName="Perfaware" LastName="User" MobilePhone="9481601389" State="ON" ZipCode="L5R3T8"/>
+  <PersonInfoBillTo AddressID="" AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" City="Mississauga" Country="CA" EMailID="perfaware@gmail.com" FirstName="Perfaware" LastName="User" MobilePhone="9481601389" State="ON" ZipCode="L5R3T8"/>
+  <OrderLines>
+    <OrderLine LineType="SHP" OrderedQty="2" PrimeLineNo="1">
+      <Item ItemID="ATSTK_1326" UnitCost="10" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsLinePriceForInformationOnly="N" IsPriceLocked="Y" ListPrice="0" PricingQuantityStrategy="FIX" RetailPrice="0" UnitPrice="0"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="SHIPPING_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="CITY_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="COUNTY_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="DISTRICT_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="STATE_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="SALES_TAX"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine LineType="SHP" OrderedQty="4" PrimeLineNo="2">
+      <Item ItemID="ATSTK_6256" UnitCost="10" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsLinePriceForInformationOnly="N" IsPriceLocked="Y" ListPrice="0" PricingQuantityStrategy="FIX" RetailPrice="0" UnitPrice="0"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="SHIPPING_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="CITY_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="COUNTY_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="DISTRICT_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="STATE_TAX"/>
+        <LineTax ChargeCategory="" Reference1="0" Tax="0" TaxName="SALES_TAX"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentDetails CVVAuthCode="476" ChargeType="CHARGE"/>
+    <PaymentMethod CreditCardExpDate="10/2025" CreditCardName="HDFC" CreditCardNo="478367543892" CreditCardType="VISA" FirstName="Perfaware" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+Date: Sun, 07 Nov 2021 17:10:58 GMT
+Content-Length: 157
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderHeaderKey="2021110722405844511" OrderNo="05339415"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="05339415"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+Date: Sun, 07 Nov 2021 17:10:59 GMT
+Content-Length: 3334
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Order AuthorizationExpirationDate="2021-11-07T22:40:57-05:00" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="perfaware@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="DEFAULT" EntryType="" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2021-11-07T22:40:57-05:00" OrderHeaderKey="2021110722405844511" OrderName="" OrderNo="05339415" OrderType="" OriginalTax="0.00" OriginalTotalAmount="0.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="DEFAULT" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="USD" EnterpriseCurrency="USD" ReportingConversionDate="2021-11-07T22:40:57-05:00" ReportingConversionRate="1.00" TotalAmount="0.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-07" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="SHP" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="2.00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Created" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_1326" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_1326" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-07T22:40:57-05:00" ExpectedShipmentDate="2021-11-07T22:40:57-05:00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072251405844515" Quantity="2.00" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072251405844515" OrderReleaseStatusKey="202111072235405844516" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1100" StatusDate="2021-11-07T22:40:57-05:00" StatusDescription="Created" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-07T22:40:57-05:00" ExpectedShipmentDate="2021-11-07T22:40:57-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-07" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="SHP" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="4.00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderedQty="4.00" OriginalOrderedQty="4.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="4.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Created" StatusQuantity="4.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_6256" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_6256" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="4.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="4.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-07T22:40:57-05:00" ExpectedShipmentDate="2021-11-07T22:40:57-05:00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072295405844517" Quantity="4.00" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="4.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="4.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072295405844517" OrderReleaseStatusKey="202111072298405844518" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1100" StatusDate="2021-11-07T22:40:57-05:00" StatusDescription="Created" StatusQty="4.00" TotalQuantity="4.00">
+          <Details ExpectedDeliveryDate="2021-11-07T22:40:57-05:00" ExpectedShipmentDate="2021-11-07T22:40:57-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <PersonInfoBillTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="10/2025" CreditCardName="HDFC" CreditCardNo="478367543892" CreditCardType="VISA" CustomerPONo="" DisplayCreditCardNo="3892" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="0.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="0.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00"/>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <HeaderCharges/>
+  <HeaderTaxes/>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072251405844515" OrderReleaseStatusKey="202111072235405844516" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1100" StatusDate="2021-11-07T22:40:57-05:00" StatusDescription="Created" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-07T22:40:57-05:00" ExpectedShipmentDate="2021-11-07T22:40:57-05:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072295405844517" OrderReleaseStatusKey="202111072298405844518" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1100" StatusDate="2021-11-07T22:40:57-05:00" StatusDescription="Created" StatusQty="4.00" TotalQuantity="4.00">
+      <Details ExpectedDeliveryDate="2021-11-07T22:40:57-05:00" ExpectedShipmentDate="2021-11-07T22:40:57-05:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Pre-condition for Test: Change Order for resolving the holds
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/scheduleOrder
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/scheduleOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ScheduleOrder CheckInventory="Y" DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="05339415"/>
+
+API Response received : 
+HTTP/1.1 204 No Content
+Date: Sun, 07 Nov 2021 17:10:59 GMT
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="05339415"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+Date: Sun, 07 Nov 2021 17:10:59 GMT
+Content-Length: 3326
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Order AuthorizationExpirationDate="2021-11-07T22:40:59-05:00" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="perfaware@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="DEFAULT" EntryType="" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1500" MaxOrderStatusDesc="Scheduled" MinOrderStatus="1500" MinOrderStatusDesc="Scheduled" NotifyAfterShipmentFlag="N" OrderDate="2021-11-07T22:40:57-05:00" OrderHeaderKey="2021110722405844511" OrderName="" OrderNo="05339415" OrderType="" OriginalTax="0.00" OriginalTotalAmount="0.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="DEFAULT" Status="Scheduled" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="Y"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="Y"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="Y"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="Y"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="Y"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="Y"/>
+  </AllowedModifications>
+  <PriceInfo Currency="USD" EnterpriseCurrency="USD" ReportingConversionDate="2021-11-07T22:40:57-05:00" ReportingConversionRate="1.00" TotalAmount="0.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-07" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="SHP" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="0.00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Scheduled" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_1326" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_1326" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-07T22:40:58-05:00" ExpectedShipmentDate="2021-11-07T22:40:58-05:00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072282405944534" Quantity="2.00" ScheduleNo="2" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072282405944534" OrderReleaseStatusKey="202111072241405944535" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1500" StatusDate="2021-11-07T22:40:59-05:00" StatusDescription="Scheduled" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-07T22:40:58-05:00" ExpectedShipmentDate="2021-11-07T22:40:58-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-07" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="SHP" MaxLineStatus="1500" MaxLineStatusDesc="Scheduled" MinLineStatus="1500" MinLineStatusDesc="Scheduled" OpenQty="0.00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderedQty="4.00" OriginalOrderedQty="4.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="4.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Scheduled" StatusQuantity="4.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_6256" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_6256" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="4.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="4.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-07T22:40:58-05:00" ExpectedShipmentDate="2021-11-07T22:40:58-05:00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072297405944536" Quantity="4.00" ScheduleNo="2" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="4.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="4.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072297405944536" OrderReleaseStatusKey="202111072239405944537" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1500" StatusDate="2021-11-07T22:40:59-05:00" StatusDescription="Scheduled" StatusQty="4.00" TotalQuantity="4.00">
+          <Details ExpectedDeliveryDate="2021-11-07T22:40:58-05:00" ExpectedShipmentDate="2021-11-07T22:40:58-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <PersonInfoBillTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="10/2025" CreditCardName="HDFC" CreditCardNo="478367543892" CreditCardType="VISA" CustomerPONo="" DisplayCreditCardNo="3892" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="0.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="0.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00"/>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <HeaderCharges/>
+  <HeaderTaxes/>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072282405944534" OrderReleaseStatusKey="202111072241405944535" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1500" StatusDate="2021-11-07T22:40:59-05:00" StatusDescription="Scheduled" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-07T22:40:58-05:00" ExpectedShipmentDate="2021-11-07T22:40:58-05:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072297405944536" OrderReleaseStatusKey="202111072239405944537" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="1500" StatusDate="2021-11-07T22:40:59-05:00" StatusDescription="Scheduled" StatusQty="4.00" TotalQuantity="4.00">
+      <Details ExpectedDeliveryDate="2021-11-07T22:40:58-05:00" ExpectedShipmentDate="2021-11-07T22:40:58-05:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Pre-condition for Test: Change Order for resolving the holds
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/releaseOrder
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/releaseOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ReleaseOrder CheckInventory="Y" DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="05339415"/>
+
+API Response received : 
+HTTP/1.1 204 No Content
+Date: Sun, 07 Nov 2021 17:11:00 GMT
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="DEFAULT" OrderNo="05339415"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+Date: Sun, 07 Nov 2021 17:11:00 GMT
+Content-Length: 3332
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<Order AuthorizationExpirationDate="2021-11-07T22:40:59-05:00" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="perfaware@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnterpriseCode="DEFAULT" EntryType="" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="3200" MaxOrderStatusDesc="Released" MinOrderStatus="3200" MinOrderStatusDesc="Released" NotifyAfterShipmentFlag="N" OrderDate="2021-11-07T22:40:57-05:00" OrderHeaderKey="2021110722405844511" OrderName="" OrderNo="05339415" OrderType="" OriginalTax="0.00" OriginalTotalAmount="0.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="DEFAULT" Status="Released" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="Y"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="Y"/>
+    <Modification ModificationType="TAX" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="Y"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="Y"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="Y"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="Y"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="Y"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD" ThroughOverride="Y"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="PRICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="Y"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="Y"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="Y"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="Y"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="Y"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="Y"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="Y"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="UNSCHEDULE" ThroughOverride="Y"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="Y"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="Y"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="Y"/>
+  </AllowedModifications>
+  <PriceInfo Currency="USD" EnterpriseCurrency="USD" ReportingConversionDate="2021-11-07T22:40:57-05:00" ReportingConversionRate="1.00" TotalAmount="0.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-07" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="SHP" MaxLineStatus="3200" MaxLineStatusDesc="Released" MinLineStatus="3200" MinLineStatusDesc="Released" OpenQty="0.00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderedQty="2.00" OriginalOrderedQty="2.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="2.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Released" StatusQuantity="2.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_1326" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_1326" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="2.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-07T22:40:59-05:00" ExpectedShipmentDate="2021-11-07T22:40:59-05:00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072282410044545" Quantity="2.00" ScheduleNo="3" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072282410044545" OrderReleaseKey="2021110722410044544" OrderReleaseStatusKey="202111072227410044546" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="3200" StatusDate="2021-11-07T22:40:59-05:00" StatusDescription="Released" StatusQty="2.00" TotalQuantity="2.00">
+          <Details ExpectedDeliveryDate="2021-11-07T22:40:59-05:00" ExpectedShipmentDate="2021-11-07T22:40:59-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-07" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="SHP" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0.00" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="SHP" MaxLineStatus="3200" MaxLineStatusDesc="Released" MinLineStatus="3200" MinLineStatusDesc="Released" OpenQty="0.00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderedQty="4.00" OriginalOrderedQty="4.00" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="4.00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="Matrix_WH1" ShipTogetherNo="" SplitQty="0.00" Status="Released" StatusQuantity="4.00" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="" CountryOfOrigin="" CustomerItem="ATSTK_6256" CustomerItemDesc="Nike Shorts" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Nike Shorts" ItemID="ATSTK_6256" ItemShortDesc="Nike Strike X Shorts Mens - Inner size: 24.5 cm" ItemWeight="0.05" ItemWeightUOM="KG" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="Nike" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="10.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="4.00" DiscountPercentage="0.00" InvoicedPricingQty="0.00" IsPriceLocked="Y" LineTotal="0.00" ListPrice="0.00" OrderedPricingQty="4.00" PricingQtyConversionFactor="0.00" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0.00" TaxableFlag="N" UnitPrice="0.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-07T22:40:59-05:00" ExpectedShipmentDate="2021-11-07T22:40:59-05:00" OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072240410044547" Quantity="4.00" ScheduleNo="3" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="4.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="4.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="CITY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="COUNTY_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="DISTRICT_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="STATE_TAX" TaxPercentage="0.00"/>
+        <LineTax ChargeCategory="" ChargeName="" ChargeNameKey="" InvoicedTax="0.00" Reference1="0" Reference2="" Reference3="" RemainingTax="0.00" Tax="0.00" TaxName="SALES_TAX" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SHIPPING_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="CITY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="COUNTY_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="DISTRICT_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="STATE_TAX"/>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="0.00" RemainingTax="0.00" TaxName="SALES_TAX"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072240410044547" OrderReleaseKey="2021110722410044544" OrderReleaseStatusKey="202111072292410044548" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="3200" StatusDate="2021-11-07T22:40:59-05:00" StatusDescription="Released" StatusQty="4.00" TotalQuantity="4.00">
+          <Details ExpectedDeliveryDate="2021-11-07T22:40:59-05:00" ExpectedShipmentDate="2021-11-07T22:40:59-05:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <PersonInfoBillTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="10/2025" CreditCardName="HDFC" CreditCardNo="478367543892" CreditCardType="VISA" CustomerPONo="" DisplayCreditCardNo="3892" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="" PaymentReference3="" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="0.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="0.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00"/>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <HeaderCharges/>
+  <HeaderTaxes/>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844512" OrderLineScheduleKey="202111072282410044545" OrderReleaseKey="2021110722410044544" OrderReleaseStatusKey="202111072227410044546" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="3200" StatusDate="2021-11-07T22:40:59-05:00" StatusDescription="Released" StatusQty="2.00" TotalQuantity="2.00">
+      <Details ExpectedDeliveryDate="2021-11-07T22:40:59-05:00" ExpectedShipmentDate="2021-11-07T22:40:59-05:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2021110722405844511" OrderLineKey="2021110722405844513" OrderLineScheduleKey="202111072240410044547" OrderReleaseKey="2021110722410044544" OrderReleaseStatusKey="202111072292410044548" PipelineKey="SALES-10.0" ShipNode="Matrix_WH1" Status="3200" StatusDate="2021-11-07T22:40:59-05:00" StatusDescription="Released" StatusQty="4.00" TotalQuantity="4.00">
+      <Details ExpectedDeliveryDate="2021-11-07T22:40:59-05:00" ExpectedShipmentDate="2021-11-07T22:40:59-05:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : http://localhost:7001/smcfs/restapi/invoke/getOrderReleaseList
+API Request sent : 
+Request method:	POST
+Request URI:	http://localhost:7001/smcfs/restapi/invoke/getOrderReleaseList
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<OrderRelease OrderHeaderKey="2021110722405844511"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+Date: Sun, 07 Nov 2021 17:11:01 GMT
+Content-Length: 1138
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+
+<OrderReleaseList LastOrderReleaseKey="2021110722410044544" LastRecordSet="Y" ReadFromHistory="" TotalOrderReleaseList="1">
+  <OrderRelease CarrierAccountNo="" CarrierServiceCode="" Currency="" CustomerPoNo="" DeliveryCode="" Division="" DocumentType="0001" EnterpriseCode="DEFAULT" FOB="" HoldFlag="N" HoldReasonCode="" MaxOrderReleaseStatus="3200" MaxOrderReleaseStatusDesc="Released" MinOrderReleaseStatus="3200" MinOrderReleaseStatusDesc="Released" NotifyAfterShipmentFlag="N" OrderDate="2021-11-07T22:40:57-05:00" OrderHeaderKey="2021110722405844511" OrderName="" OrderReleaseKey="2021110722410044544" OrderType="" OtherCharges="0.00" PacklistType="" PersonalizeCode="" PriorityCode="" Purpose="" ReleaseNo="1" ReleaseSeqNo="0" ReqCancelDate="2500-01-01T00:00:00-05:00" ReqDeliveryDate="2021-11-07T22:40:59-05:00" ReqShipDate="2021-11-07T22:40:59-05:00" SCAC="" SalesOrderNo="05339415" SellerOrganizationCode="DEFAULT" ShipAdviceNo="05339415_1" ShipCompleteFlag="N" ShipLineComplete="" ShipNode="Matrix_WH1" ShipNodeClass="" ShipOrderComplete="" ShipToKey="2021102116413335818" Status="Released" SupplierCode="Matrix_WH1" SupplierName="MatrixR" TaxpayerId="" isHistory="N">
+    <Order AuthorizationExpirationDate="2021-11-07T22:40:59-05:00" CarrierAccountNo="" CarrierServiceCode="" ChargeActualFreightFlag="N" CustomerEMailID="perfaware@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" EnterpriseCode="DEFAULT" EntryType="" FreightTerms="" HoldFlag="N" HoldReasonCode="" NotifyAfterShipmentFlag="N" OrderDate="2021-11-07T22:40:57-05:00" OrderHeaderKey="2021110722405844511" OrderName="" OrderNo="05339415" OrderType="" OriginalTax="0.00" OriginalTotalAmount="0.00" OtherCharges="0.00" PaymentStatus="AUTHORIZED" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="DEFAULT" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N"/>
+    <PersonInfoShipTo AddressLine1="5995 Avebury Rd Suite 100" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Mississauga" Company="" Country="CA" DayFaxNo="" DayPhone="" Department="" EMailID="perfaware@gmail.com" EveningFaxNo="" EveningPhone="" FirstName="Perfaware" JobTitle="" LastName="User" MiddleName="" MobilePhone="9481601389" OtherPhone="" PersonID="" PersonInfoKey="2021102116413335818" State="ON" Suffix="" Title="" ZipCode="L5R3T8"/>
+  </OrderRelease>
+</OrderReleaseList>
+
+Test successfully passed : TC01_create_schedule_release_Order[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.RestAPI]

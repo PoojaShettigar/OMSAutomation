@@ -1,0 +1,3 @@
+com\perfaware\automation\oms\sterling\common\testcases\COM_LoginFunctionality.class
+com\perfaware\automation\oms\sterling\common\testcases\XML_BOPIS_OrderFulfillment.class
+com\perfaware\automation\oms\sterling\common\testcases\COM_RegisteredUser_SFS_OrderFulfillment.class

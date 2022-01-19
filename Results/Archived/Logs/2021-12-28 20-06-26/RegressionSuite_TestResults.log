@@ -1,0 +1,3 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_COM_RegisteredUser_SFS_OrderFulfillment
+Test successfully passed : TC01_COM_RegisteredUser_SFS_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment]

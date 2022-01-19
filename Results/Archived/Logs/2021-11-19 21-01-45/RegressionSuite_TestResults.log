@@ -1,0 +1,7 @@
+Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
+Reading https://chromedriver.storage.googleapis.com/ to seek chromedriver
+Downloading https://chromedriver.storage.googleapis.com/96.0.4664.45/chromedriver_win32.zip
+Extracting driver from compressed file chromedriver_win32.zip
+Exporting webdriver.chrome.driver as C:\Users\Admin\.cache\selenium\chromedriver\win32\96.0.4664.45\chromedriver.exe
+Using chromedriver 96.0.4664.45 (resolved driver for Chrome 96)
+Exporting webdriver.chrome.driver as C:\Users\Admin\.cache\selenium\chromedriver\win32\96.0.4664.45\chromedriver.exe
