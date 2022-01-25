@@ -37,7 +37,7 @@ public class Page_COM_Login {
 	@CacheLookup
 	private WebElement txtLoginError;
 
-	
+
 	@FindBy(xpath="//a[@title='Administrator']")
 	@CacheLookup
 	private WebElement lnkAdministrator;
@@ -47,8 +47,7 @@ public class Page_COM_Login {
 	private WebElement lnkLogout;
 	
 	public void enterUsername(String username) {
-		uiUtil.enterInput(txtbxUserName, username, "Username");
-		
+		uiUtil.enterInput(txtbxUserName, username, "Username");	
 	}
 	
 	public void enterPassword(String password) {

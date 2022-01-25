@@ -1,5 +1,4 @@
 package com.perfaware.automation.oms.sterling.common.applicationHelper;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,7 +21,9 @@ public enum MappedTags {
 	DifarmaMobileFinishCustomerPickService("ShipmentLines","ShipmentLine","difarmaMobileFinishCustomerPickService.xml"),
 	DifarmaMobileConfirmShipment("Shipment","Shipment","difarmaMobileConfirmShipment.xml"),
 	changeShipmentStatus("Shipment","Shipment","changeShipmentStatus.xml"),
-	changeOrder("Order","Order","changeOrder.xml");
+	changeOrder("Order","Order","changeOrder.xml"),
+	processOrderPayments("Order","Order","processOrderPayments.xml");
+	
 	
 	MappedTags(String p,String a,String m,String... keysAndValues ){
 		parentTag = p;

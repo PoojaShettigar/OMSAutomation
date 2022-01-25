@@ -1,5 +1,4 @@
 package com.perfaware.automation.oms.sterling.common.testListeners;
-
 import static io.restassured.RestAssured.given;
 
 import java.io.File;
@@ -58,7 +57,6 @@ public class TestListener implements ITestListener {
 		test = report.createTest(result.getMethod().getMethodName());
 		ExtentFactory.getInstance().setExtent(test);
 	}
-
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		logger.info("Test successfully completed : " + result.getMethod().getMethodName() + result.getTestClass());
@@ -75,18 +73,18 @@ public class TestListener implements ITestListener {
 		result.getThrowable().printStackTrace(new PrintWriter(sw));
 		logger.error(sw.toString());
 		sw = null;
-		//add screenshot for failed test.
-		File srcFile = ((TakesScreenshot)DriverFactory.getInstance().getDriver()).getScreenshotAs(OutputType.FILE);
-		
-		SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyy HH-mm-ss");
-		Date date = new Date();
-		String actualDate = format.format(date);
-		
-		String screenshotPath = System.getProperty("user.dir")+ExtentManager.reportPropertyMap.get("screenshotFolder")+"/"
-				+ (util.getCurrentDateTime().replaceAll("/", "-").replaceAll(":", "-"))+"/"+actualDate+".jpeg";
-		File destFile = new File(screenshotPath);
 		
 		try {
+			//add screenshot for failed test.
+			File srcFile = ((TakesScreenshot)DriverFactory.getInstance().getDriver()).getScreenshotAs(OutputType.FILE);
+			System.out.println("srcFile->"+srcFile);
+			SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyy HH-mm-ss");
+			Date date = new Date();
+			String actualDate = format.format(date);
+			
+			String screenshotPath = System.getProperty("user.dir")+"/Results/Screenshots/"+actualDate+".jpeg";
+			System.out.println(System.getProperty("user.dir"));
+			File destFile = new File(screenshotPath);
 			util.copyFile(srcFile, destFile);
 			ExtentFactory.getInstance().getExtent().addScreenCaptureFromPath(screenshotPath, "Test case failure screenshot");
 			ExtentFactory.getInstance().removeExtentObject();
@@ -117,7 +115,6 @@ public class TestListener implements ITestListener {
 	public void onStart(ITestContext context) {
 		try {
 			 report = ExtentManager.setupExtentReport();
-			 
 			/*try {
 			PropertyReader.propertyMap = new PropertyReader()
 					.getProperties(curDir + "/src/test/resources/config.Properties");

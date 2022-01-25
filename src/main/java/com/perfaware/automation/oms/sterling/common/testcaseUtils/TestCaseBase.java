@@ -42,7 +42,6 @@ public class TestCaseBase {
 	protected Utilities util;
 
 
-
 	@BeforeSuite(alwaysRun=true)
 	public void initialSetup() throws Exception {
 	
@@ -55,8 +54,8 @@ public class TestCaseBase {
 		String currentFolder = curDir + ExtentManager.reportPropertyMap.get("htmlReportFolder");
 		initializeReports(currentFolder);
 		
-		String currentScreenshotFolder= curDir + ExtentManager.reportPropertyMap.get("screenshotFolder");
-		initializeScreenshots(currentScreenshotFolder);
+		//String currentScreenshotFolder= curDir + ExtentManager.reportPropertyMap.get("screenshotFolder");
+		//initializeScreenshots(currentScreenshotFolder);
 			
 		
 		excelFilePath_jira = curDir + PropertyFileReader.propertyMap.get("JiraTickets");

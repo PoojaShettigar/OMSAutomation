@@ -33,8 +33,7 @@ import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 import io.restassured.response.Response;
 
 public class COMTestMethods {
-	public  void COM_RegisteredUser_OrderCreation(HashMap<String, Map<String, String>> comData,String tcId,UIUtilities uiUtil, RequestHelper helper, OrderTypes orderTypes, String noOfLines, Response response, Map<String, String> tempData,Logger logger, Map<String, List<Map<String, String>>> comTestData, Map<String, String> itemData, SoftAssertion softAssert) throws Exception {
-		
+	public void COM_RegisteredUser_OrderCreation(HashMap<String, Map<String, String>> comData,String tcId,UIUtilities uiUtil, RequestHelper helper, OrderTypes orderTypes, String noOfLines, Response response, Map<String, String> tempData,Logger logger, Map<String, List<Map<String, String>>> comTestData, Map<String, String> itemData, SoftAssertion softAssert) throws Exception {		
 		Map<String, String> data = comData.get(tcId);
 		uiUtil.waitForPageLoad(3);
 		Page_COM_Login loginObj = new Page_COM_Login(DriverFactory.getInstance().getDriver());
@@ -46,12 +45,12 @@ public class COMTestMethods {
 		uiUtil.waitForPageLoad(7); 
 		homeObj.selectEenterprise(data.get("Enterprise")); 
 		Page_CustomerSearch customerSearchObj = homeObj.clickApply(); 
-		uiUtil.waitForPageLoad(3);	
+		uiUtil.waitForPageLoad(5);	
 		
 		//Search Customer Page
 		customerSearchObj.enterEmailAddress(data.get("EmailAddress"));
 		customerSearchObj.clickSearchButton();
-		uiUtil.waitForPageLoad(3);
+		uiUtil.waitForPageLoad(5);
 		Page_AddProducts addProductsObj=customerSearchObj.clickNextButton();
 		uiUtil.waitForPageLoad(6);
 			
@@ -116,8 +115,7 @@ public class COMTestMethods {
 		tempData.put("Enterprise", comData.get(tcId).get("Enterprise"));
 		String orderNo= summary.captureOrderNo();
 		APIMethods apiMethods=new APIMethods();
-		apiMethods.StoreOrderFulfillment(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, comTestData, itemData, softAssert,summary);
-		
+		apiMethods.StoreOrderFulfillment(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, comTestData, itemData, softAssert,summary);		
 	}
 	
 	public  Page_Home COM_PerformLogin(String userName,String password, Page_COM_Login loginObj) throws Exception {

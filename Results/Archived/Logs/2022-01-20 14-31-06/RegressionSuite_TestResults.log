@@ -1,0 +1,297 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="680256" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="021085529999"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 20 Jan 2022 09:00:55 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="680256" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 20 Jan 2022 09:00:56 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC22291890" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="680256" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="35970.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="35970.00" RequestAmount="35970.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 163
+Date: Thu, 20 Jan 2022 09:00:57 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022012009005768292531" OrderNo="COCC22291890"/>
+
+Test successfully completed : TC01_XML_BOPIS_SL_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC02_XML_BOPIS_ML_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="620313" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="016529585891"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="493853" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="818639349098"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 20 Jan 2022 09:00:55 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="620313" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="493853" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="2" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 20 Jan 2022 09:00:56 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC21359321" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="620313" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="2" PrimeLineNo="2" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="493853" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="59950.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="59950.00" RequestAmount="59950.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 164
+Date: Thu, 20 Jan 2022 09:00:57 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022012009005768292530" OrderNo="COCC21359321"/>
+
+Test successfully completed : TC02_XML_BOPIS_ML_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]

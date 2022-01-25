@@ -100,35 +100,36 @@ public class COM_RegisteredUser_SFS_OrderFulfillment extends TestCaseBase {
 	}
 	
 	@Test(groups= {"Smoke"})
-	public void TC03_COM_RegisteredUser_SFS_SL_OrderFulfillment() throws Exception {
+	public void TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment() throws Exception {
 		Response response = null;
 		String orderNo;
 		SoftAssertion softAssert = new SoftAssertion();
 		OrderTypes orderTypes = OrderTypes.STKSTH;
-		String noOfLines = comData.get("TC01").get("NumberOfProducts");
+		String noOfLines = comData.get("TC05").get("NumberOfProducts");
 		Map<String, String> itemData = helper.generateItemIds_ForOrder(OrderTypes.STKSTH, noOfLines);
 		Map<String, String> tempData = new HashMap<String, String>();
 		uiUtil=new UIUtilities();
 		COMTestMethods comMethods=new COMTestMethods();
-		tempData.put("Enterprise", comData.get("TC01").get("Enterprise"));
+		tempData.put("Enterprise", comData.get("TC05").get("Enterprise"));
 		Page_OrderSummary summary=new Page_OrderSummary(DriverFactory.getInstance().getDriver());
-		comMethods.COM_RegisteredUser_OrderCreation(comData,"TC01",uiUtil,helper, orderTypes, noOfLines, response, tempData, logger, comTestData, itemData, softAssert);
+		comMethods.COM_RegisteredUser_OrderCreation(comData,"TC05",uiUtil,helper, orderTypes, noOfLines, response, tempData, logger, comTestData, itemData, softAssert);
 
 	}	
 	
 	@Test(groups= {"Regression"})
-	public void TC04_COM_RegisteredUser_SFS_ML_OrderFulfillment() throws Exception {
+	public void TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment() throws Exception {
 		Response response = null;
 		String orderNo;
 		SoftAssertion softAssert = new SoftAssertion();
 		OrderTypes orderTypes = OrderTypes.STKSTH;
-		String noOfLines = comData.get("TC02").get("NumberOfProducts");
+		String noOfLines = comData.get("TC03").get("NumberOfProducts");
 		Map<String, String> itemData = helper.generateItemIds_ForOrder(OrderTypes.STKSTH, noOfLines);
 		Map<String, String> tempData = new HashMap<String, String>();
 		uiUtil=new UIUtilities();
 		COMTestMethods comMethods=new COMTestMethods();
+		tempData.put("Enterprise", comData.get("TC03").get("Enterprise"));
 		Page_OrderSummary summary=new Page_OrderSummary(DriverFactory.getInstance().getDriver());
-		comMethods.COM_RegisteredUser_OrderCreation(comData,"TC02",uiUtil,helper, orderTypes, noOfLines, response, tempData,logger, comTestData, itemData, softAssert);
+		comMethods.COM_RegisteredUser_OrderCreation(comData,"TC03",uiUtil,helper, orderTypes, noOfLines, response, tempData,logger, comTestData, itemData, softAssert);
 
 	}	
 }

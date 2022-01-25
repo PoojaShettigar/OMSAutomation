@@ -6,9 +6,7 @@ public enum OrderTypes {
 	;
 
 	 private TestData header_Type;
-		
-
-		
+			
 		public TestData getHeader_Type() {
 			return header_Type;
 		}

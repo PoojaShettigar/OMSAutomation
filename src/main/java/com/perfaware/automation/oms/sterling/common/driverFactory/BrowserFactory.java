@@ -25,6 +25,7 @@ public class BrowserFactory {
 				System.setProperty("webdriver.chrome.silentOutput", "true");
 				ChromeOptions options = new ChromeOptions();
 				options.addArguments("--incognito");
+				//options.addArguments("--headless");
 				options.addArguments("ignore-certificate-errors");
 				options.addArguments("lang=en-GB");
 				driver = new ChromeDriver(options);

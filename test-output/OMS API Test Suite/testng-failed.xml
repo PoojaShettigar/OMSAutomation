@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [OMS API Test Suite]">
-  <test thread-count="5" name="OMS(failed)" parallel="tests">
+  <test thread-count="5" name="OMS(failed)" parallel="classes">
     <classes>
       <class name="com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment">
         <methods>
           <include name="initiate"/>
           <include name="sendReports"/>
           <include name="initialSetup"/>
-          <include name="TC01_XML_BOPIS_SL_OrderFulfillment"/>
+          <include name="TC02_XML_BOPIS_ML_OrderFulfillment"/>
         </methods>
       </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment -->
     </classes>

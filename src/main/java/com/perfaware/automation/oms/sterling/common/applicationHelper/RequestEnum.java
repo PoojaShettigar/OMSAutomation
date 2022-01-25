@@ -28,8 +28,10 @@ public class RequestEnum {
 		DifarmaMobileConfirmShipment,
 		changeShipmentStatus,
 		changeShipment,
-		changeOrder;
+		changeOrder,
+		processOrderPayment;
 	
+		
 		
 		}
 

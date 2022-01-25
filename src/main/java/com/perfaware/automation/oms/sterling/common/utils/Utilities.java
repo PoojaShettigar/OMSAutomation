@@ -27,7 +27,6 @@ import org.apache.commons.io.FileUtils;
 import com.perfaware.automation.oms.sterling.common.fileReader.PropertyFileReader;
 import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentManager;
 
-
 public class Utilities {
 	
 	

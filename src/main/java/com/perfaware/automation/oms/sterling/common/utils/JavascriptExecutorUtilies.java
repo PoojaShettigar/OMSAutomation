@@ -18,7 +18,6 @@ public class JavascriptExecutorUtilies {
 	public JavascriptExecutorUtilies(WebDriver driver) {
 		 jse = ((JavascriptExecutor)driver); 
 	}
-
 	public void elementSelect(WebDriver driver,WebElement webElement,String keysToSend,String element) {
 		try {
 			//JavascriptExecutor jse = ((JavascriptExecutor)driver); 

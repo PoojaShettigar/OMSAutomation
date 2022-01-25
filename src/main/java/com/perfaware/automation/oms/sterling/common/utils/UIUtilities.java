@@ -42,7 +42,7 @@ public class UIUtilities {
 		} catch (Exception e) {
 		}
 	}
-	
+
 	public void elementClick(WebElement webElement,String element) {
 		webElement.click();
 		ExtentFactory.getInstance().getExtent().log(Status.PASS, element+"- Clicked Successfully! ");

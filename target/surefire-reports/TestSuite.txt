@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 307.07 s <<< FAILURE! - in TestSuite
-com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality.TC05_COM_LoginFunctionality  Time elapsed: 13.532 s  <<< FAILURE!
-java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality.TC05_COM_LoginFunctionality(COM_LoginFunctionality.java:92)
-

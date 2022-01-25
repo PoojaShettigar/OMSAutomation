@@ -35,7 +35,6 @@ public class ApplicationMethods {
 	protected static String curDir = System.getProperty("user.dir");
 	private static final Logger LOGGER = Logger.getLogger(RequestHelper.class);
 	
-
 	private String getFilePath(String testName, String fileName, Boolean isReadFromExcel) {
 		String filePath = "";
 		if (isReadFromExcel)
@@ -666,7 +665,7 @@ public class ApplicationMethods {
 		}
 		return XMLUtil.convertXMLDocumentToString(finalDoc);
 	}
-	
+
 	/**
 	 * This function return payload for getOrderHoldList
 	 * 

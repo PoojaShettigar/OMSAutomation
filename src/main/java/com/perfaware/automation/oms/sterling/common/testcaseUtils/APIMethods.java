@@ -44,7 +44,7 @@ public class APIMethods {
 			softAssert.assertTrue(false,"Order is not in valid status " + XMLUtil.getXmlPath(response.asString()).getString("Order[0].@Status"));
 		}
 		
-		
+	
 		//-resolveHold-----------------------------------------------------------------------------------------------------------------------------
 		
 		String isHoldApplied=XMLUtil.getXmlPath(response.asString()).getString("Order[0].@HoldFlag");
@@ -66,9 +66,7 @@ public class APIMethods {
 			
 			response = helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
 					TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.changeOrder, response, tempData, orderNo, logger,
-					testData, itemData,null);
-
-			
+					testData, itemData,null);			
 		}
 
 		//-scheduleOrder----------------------------------------------------------------------------------------------------------------------------
@@ -290,11 +288,12 @@ public class APIMethods {
 		
 	}
 	
+	
 	public Map<String, String> XMLOrderCreation(RequestHelper helper,OrderTypes orderTypes, String noOfLines,Response response, Map<String, String> tempData,
 			String orderNo, Logger logger, Map<String, List<Map<String, String>>> testData,
 			Map<String, String> itemData,SoftAssertion softAssert) throws Exception   {
 
-		TestCaseDetails testCaseDetails = new TestCaseDetails();
+		
 
 		helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
 		TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.manageItem, response, tempData, orderNo, logger,
@@ -304,6 +303,7 @@ public class APIMethods {
 				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.adjustInventory, response, tempData, orderNo, logger,
 				testData, itemData,null);
 		
+		TestCaseDetails testCaseDetails = new TestCaseDetails();
 		response = helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
 				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.createOrder, response, tempData, orderNo, logger,
 				testData, itemData,testCaseDetails);
@@ -522,5 +522,142 @@ public class APIMethods {
 		return tempData;
 	}
 	
+	public void manageItem(RequestHelper helper,OrderTypes orderTypes, String noOfLines,Response response, Map<String, String> tempData,
+			String orderNo, Logger logger, Map<String, List<Map<String, String>>> testData,
+			Map<String, String> itemData,SoftAssertion softAssert) throws Exception  {
+		
+		helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.manageItem, response, tempData, orderNo, logger,
+				testData, itemData,null);
+		
+	}
 	
+	public void adjustInventory(RequestHelper helper,OrderTypes orderTypes, String noOfLines,Response response, Map<String, String> tempData,
+			String orderNo, Logger logger, Map<String, List<Map<String, String>>> testData,
+			Map<String, String> itemData,SoftAssertion softAssert) throws Exception  {
+		
+		helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.adjustInventory, response, tempData, orderNo, logger,
+				testData, itemData,null);
+			
+	}
+	
+	public void manageInventoryAndAdjustInventory(RequestHelper helper,OrderTypes orderTypes, String noOfLines,Response response, Map<String, String> tempData,
+			String orderNo, Logger logger, Map<String, List<Map<String, String>>> testData,
+			Map<String, String> itemData,SoftAssertion softAssert) throws Exception  {
+		
+		helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.manageItem, response, tempData, orderNo, logger,
+				testData, itemData,null);
+		helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.adjustInventory, response, tempData, orderNo, logger,
+				testData, itemData,null);
+			
+	}
+	
+	public Response createOrder(RequestHelper helper,OrderTypes orderTypes, String noOfLines,Response response, Map<String, String> tempData,
+			String orderNo, Logger logger, Map<String, List<Map<String, String>>> testData,
+			Map<String, String> itemData,SoftAssertion softAssert) throws Exception  {
+		
+		TestCaseDetails testCaseDetails = new TestCaseDetails();
+		response = helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.createOrder, response, tempData, orderNo, logger,
+				testData, itemData,testCaseDetails);
+		
+		Response getOrderDetailsResponse = getOrderDetails(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		
+		if(XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status").equals(OmsConstants.OrderStatus_Created.getValue())||XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status").equals(OmsConstants.OrderStatus_Scheduled.getValue())) {
+			softAssert.assertTrue(true,"Order is in valid status " + XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"));
+			ExtentFactory.getInstance().getExtent().pass(MarkupHelper.createLabel(XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"), ExtentColor.BLUE));
+		}else {
+			softAssert.assertTrue(false,"Order is not in valid status " + XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"));
+		}
+		return response;		
+	}
+	
+	public Response getOrderDetails(RequestHelper helper,OrderTypes orderTypes, String noOfLines,Response response, Map<String, String> tempData,
+			String orderNo, Logger logger, Map<String, List<Map<String, String>>> testData,
+			Map<String, String> itemData,SoftAssertion softAssert) throws Exception  {
+		
+		String ohk = XMLUtil.getXmlPath(response.asString()).getString("Order[0].@OrderHeaderKey");
+		String enterpriseCode = XMLUtil.getXmlPath(response.asString()).getString("Order[0].@EnterpriseCode");
+		
+		tempData.clear();
+		tempData.put("Enterprise", enterpriseCode);
+		response = helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.getOrderDetails, response, tempData, orderNo, logger,
+				testData, itemData,null);
+		
+		return response;
+	}
+	
+	public void scheduleAndReleaseOrder(RequestHelper helper,OrderTypes orderTypes, String noOfLines,Response response, Map<String, String> tempData,
+			String orderNo, Logger logger, Map<String, List<Map<String, String>>> testData,
+			Map<String, String> itemData,SoftAssertion softAssert) throws Exception  {
+		
+
+		String ohk = XMLUtil.getXmlPath(response.asString()).getString("Order[0].@OrderHeaderKey");
+		String enterpriseCode = XMLUtil.getXmlPath(response.asString()).getString("Order[0].@EnterpriseCode");
+		
+		tempData.clear();
+		tempData.put("ScheduleOrder.EnterpriseCode",enterpriseCode);
+		tempData.put("ScheduleOrder.OrderNo", orderNo);
+		
+		 response = helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+				TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.scheduleOrder, response, tempData, orderNo, logger,
+				testData, itemData,null);
+		
+		 Response getOrderDetailsResponse = getOrderDetails(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		
+		 if(XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status").equals(OmsConstants.OrderStatus_Scheduled.getValue()) || XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status").equals(OmsConstants.OrderStatus_Released.getValue())||XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status").equals(OmsConstants.OrderStatus_BackroomPick.getValue())) {
+				softAssert.assertTrue(true,"Order is in valid status " + XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"));
+				ExtentFactory.getInstance().getExtent().pass(MarkupHelper.createLabel(XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"), ExtentColor.BLUE));
+			}else {
+				softAssert.assertTrue(false,"Order is not in valid status " + XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"));
+			}
+		 
+		 tempData.clear();
+		 tempData.put("ReleaseOrder.EnterpriseCode", enterpriseCode);
+		 tempData.put("ReleaseOrder.OrderNo", orderNo);
+
+		 response = helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+					TestData.LineTaxes_WO_GW_TAX, null,ResourceKey.releaseOrder, response, tempData, orderNo, logger,testData, itemData,null);
+			
+		 getOrderDetailsResponse = getOrderDetails(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		 if(XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status").equals(OmsConstants.OrderStatus_Released.getValue())||XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status").equals(OmsConstants.OrderStatus_BackroomPick.getValue())) {
+				softAssert.assertTrue(true,"Order is in valid status " + XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"));
+				ExtentFactory.getInstance().getExtent().pass(MarkupHelper.createLabel(XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"), ExtentColor.BLUE));
+			}else {
+				softAssert.assertTrue(false,"Order is not in valid status " + XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@Status"));
+			}		
+			
+	}
+	
+	public void resolveHold(RequestHelper helper,OrderTypes orderTypes, String noOfLines,Response response, Map<String, String> tempData,
+			String orderNo, Logger logger, Map<String, List<Map<String, String>>> testData,
+			Map<String, String> itemData,SoftAssertion softAssert) throws Exception  {
+		
+		Response getOrderDetailsResponse = getOrderDetails(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		String isHoldApplied=XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@HoldFlag");
+		String ohk = XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@OrderHeaderKey");
+		String sellerOrganizationCode=XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@SellerOrganizationCode");
+		String enterpriseCode = XMLUtil.getXmlPath(getOrderDetailsResponse.asString()).getString("Order[0].@EnterpriseCode");
+		
+		if(isHoldApplied.equalsIgnoreCase("Y")) {
+			tempData.put("OrderHoldType.OrderHeaderKey", ohk);
+			response = helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+					TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.getorderholdlist, response, tempData, orderNo, logger,
+					testData, itemData,null);
+			String holdValue = XMLUtil.getXmlPath(response.asString()).getString("OrderHoldTypes[0].OrderHoldType.@HoldType");
+			System.out.println(holdValue);
+			tempData.clear();
+			tempData.put("Order.OrderNo", orderNo);
+			tempData.put("Order.EnterpriseCode", sellerOrganizationCode);
+			tempData.put("Order.OrderHoldTypes.OrderHoldType.HoldType", holdValue);
+			
+			response = helper.requestCreationInOMS(orderTypes, noOfLines, PaymentTypes.CC.toString(),
+					TestData.LineTaxes_WO_GW_TAX, null, ResourceKey.changeOrder, response, tempData, orderNo, logger,
+					testData, itemData,null);			
+		}		
+	}	
 }

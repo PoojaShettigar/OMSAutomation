@@ -42,7 +42,7 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 	public static XSSFSheet worksheet;
 	public static String excelFilePath;
 
-	
+
 	@BeforeClass(alwaysRun=true)
 	public void initiate() throws Exception {
 
@@ -91,7 +91,7 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 		String orderNo;
 		SoftAssertion softAssert = new SoftAssertion();
 		OrderTypes orderTypes = OrderTypes.STKSTH;
-		String noOfLines = "2";
+		String noOfLines = "3";
 		Map<String, String> itemData = helper.generateItemIds_ForOrder(OrderTypes.STKSTH, noOfLines);
 		Map<String, String> tempData = new HashMap<String, String>();
 		orderNo = "COCC"+Utilities.generateRandomString(8);
@@ -102,7 +102,6 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 		for(int i =0;i<split.length;i++) {
 			nooflines = nooflines+Integer.valueOf(split[i]);
 		}
-		System.out.println(ExtentManager.reportFolder);
 		tempData=apiMethods.XMLOrderCreation(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
 		apiMethods.BopisOrderFulfillment(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
 		

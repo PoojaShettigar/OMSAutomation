@@ -8,16 +8,6 @@
       </run>
     </groups>
     <classes>
-      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment">
-        <methods>
-          <include name="sendReports"/>
-          <include name="initialSetup"/>
-          <include name="tearDown"/>
-          <include name="TC04_COM_RegisteredUser_SFS_OrderFulfillment"/>
-          <include name="initiate"/>
-          <include name="driverInitialization"/>
-        </methods>
-      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment -->
       <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality">
         <methods>
           <include name="sendReports"/>

@@ -1,5 +1,4 @@
 package com.perfaware.automation.oms.sterling.common.testcases;
-
 import java.io.FileInputStream;
 import java.net.MalformedURLException;
 import java.util.HashMap;
@@ -83,7 +82,7 @@ public class COM_LoginFunctionality extends TestCaseBase {
 	}
 	
 	@Test(groups= {"Regression"})
-	public void TC05_COM_LoginFunctionality() throws Exception {
+	public void TC04_COM_LoginFunctionality() throws Exception {
 		uiUtil=new UIUtilities();
 		COMTestMethods comMethods=new COMTestMethods();
 		Page_COM_Login loginObj = new Page_COM_Login(DriverFactory.getInstance().getDriver());
