@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Pre-condition for Test: getOrderReleaseList
+Test successfully completed : TC01_XML_BOPIS_SL_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.GenericOOBApis]

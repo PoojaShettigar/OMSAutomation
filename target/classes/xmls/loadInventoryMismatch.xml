@@ -1,0 +1,9 @@
+<Items ApplyDifferences="" BatchMode="" BatchSize="" CompleteInventoryFlag="" PublishedTime="" ReasonCode="" ReasonText="" ShipNode="Required" ValidateItems="" YantraMessageGroupID="">
+<Item InventoryOrganizationCode="Required" ItemID="Required" ProductClass="" UnitOfMeasure="">
+<Supplies>
+<Supply AvailabilityType="" ETA="" Quantity="" Segment="" SegmentType="" ShipByDate="" SupplyLineReference="" SupplyReference="" SupplyReferenceType="" SupplyType="Required">
+<Tag BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo=""/>
+</Supply>
+</Supplies>
+</Item>
+</Items>

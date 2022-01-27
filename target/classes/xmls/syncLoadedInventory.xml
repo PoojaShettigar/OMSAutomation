@@ -1,0 +1,5 @@
+<Inventory ApplyDifferences="" CompleteInventoryFlag="" InsertInventoryItem="" InventoryItemKeysStartingWith="" PublishedTime="" ReasonCode="" ReasonText="" RemoveInventoryNodeControl="" ShipNode="Required" SynchNonOnHandInventory="" YantraMessageGroupID="">
+<SupplyTypes>
+<SupplyType SupplyType=""/>
+</SupplyTypes>
+</Inventory>

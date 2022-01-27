@@ -1,0 +1,1344 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items ApplyDifferences="" BatchMode="" BatchSize="" CompleteInventoryFlag="" PublishedTime="" ReasonCode="" ReasonText="" ShipNode="" ValidateItems="" YantraMessageGroupID="">
+  <Item InventoryOrganizationCode="Required" ItemID="Required" ProductClass="" UnitOfMeasure="">
+    <Supplies>
+      <Supply AvailabilityType="" ETA="" Quantity="" Segment="" SegmentType="" ShipByDate="" SupplyLineReference="" SupplyReference="" SupplyReferenceType="" SupplyType="Required">
+        <Tag BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo=""/>
+      </Supply>
+    </Supplies>
+  </Item>
+</Items>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 258
+Connection: Close
+Date: Thu, 27 Jan 2022 03:22:01 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10364" ErrorDescription="Mandatory Parameters for the Operation are missing." HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Mandatory Parameters for the Operation are missing."/>
+    <Attribute Name="ErrorCode" Value="YFS10364"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="InventoryOrganizationCode" Value="Required"/>
+    <Attribute Name="ShipNode" Value=""/>
+    <Attribute Name="ItemID" Value="Required"/>
+  </Error>
+</Errors>
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.AssertionError: Status code for loadInventoryMismatch matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:329)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.loadInventoryMismatch(APIMethods.java:638)
+	at com.perfaware.automation.oms.sterling.common.testcases.GenericOOBApis.TC01_XML_BOPIS_SL_OrderFulfillment(GenericOOBApis.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items ApplyDifferences="" BatchMode="" BatchSize="" CompleteInventoryFlag="" PublishedTime="" ReasonCode="" ReasonText="" ShipNode="" ValidateItems="" YantraMessageGroupID="">
+  <Item InventoryOrganizationCode="Required" ItemID="Required" ProductClass="" UnitOfMeasure="">
+    <Supplies>
+      <Supply AvailabilityType="" ETA="" Quantity="" Segment="" SegmentType="" ShipByDate="" SupplyLineReference="" SupplyReference="" SupplyReferenceType="" SupplyType="Required">
+        <Tag BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo=""/>
+      </Supply>
+    </Supplies>
+  </Item>
+</Items>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 258
+Connection: Close
+Date: Thu, 27 Jan 2022 03:26:33 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10364" ErrorDescription="Mandatory Parameters for the Operation are missing." HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Mandatory Parameters for the Operation are missing."/>
+    <Attribute Name="ErrorCode" Value="YFS10364"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="InventoryOrganizationCode" Value="Required"/>
+    <Attribute Name="ShipNode" Value=""/>
+    <Attribute Name="ItemID" Value="Required"/>
+  </Error>
+</Errors>
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.AssertionError: Status code for loadInventoryMismatch matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:329)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.loadInventoryMismatch(APIMethods.java:638)
+	at com.perfaware.automation.oms.sterling.common.testcases.GenericOOBApis.TC01_XML_BOPIS_SL_OrderFulfillment(GenericOOBApis.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items ApplyDifferences="" BatchMode="" BatchSize="" CompleteInventoryFlag="" PublishedTime="" ReasonCode="" ReasonText="" ShipNode="" ValidateItems="" YantraMessageGroupID="">
+  <Item InventoryOrganizationCode="Required" ItemID="Required" ProductClass="" UnitOfMeasure="">
+    <Supplies>
+      <Supply AvailabilityType="" ETA="" Quantity="" Segment="" SegmentType="" ShipByDate="" SupplyLineReference="" SupplyReference="" SupplyReferenceType="" SupplyType="Required">
+        <Tag BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo=""/>
+      </Supply>
+    </Supplies>
+  </Item>
+</Items>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 258
+Connection: Close
+Date: Thu, 27 Jan 2022 03:31:22 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10364" ErrorDescription="Mandatory Parameters for the Operation are missing." HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Mandatory Parameters for the Operation are missing."/>
+    <Attribute Name="ErrorCode" Value="YFS10364"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="InventoryOrganizationCode" Value="Required"/>
+    <Attribute Name="ShipNode" Value=""/>
+    <Attribute Name="ItemID" Value="Required"/>
+  </Error>
+</Errors>
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.AssertionError: Status code for loadInventoryMismatch matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:329)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.loadInventoryMismatch(APIMethods.java:638)
+	at com.perfaware.automation.oms.sterling.common.testcases.GenericOOBApis.TC01_XML_BOPIS_SL_OrderFulfillment(GenericOOBApis.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items ApplyDifferences="" BatchMode="" BatchSize="" CompleteInventoryFlag="" PublishedTime="" ReasonCode="" ReasonText="" ShipNode="" ValidateItems="" YantraMessageGroupID="">
+  <Item InventoryOrganizationCode="Required" ItemID="Required" ProductClass="" UnitOfMeasure="">
+    <Supplies>
+      <Supply AvailabilityType="" ETA="" Quantity="" Segment="" SegmentType="" ShipByDate="" SupplyLineReference="" SupplyReference="" SupplyReferenceType="" SupplyType="Required">
+        <Tag BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo=""/>
+      </Supply>
+    </Supplies>
+  </Item>
+</Items>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 258
+Connection: Close
+Date: Thu, 27 Jan 2022 03:36:37 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10364" ErrorDescription="Mandatory Parameters for the Operation are missing." HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Mandatory Parameters for the Operation are missing."/>
+    <Attribute Name="ErrorCode" Value="YFS10364"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="InventoryOrganizationCode" Value="Required"/>
+    <Attribute Name="ShipNode" Value=""/>
+    <Attribute Name="ItemID" Value="Required"/>
+  </Error>
+</Errors>
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.AssertionError: Status code for loadInventoryMismatch matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:329)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.loadInventoryMismatch(APIMethods.java:638)
+	at com.perfaware.automation.oms.sterling.common.testcases.GenericOOBApis.TC01_XML_BOPIS_SL_OrderFulfillment(GenericOOBApis.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/loadInventoryMismatch
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items ApplyDifferences="" BatchMode="" BatchSize="" CompleteInventoryFlag="" PublishedTime="" ReasonCode="" ReasonText="" ShipNode="" ValidateItems="" YantraMessageGroupID="">
+  <Item InventoryOrganizationCode="Required" ItemID="Required" ProductClass="" UnitOfMeasure="">
+    <Supplies>
+      <Supply AvailabilityType="" ETA="" Quantity="" Segment="" SegmentType="" ShipByDate="" SupplyLineReference="" SupplyReference="" SupplyReferenceType="" SupplyType="Required">
+        <Tag BatchNo="" LotAttribute1="" LotAttribute2="" LotAttribute3="" LotKeyReference="" LotNumber="" ManufacturingDate="" RevisionNo=""/>
+      </Supply>
+    </Supplies>
+  </Item>
+</Items>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 258
+Connection: Close
+Date: Thu, 27 Jan 2022 03:52:16 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10364" ErrorDescription="Mandatory Parameters for the Operation are missing." HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Mandatory Parameters for the Operation are missing."/>
+    <Attribute Name="ErrorCode" Value="YFS10364"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="InventoryOrganizationCode" Value="Required"/>
+    <Attribute Name="ShipNode" Value=""/>
+    <Attribute Name="ItemID" Value="Required"/>
+  </Error>
+</Errors>
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.AssertionError: Status code for loadInventoryMismatch matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:329)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.loadInventoryMismatch(APIMethods.java:638)
+	at com.perfaware.automation.oms.sterling.common.testcases.GenericOOBApis.TC01_XML_BOPIS_SL_OrderFulfillment(GenericOOBApis.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="614998" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="388958629830"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 27 Jan 2022 04:46:33 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="614998" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 27 Jan 2022 04:46:35 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC30352395" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="614998" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="35970.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="35970.00" RequestAmount="35970.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 164
+Date: Thu, 27 Jan 2022 04:46:37 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022012704463769021482" OrderNo="COCC30352395"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC30352395"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3956
+Date: Thu, 27 Jan 2022 04:46:40 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-27T04:46:37+00:00" BillToID="00198505" BuyerOrganizationCode="FCV.CO" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="tremere27@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-27T04:46:37+00:00" OrderHeaderKey="2022012704463769021482" OrderName="" OrderNo="COCC30352395" OrderType="PICK" OriginalTax="0.00" OriginalTotalAmount="38960.00" OtherCharges="2990.00" PaymentStatus="PAID" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CO" ShipToID="00198505" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2022-01-27T04:46:37+00:00" ReportingConversionRate="1.00" TotalAmount="38960.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="3" OrderHeaderKey="2022012704463769021482" OrderLineKey="2022012704463769021483" OrderedQty="3" OriginalOrderedQty="3" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="3" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="3" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="614998" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="614998" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="3" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="35970.00" ListPrice="11990.00" OrderedPricingQty="3" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022012704463769021482" OrderLineKey="2022012704463769021483" OrderLineScheduleKey="202201270447463769021488" Quantity="3" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022012704463769021482" OrderLineKey="2022012704463769021483" OrderLineScheduleKey="202201270447463769021488" OrderReleaseStatusKey="202201270479463769021489" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-27T04:46:37+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885971" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="35970.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="38960.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-27T04:46:37+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022012704463769021485" ChargeType="CHARGE" CollectionDate="2022-01-27T04:46:37+00:00" CreditAmount="35970.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022012704463769021482" OrderInvoiceKey="" PaymentKey="202201270478463769021484" RequestAmount="35970.00" SettledAmount="0.00" Status="CLOSED" TransactionDate="2022-01-27T04:46:37+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions>
+        <CreditCardTransaction AuthAmount="35970.00" AuthAvs="" AuthCode="1234546089" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="2022-01-27T04:46:37+00:00" CVVAuthCode="" ChargeTransactionKey="2022012704463769021485" CreditCardTransactionKey="202201270409463769021486" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="35970.00" TranRequestTime="2022-01-27T04:46:37+00:00" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="CHARGE"/>
+      </CreditCardTransactions>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-27T04:46:37+00:00" AuthorizationID="" BookAmount="38960.00" ChargeTransactionKey="2022012704463769021491" ChargeType="CREATE_ORDER" CollectionDate="2022-01-27T04:46:37+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022012704463769021482" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="OPEN" TransactionDate="2022-01-27T04:46:37+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="Y"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022012704463769021482" OrderLineKey="2022012704463769021483" OrderLineScheduleKey="202201270447463769021488" OrderReleaseStatusKey="202201270479463769021489" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-27T04:46:37+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test successfully completed : TC01_XML_BOPIS_SL_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC02_XML_BOPIS_ML_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="809961" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="125264435346"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="189558" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="919534434180"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="291891" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="442524331295"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 27 Jan 2022 04:46:42 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="809961" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="189558" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="2" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="291891" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="1" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Thu, 27 Jan 2022 04:46:44 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC86302421" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="809961" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="2" PrimeLineNo="2" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="189558" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="1" PrimeLineNo="3" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="291891" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="71940.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="71940.00" RequestAmount="71940.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 163
+Date: Thu, 27 Jan 2022 04:46:45 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022012704464569021528" OrderNo="COCC86302421"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC86302421"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 4395
+Date: Thu, 27 Jan 2022 04:46:47 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-27T04:46:45+00:00" BillToID="00198505" BuyerOrganizationCode="FCV.CO" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="tremere27@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-27T04:46:45+00:00" OrderHeaderKey="2022012704464569021528" OrderName="" OrderNo="COCC86302421" OrderType="PICK" OriginalTax="0.00" OriginalTotalAmount="74930.00" OtherCharges="2990.00" PaymentStatus="PAID" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CO" ShipToID="00198505" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2022-01-27T04:46:45+00:00" ReportingConversionRate="1.00" TotalAmount="74930.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="3" OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021529" OrderedQty="3" OriginalOrderedQty="3" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="3" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="3" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="809961" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="809961" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="3" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="35970.00" ListPrice="11990.00" OrderedPricingQty="3" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021529" OrderLineScheduleKey="202201270432464569021540" Quantity="3" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021529" OrderLineScheduleKey="202201270432464569021540" OrderReleaseStatusKey="202201270463464569021541" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-27T04:46:45+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="2" OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021530" OrderedQty="2" OriginalOrderedQty="2" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="2" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="2" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="189558" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="189558" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="23980.00" ListPrice="11990.00" OrderedPricingQty="2" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021530" OrderLineScheduleKey="202201270480464569021536" Quantity="2" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="23980.00" LineTotal="23980.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="23980.00" LineTotal="23980.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021530" OrderLineScheduleKey="202201270480464569021536" OrderReleaseStatusKey="202201270417464569021537" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-27T04:46:45+00:00" StatusDescription="Created" StatusQty="2" TotalQuantity="2">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="3.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="1" OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021531" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="3" Purpose="" RemainingQty="1" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="291891" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="291891" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="11990.00" ListPrice="11990.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021531" OrderLineScheduleKey="202201270452464569021538" Quantity="1" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="11990.00" LineTotal="11990.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="11990.00" LineTotal="11990.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021531" OrderLineScheduleKey="202201270452464569021538" OrderReleaseStatusKey="202201270455464569021539" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-27T04:46:45+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885971" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="71940.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="74930.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-27T04:46:45+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022012704464569021533" ChargeType="CHARGE" CollectionDate="2022-01-27T04:46:45+00:00" CreditAmount="71940.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022012704464569021528" OrderInvoiceKey="" PaymentKey="202201270400464569021532" RequestAmount="71940.00" SettledAmount="0.00" Status="CLOSED" TransactionDate="2022-01-27T04:46:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions>
+        <CreditCardTransaction AuthAmount="71940.00" AuthAvs="" AuthCode="1234546089" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="2022-01-27T04:46:45+00:00" CVVAuthCode="" ChargeTransactionKey="2022012704464569021533" CreditCardTransactionKey="202201270488464569021534" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="71940.00" TranRequestTime="2022-01-27T04:46:45+00:00" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="CHARGE"/>
+      </CreditCardTransactions>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-27T04:46:45+00:00" AuthorizationID="" BookAmount="74930.00" ChargeTransactionKey="2022012704464569021545" ChargeType="CREATE_ORDER" CollectionDate="2022-01-27T04:46:45+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022012704464569021528" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="OPEN" TransactionDate="2022-01-27T04:46:45+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="74930.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="71940.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="74930.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="71940.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="Y"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021529" OrderLineScheduleKey="202201270432464569021540" OrderReleaseStatusKey="202201270463464569021541" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-27T04:46:45+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021530" OrderLineScheduleKey="202201270480464569021536" OrderReleaseStatusKey="202201270417464569021537" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-27T04:46:45+00:00" StatusDescription="Created" StatusQty="2" TotalQuantity="2">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022012704464569021528" OrderLineKey="2022012704464569021531" OrderLineScheduleKey="202201270452464569021538" OrderReleaseStatusKey="202201270455464569021539" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-27T04:46:45+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test successfully completed : TC02_XML_BOPIS_ML_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]

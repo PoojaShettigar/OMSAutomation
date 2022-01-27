@@ -59,7 +59,7 @@ public class GenericOOBApis extends TestCaseBase{
 		String orderNo;
 		SoftAssertion softAssert = new SoftAssertion();
 		OrderTypes orderTypes = OrderTypes.STKSTH;
-		String noOfLines = "1";
+		String noOfLines = "2";
 		Map<String, String> itemData = helper.generateItemIds_ForOrder(OrderTypes.STKSTH, noOfLines);
 		Map<String, String> tempData = new HashMap<String, String>();
 		orderNo = "COCC"+Utilities.generateRandomString(8);
@@ -71,8 +71,11 @@ public class GenericOOBApis extends TestCaseBase{
 			nooflines = nooflines+Integer.valueOf(split[i]);
 		}
 		System.out.println(orderNo);
-		tempData=apiMethods.XMLOrderCreation(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		apiMethods.BopisOrderFulfillment(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+	//	apiMethods.findInventory(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		//apiMethods.reserveAvailableInventory(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		//apiMethods.getATP(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		apiMethods.loadInventoryMismatch(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		
 	}
 	
 }

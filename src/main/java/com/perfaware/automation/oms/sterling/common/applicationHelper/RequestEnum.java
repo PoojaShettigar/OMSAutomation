@@ -29,7 +29,14 @@ public class RequestEnum {
 		changeShipmentStatus,
 		changeShipment,
 		changeOrder,
-		processOrderPayment;
+		processOrderPayments,
+		getATP,
+		getShipmentListForOrder,
+		getShipmentList,
+		syncLoadedInventory,
+		loadInventoryMismatch,
+		findInventory,
+		reserveAvailableInventory;
 	
 		
 		

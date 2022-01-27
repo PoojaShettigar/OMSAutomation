@@ -101,6 +101,15 @@ public class RequestHelper {
 			}
 		}
 		
+		if (resourceKey.equals(ResourceKey.getATP)) {
+			payload = helper.getATP(tempData);
+			//logger.info("Pre-condition for Test: getOrderDetails");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderDetails");
+			response = helper.createRequest(ResourceKey.getATP, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.getATP + " matches with expected code");
+		}
+		
 		if (resourceKey.equals(ResourceKey.createOrder)) {
 			// Create Order		
 			
@@ -215,6 +224,15 @@ public class RequestHelper {
 					"Status code for " + ResourceKey.DifarmaGetShipmentList + " matches with expected code");
 		}
 		
+		if (resourceKey.equals(ResourceKey.getShipmentList)) {
+			payload = helper.getShipmentList(tempData);
+			logger.info("Pre-condition for Test: getOrderReleaseList");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.getShipmentList, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.getShipmentList + " matches with expected code");
+		}
+		
 		if (resourceKey.equals(ResourceKey.DifarmaGetShipmentListForOrder)) {
 			payload = helper.DifarmaGetShipmentListForOrder(tempData);
 			System.out.println(payload);
@@ -223,6 +241,15 @@ public class RequestHelper {
 			response = helper.createRequest(ResourceKey.DifarmaGetShipmentListForOrder, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
 					"Status code for " + ResourceKey.DifarmaGetShipmentListForOrder + " matches with expected code");
+		}
+		
+		if (resourceKey.equals(ResourceKey.getShipmentListForOrder)) {
+			payload = helper.getShipmentListForOrder(tempData);
+			logger.info("Pre-condition for Test: getOrderReleaseList");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.getShipmentListForOrder, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.getShipmentListForOrder + " matches with expected code");
 		}
 		
 		if (resourceKey.equals(ResourceKey.DifarmaMobileRecordPickCompletion)) {
@@ -281,6 +308,38 @@ public class RequestHelper {
 			response = helper.createRequest(ResourceKey.DifarmaMobileFinishCustomerPickService, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
 					"Status code for " + ResourceKey.DifarmaMobileFinishCustomerPickService + " matches with expected code");
+		}
+		
+		if (resourceKey.equals(ResourceKey.syncLoadedInventory)) {
+			payload = helper.syncLoadedInventory(tempData);
+			logger.info("Pre-condition for Test: getOrderReleaseList");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.syncLoadedInventory, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.syncLoadedInventory + " matches with expected code");
+		}
+		
+
+		if (resourceKey.equals(ResourceKey.findInventory)) {
+			payload = helper.findInventory(tempData, itemData);
+			payload=setDatafindInventoryPayload(payload, tempData,itemData);
+			payload=setItemIdsInfindInventoryPayloadPayload(payload,itemData);
+			//logger.info("Pre-condition for Test: getOrderReleaseList");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.findInventory, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.findInventory + " matches with expected code");
+		}
+		
+		if (resourceKey.equals(ResourceKey.reserveAvailableInventory)) {
+			payload = helper.reserveAvailableInventory(tempData, itemData);
+			payload=setDatareserveAvailableInventoryPayload(payload, tempData,itemData);
+			payload=setItemIdsInreserveAvailableInventoryPayloadPayload(payload,itemData);
+			logger.info("Pre-condition for Test: getOrderReleaseList");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.reserveAvailableInventory, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.reserveAvailableInventory + " matches with expected code");
 		}
 		
 		return response;
@@ -389,6 +448,88 @@ public class RequestHelper {
 			XMLUtil.setDataInNodeAtt((Element) node, "ShipmentLine.ShipmentLineNo", Integer.toString(i+1));
 			XMLUtil.setDataInNodeAtt((Element) node, "ShipmentLine.Quantity", orderData.get("ShipmentLine["+i+"].Quantity"));
 			XMLUtil.setDataInNodeAtt((Element) node, "ShipmentLine.PickedQty", orderData.get("ShipmentLine["+i+"].PickedQty"));
+
+		}
+
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	public String setDatafindInventoryPayload(String payload, Map<String, String> orderData,Map<String, String> itemData) throws Exception {
+		Document finalDoc = XMLUtil.convertStringToXmlDoc(payload);
+		Node node;
+		NodeList crawlNodeList = finalDoc.getElementsByTagName(MappedTags.findInventory.getActualTag());
+		String[] keysplit;
+
+		for (int i = 0; i < crawlNodeList.getLength(); i++) {
+			node = crawlNodeList.item(i);;
+			XMLUtil.setDataInNodeAtt((Element) node, "PromiseLine.LineId", Integer.toString(i+1));
+		}
+
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	public String setDatareserveAvailableInventoryPayload(String payload, Map<String, String> orderData,Map<String, String> itemData) throws Exception {
+		Document finalDoc = XMLUtil.convertStringToXmlDoc(payload);
+		Node node;
+		NodeList crawlNodeList = finalDoc.getElementsByTagName(MappedTags.reserveAvailableInventory.getActualTag());
+		String[] keysplit;
+
+		for (int i = 0; i < crawlNodeList.getLength(); i++) {
+			node = crawlNodeList.item(i);;
+			XMLUtil.setDataInNodeAtt((Element) node, "PromiseLine.LineId", Integer.toString(i+1));
+		}
+
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	
+	public String setItemIdsInfindInventoryPayloadPayload(String payload, Map<String, String> items) throws Exception {
+		Document finalDoc = XMLUtil.convertStringToXmlDoc(payload);
+		Node node;
+		NodeList crawlNodeList = finalDoc.getElementsByTagName(MappedTags.findInventory.getActualTag());
+		String[] keysplit;
+		for (Map.Entry<String, String> entry : items.entrySet()) {
+			keysplit = entry.getKey().split("_");
+			for (int i = 0; i < crawlNodeList.getLength(); i++) {
+				node = crawlNodeList.item(i);
+				if (keysplit[1].equals(String.valueOf(i + 1))) {
+					XMLUtil.setDataInNodeAtt((Element) node, "PromiseLine.ItemID", entry.getValue());
+				}
+			}
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	public String setItemIdsInreserveAvailableInventoryPayloadPayload(String payload, Map<String, String> items) throws Exception {
+		Document finalDoc = XMLUtil.convertStringToXmlDoc(payload);
+		Node node;
+		NodeList crawlNodeList = finalDoc.getElementsByTagName(MappedTags.reserveAvailableInventory.getActualTag());
+		String[] keysplit;
+		for (Map.Entry<String, String> entry : items.entrySet()) {
+			keysplit = entry.getKey().split("_");
+			for (int i = 0; i < crawlNodeList.getLength(); i++) {
+				node = crawlNodeList.item(i);
+				if (keysplit[1].equals(String.valueOf(i + 1))) {
+					XMLUtil.setDataInNodeAtt((Element) node, "PromiseLine.ItemID", entry.getValue());
+				}
+			}
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	public String setDataloadInventoryMismatch(String payload, Map<String, String> orderData) throws Exception {
+		Document finalDoc = XMLUtil.convertStringToXmlDoc(payload);
+		Node node;
+		NodeList crawlNodeList = finalDoc.getElementsByTagName(MappedTags.DifarmaMobileRecordPickCompletion.getActualTag());
+		String[] keysplit;
+
+		for (int i = 0; i < crawlNodeList.getLength(); i++) {
+			node = crawlNodeList.item(i);
+//			XMLUtil.setDataInNodeAtt((Element) node, "ShipmentLine.OrderHeaderKey",orderData.get("ShipmentLine.OrderHeaderKey"));
+//			XMLUtil.setDataInNodeAtt((Element) node, "ShipmentLine.ShipmentLineKey", orderData.get("ShipmentLine["+i+"].ShipmentLineKey"));
+//			XMLUtil.setDataInNodeAtt((Element) node, "ShipmentLine.ShipmentLineNo", Integer.toString(i+1));
+//			XMLUtil.setDataInNodeAtt((Element) node, "ShipmentLine.Quantity", orderData.get("ShipmentLine["+i+"].Quantity"));
+//			XMLUtil.setDataInNodeAtt((Element) node, "ShipmentLine.PickedQty", orderData.get("ShipmentLine["+i+"].PickedQty"));
 
 		}
 

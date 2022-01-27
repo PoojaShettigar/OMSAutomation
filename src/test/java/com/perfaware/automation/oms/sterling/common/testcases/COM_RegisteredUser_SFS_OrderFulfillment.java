@@ -112,8 +112,9 @@ public class COM_RegisteredUser_SFS_OrderFulfillment extends TestCaseBase {
 		COMTestMethods comMethods=new COMTestMethods();
 		tempData.put("Enterprise", comData.get("TC05").get("Enterprise"));
 		Page_OrderSummary summary=new Page_OrderSummary(DriverFactory.getInstance().getDriver());
-		comMethods.COM_RegisteredUser_OrderCreation(comData,"TC05",uiUtil,helper, orderTypes, noOfLines, response, tempData, logger, comTestData, itemData, softAssert);
-
+		orderNo=comMethods.COM_RegisteredUser_OrderCreation(comData,"TC05",uiUtil,helper, orderTypes, noOfLines, response, tempData, logger, comTestData, itemData, softAssert);
+		APIMethods apiMethods=new APIMethods();
+		apiMethods.StoreOrderFulfillment(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, comTestData, itemData, softAssert,summary);		
 	}	
 	
 	@Test(groups= {"Regression"})
@@ -129,7 +130,9 @@ public class COM_RegisteredUser_SFS_OrderFulfillment extends TestCaseBase {
 		COMTestMethods comMethods=new COMTestMethods();
 		tempData.put("Enterprise", comData.get("TC03").get("Enterprise"));
 		Page_OrderSummary summary=new Page_OrderSummary(DriverFactory.getInstance().getDriver());
-		comMethods.COM_RegisteredUser_OrderCreation(comData,"TC03",uiUtil,helper, orderTypes, noOfLines, response, tempData,logger, comTestData, itemData, softAssert);
+		orderNo=comMethods.COM_RegisteredUser_OrderCreation(comData,"TC03",uiUtil,helper, orderTypes, noOfLines, response, tempData, logger, comTestData, itemData, softAssert);
+		APIMethods apiMethods=new APIMethods();
+		apiMethods.StoreOrderFulfillment(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, comTestData, itemData, softAssert,summary);		
 
-	}	
+	}
 }

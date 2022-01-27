@@ -667,6 +667,23 @@ public class ApplicationMethods {
 	}
 
 	/**
+	 * This function return payload for getOrderDetails
+	 * 
+	 * @author Perfaware
+	 * @param data  - data to set in the xml              
+	 * 
+	 */
+	public String getATP(Map<String, String> data) throws Exception {
+		String filePath = getFilePath(null, MappedTags.getATP.getMasterXmlFilePath(), true);
+		Document finalDoc = XMLUtil.readXmlFile(filePath);
+		Node node = finalDoc.getDocumentElement();
+		for (Map.Entry<String, String> entry : data.entrySet()) {
+			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	/**
 	 * This function return payload for getOrderHoldList
 	 * 
 	 * @author Perfaware
@@ -768,6 +785,40 @@ public class ApplicationMethods {
 	}
 	
 	/**
+	 * This function return payload for syncLoadedInventory
+	 * 
+	 * @author Perfaware
+	 * @param data  - data to set in the xml              
+	 * 
+	 */
+	public String syncLoadedInventory(Map<String, String> data) throws Exception {
+		String filePath = getFilePath(null, MappedTags.syncLoadedInventory.getMasterXmlFilePath(), true);
+		Document finalDoc = XMLUtil.readXmlFile(filePath);
+		Node node = finalDoc.getDocumentElement();
+		for (Map.Entry<String, String> entry : data.entrySet()) {
+			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	/**
+	 * This function return payload for DifarmaGetShipmentListForOrder
+	 * 
+	 * @author Perfaware
+	 * @param data  - data to set in the xml              
+	 * 
+	 */
+	public String getShipmentListForOrder(Map<String, String> data) throws Exception {
+		String filePath = getFilePath(null, MappedTags.getShipmentListForOrder.getMasterXmlFilePath(), true);
+		Document finalDoc = XMLUtil.readXmlFile(filePath);
+		Node node = finalDoc.getDocumentElement();
+		for (Map.Entry<String, String> entry : data.entrySet()) {
+			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	/**
 	 * This function return payload for DifarmaGetShipmentList
 	 * 
 	 * @author Perfaware
@@ -783,6 +834,25 @@ public class ApplicationMethods {
 		}
 		return XMLUtil.convertXMLDocumentToString(finalDoc);
 	}
+	
+	
+	/**
+	 * This function return payload for DifarmaGetShipmentList
+	 * 
+	 * @author Perfaware
+	 * @param data  - data to set in the xml              
+	 * 
+	 */
+	public String getShipmentList(Map<String, String> data) throws Exception {
+		String filePath = getFilePath(null, MappedTags.getShipmentList.getMasterXmlFilePath(), true);
+		Document finalDoc = XMLUtil.readXmlFile(filePath);
+		Node node = finalDoc.getDocumentElement();
+		for (Map.Entry<String, String> entry : data.entrySet()) {
+			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
 	
 	/**
 	 * This function return payload for DifarmaMobileRecordPackCompletion
@@ -911,7 +981,7 @@ public class ApplicationMethods {
 				.createDocFromNode((Element) XMLUtil.getNodeByTagName(doc, MappedTags.DifarmaMobileFinishCustomerPickService.getParentTag()));
 		
 		Node copiedNode;
-		// Adding OrderLines and setting up orderlines data
+		// Adding shipmentLines and setting up shipmentLines data
 		for(int i=2;i<=Integer.parseInt(noOfOrderLines);i++) {
 			copiedNode = docforShipmentlines.importNode(node, true);
 			XMLUtil.appendNode(docforShipmentlines.getDocumentElement(), copiedNode);
@@ -932,6 +1002,84 @@ public class ApplicationMethods {
 		return XMLUtil.convertXMLDocumentToString(doc);
 	}
 
+	/**
+	 * This function return payload for findInventory
+	 * 
+	 * @author Perfaware
+	 * @param data  - data to set in the xml              
+	 * 
+	 */
+	public String findInventory(Map<String, String> testdata,Map<String, String> items) throws Exception {
+		String filePath = getFilePath(null, MappedTags.findInventory.getMasterXmlFilePath(), true);
+		Document doc = XMLUtil.readXmlFile(filePath);
+		Node node = (Element) XMLUtil.getNodeByTagName(doc, MappedTags.findInventory.getActualTag());
+		XMLUtil.setDataInNodeAtt(doc.getDocumentElement(), "Promise.FulfillmentType", testdata.get("Promise.FulfillmentType"));
+		XMLUtil.setDataInNodeAtt(doc.getDocumentElement(), "Promise.OrganizationCode", testdata.get("Promise.OrganizationCode"));
+
+		Document docforShipmentlines = XMLUtil
+				.createDocFromNode((Element) XMLUtil.getNodeByTagName(doc, MappedTags.findInventory.getParentTag()));
+		
+		Node copiedNode;
+		// Adding PromiseLine and setting up shipmentLines data
+		for(int i=2;i<=items.size();i++) {
+			copiedNode = docforShipmentlines.importNode(node, true);
+			XMLUtil.appendNode(docforShipmentlines.getDocumentElement(), copiedNode);
+		}
+		
+		XMLUtil.removeNode(doc.getDocumentElement(),
+				XMLUtil.getNodeByTagName(doc, MappedTags.findInventory.getParentTag()));
+		XMLUtil.removeNode(docforShipmentlines.getDocumentElement(),
+				XMLUtil.getNodeByTagName(docforShipmentlines, MappedTags.findInventory.getParentTag()));
+		
+		// Adding the PromiseLine To findInventory xml
+		copiedNode = doc.importNode(XMLUtil.getNodeByTagName(docforShipmentlines, MappedTags.findInventory.getParentTag()),
+				true);
+		XMLUtil.appendNodeBeforeNode(doc.getDocumentElement(), copiedNode,
+				XMLUtil.getNodeByTagName(doc, "PromiseLines"));		
+
+		
+		return XMLUtil.convertXMLDocumentToString(doc);
+	}
+	
+	/**
+	 * This function return payload for findInventory
+	 * 
+	 * @author Perfaware
+	 * @param data  - data to set in the xml              
+	 * 
+	 */
+	public String reserveAvailableInventory(Map<String, String> testdata,Map<String, String> items) throws Exception {
+		String filePath = getFilePath(null, MappedTags.reserveAvailableInventory.getMasterXmlFilePath(), true);
+		Document doc = XMLUtil.readXmlFile(filePath);
+		Node node = (Element) XMLUtil.getNodeByTagName(doc, MappedTags.findInventory.getActualTag());
+		XMLUtil.setDataInNodeAtt(doc.getDocumentElement(), "Promise.FulfillmentType", testdata.get("Promise.FulfillmentType"));
+		XMLUtil.setDataInNodeAtt(doc.getDocumentElement(), "Promise.OrganizationCode", testdata.get("Promise.OrganizationCode"));
+		XMLUtil.setDataInNodeAtt(doc.getDocumentElement(), "Promise.ReservationParameters.ReservationID", testdata.get("Promise.ReservationParameters.ReservationID"));
+		Document docforShipmentlines = XMLUtil
+				.createDocFromNode((Element) XMLUtil.getNodeByTagName(doc, MappedTags.reserveAvailableInventory.getParentTag()));
+		
+		Node copiedNode;
+		// Adding PromiseLine and setting up PromiseLines data
+		for(int i=2;i<=items.size();i++) {
+			copiedNode = docforShipmentlines.importNode(node, true);
+			XMLUtil.appendNode(docforShipmentlines.getDocumentElement(), copiedNode);
+		}
+		
+		XMLUtil.removeNode(doc.getDocumentElement(),
+				XMLUtil.getNodeByTagName(doc, MappedTags.reserveAvailableInventory.getParentTag()));
+		XMLUtil.removeNode(docforShipmentlines.getDocumentElement(),
+				XMLUtil.getNodeByTagName(docforShipmentlines, MappedTags.reserveAvailableInventory.getParentTag()));
+		
+		// Adding the PromiseLine To reserveAvailableInventory xml
+		copiedNode = doc.importNode(XMLUtil.getNodeByTagName(docforShipmentlines, MappedTags.reserveAvailableInventory.getParentTag()),
+				true);
+		XMLUtil.appendNodeBeforeNode(doc.getDocumentElement(), copiedNode,
+				XMLUtil.getNodeByTagName(doc, "PromiseLines"));		
+
+		
+		return XMLUtil.convertXMLDocumentToString(doc);
+	}
+	
 	public String changeOrder(Response response, Map<String, String> tempData) throws Exception {
 		String filePath = getFilePath(null, MappedTags.changeOrder.getMasterXmlFilePath(), true);
 		Document finalDoc = XMLUtil.readXmlFile(filePath);

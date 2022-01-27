@@ -22,7 +22,13 @@ public enum MappedTags {
 	DifarmaMobileConfirmShipment("Shipment","Shipment","difarmaMobileConfirmShipment.xml"),
 	changeShipmentStatus("Shipment","Shipment","changeShipmentStatus.xml"),
 	changeOrder("Order","Order","changeOrder.xml"),
-	processOrderPayments("Order","Order","processOrderPayments.xml");
+	processOrderPayments("Order","Order","processOrderPayments.xml"),
+	getATP("GetATP","GetATP","getATP.xml"),
+	getShipmentListForOrder("Order","Order","getShipmentListForOrder.xml"),
+	getShipmentList("Shipment","Shipment","getShipmentList.xml"),
+	syncLoadedInventory("Inventory","Inventory","syncLoadedInventory.xml"),
+	findInventory("PromiseLines","PromiseLine","findInventory.xml"),
+	reserveAvailableInventory("PromiseLines","PromiseLine","reserveAvailableInventory.xml");
 	
 	
 	MappedTags(String p,String a,String m,String... keysAndValues ){

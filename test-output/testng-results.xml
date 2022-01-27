@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="111463" started-at="2022-01-24T19:33:36 IST" finished-at="2022-01-24T19:35:27 IST">
+  <suite name="Default suite" duration-ms="131636" started-at="2022-01-27T15:35:23 IST" finished-at="2022-01-27T15:37:34 IST">
     <groups>
       <group name="Regression">
         <method signature="XML_BOPIS_OrderFulfillment.TC01_XML_BOPIS_SL_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="TC01_XML_BOPIS_SL_OrderFulfillment" class="com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment"/>
@@ -12,25 +12,25 @@
         <method signature="XML_BOPIS_OrderFulfillment.TC02_XML_BOPIS_ML_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="TC02_XML_BOPIS_ML_OrderFulfillment" class="com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment"/>
       </group> <!-- Smoke -->
     </groups>
-    <test name="Default test" duration-ms="111463" started-at="2022-01-24T19:33:36 IST" finished-at="2022-01-24T19:35:27 IST">
+    <test name="Default test" duration-ms="131636" started-at="2022-01-27T15:35:23 IST" finished-at="2022-01-27T15:37:34 IST">
       <class name="com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment">
-        <test-method status="PASS" signature="initialSetup()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="initialSetup" is-config="true" duration-ms="2822" started-at="2022-01-24T19:33:33 IST" finished-at="2022-01-24T19:33:36 IST">
+        <test-method status="PASS" signature="initialSetup()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="initialSetup" is-config="true" duration-ms="3802" started-at="2022-01-27T15:35:19 IST" finished-at="2022-01-27T15:35:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialSetup -->
-        <test-method status="PASS" signature="initiate()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="initiate" is-config="true" duration-ms="140" started-at="2022-01-24T19:33:36 IST" finished-at="2022-01-24T19:33:36 IST">
+        <test-method status="PASS" signature="initiate()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="initiate" is-config="true" duration-ms="138" started-at="2022-01-27T15:35:23 IST" finished-at="2022-01-27T15:35:23 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initiate -->
-        <test-method status="PASS" signature="TC01_XML_BOPIS_SL_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="TC01_XML_BOPIS_SL_OrderFulfillment" duration-ms="31" started-at="2022-01-24T19:33:36 IST" finished-at="2022-01-24T19:33:36 IST">
+        <test-method status="PASS" signature="TC01_XML_BOPIS_SL_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="TC01_XML_BOPIS_SL_OrderFulfillment" duration-ms="75637" started-at="2022-01-27T15:35:23 IST" finished-at="2022-01-27T15:36:39 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC01_XML_BOPIS_SL_OrderFulfillment -->
-        <test-method status="PASS" signature="TC02_XML_BOPIS_ML_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="TC02_XML_BOPIS_ML_OrderFulfillment" duration-ms="110913" started-at="2022-01-24T19:33:36 IST" finished-at="2022-01-24T19:35:27 IST">
+        <test-method status="PASS" signature="TC02_XML_BOPIS_ML_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="TC02_XML_BOPIS_ML_OrderFulfillment" duration-ms="55487" started-at="2022-01-27T15:36:39 IST" finished-at="2022-01-27T15:37:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC02_XML_BOPIS_ML_OrderFulfillment -->
-        <test-method status="PASS" signature="sendReports()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="sendReports" is-config="true" duration-ms="10752" started-at="2022-01-24T19:35:28 IST" finished-at="2022-01-24T19:35:39 IST">
+        <test-method status="PASS" signature="sendReports()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment@58134517]" name="sendReports" is-config="true" duration-ms="12112" started-at="2022-01-27T15:37:35 IST" finished-at="2022-01-27T15:37:47 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendReports -->

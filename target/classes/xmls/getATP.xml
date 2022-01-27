@@ -1,0 +1,6 @@
+<GetATP CalculateProjectedOnhandQty="" ConsiderAllNodes="" ConsiderAllSegments="" ConsiderUnassignedDemand="" DemandType="" DistributionRuleId="" EndDate="" ItemID="Required" ItemOrganizationCode="" MinShipByDate="" OrganizationCode="Required" PeriodicalLength="" ProductClass="" RequiredQty="" Segment="" SegmentType="" ShipDate="" ShipNode="" UnitOfMeasure="">
+<ItemFilter GetUnpublishedItems="N" IgnoreInvalidItems="N">
+<PrimaryInformation ColorCode="" ItemType="" ManufacturerItem="" ManufacturerName="" ProductLine="" SizeCode=""/>
+<ClassificationCodes CommodityCode="" ECCNNo="" HarmonizedCode="" NAICSCode="" NMFCCode="" StorageType="" TaxProductCode="" UNSPSC="" VelocityCode=""/>
+</ItemFilter>
+</GetATP>

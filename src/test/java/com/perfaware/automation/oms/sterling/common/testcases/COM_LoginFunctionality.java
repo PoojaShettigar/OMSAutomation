@@ -86,7 +86,7 @@ public class COM_LoginFunctionality extends TestCaseBase {
 		uiUtil=new UIUtilities();
 		COMTestMethods comMethods=new COMTestMethods();
 		Page_COM_Login loginObj = new Page_COM_Login(DriverFactory.getInstance().getDriver());
-		comMethods.COM_PerformLogin("admin1",PropertyFileReader.propertyMap.get("com_password"),loginObj);
+		comMethods.comLogin("admin1",PropertyFileReader.propertyMap.get("com_password"),loginObj);
 		uiUtil.waitForPageLoad(10);
 		loginObj.captureLoginError();
 		
