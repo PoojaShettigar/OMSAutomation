@@ -78,7 +78,7 @@ public class COM_LoginFunctionality extends TestCaseBase {
 
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		DriverFactory.getInstance().closeBrowser();
+		//DriverFactory.getInstance().closeBrowser();
 	}
 	
 	@Test(groups= {"Regression"})
