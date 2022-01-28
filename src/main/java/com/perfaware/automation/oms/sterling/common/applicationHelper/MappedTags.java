@@ -28,7 +28,10 @@ public enum MappedTags {
 	getShipmentList("Shipment","Shipment","getShipmentList.xml"),
 	syncLoadedInventory("Inventory","Inventory","syncLoadedInventory.xml"),
 	findInventory("PromiseLines","PromiseLine","findInventory.xml"),
-	reserveAvailableInventory("PromiseLines","PromiseLine","reserveAvailableInventory.xml");
+	reserveAvailableInventory("PromiseLines","PromiseLine","reserveAvailableInventory.xml"),
+	triggerAgent("TriggerAgent","TriggerAgent","triggerAgent.xml"),
+	getInventoryReservationList("InventoryReservation","InventoryReservation","getInventoryReservationList.xml"),
+	cancelReservation("CancelReservation","CancelReservation","cancelReservation.xml");
 	
 	
 	MappedTags(String p,String a,String m,String... keysAndValues ){

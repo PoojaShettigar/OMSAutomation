@@ -208,7 +208,7 @@ public class RequestHelper {
 		
 		if (resourceKey.equals(ResourceKey.consolidateToShipment)) {
 			payload = helper.consolidateToShipment(tempData);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: consolidateToShipment");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.consolidateToShipment, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -217,7 +217,7 @@ public class RequestHelper {
 		
 		if (resourceKey.equals(ResourceKey.DifarmaGetShipmentList)) {
 			payload = helper.DifarmaGetShipmentList(tempData);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: DifarmaGetShipmentList");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.DifarmaGetShipmentList, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -226,7 +226,7 @@ public class RequestHelper {
 		
 		if (resourceKey.equals(ResourceKey.getShipmentList)) {
 			payload = helper.getShipmentList(tempData);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: getShipmentList");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.getShipmentList, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -236,7 +236,7 @@ public class RequestHelper {
 		if (resourceKey.equals(ResourceKey.DifarmaGetShipmentListForOrder)) {
 			payload = helper.DifarmaGetShipmentListForOrder(tempData);
 			System.out.println(payload);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: DifarmaGetShipmentListForOrder");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.DifarmaGetShipmentListForOrder, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -245,7 +245,7 @@ public class RequestHelper {
 		
 		if (resourceKey.equals(ResourceKey.getShipmentListForOrder)) {
 			payload = helper.getShipmentListForOrder(tempData);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: getShipmentListForOrder");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.getShipmentListForOrder, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -255,7 +255,7 @@ public class RequestHelper {
 		if (resourceKey.equals(ResourceKey.DifarmaMobileRecordPickCompletion)) {
 			payload = helper.DifarmaMobileRecordPickCompletion(tempData, oLineNos);
 			payload=setDataRecordPickCompletionPayload(payload, tempData);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: DifarmaMobileRecordPickCompletion");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.DifarmaMobileRecordPickCompletion, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -274,7 +274,7 @@ public class RequestHelper {
 		
 		if (resourceKey.equals(ResourceKey.DifarmaMobileConfirmShipment)) {
 			payload = helper.DifarmaMobileConfirmShipment(tempData, oLineNos);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: DifarmaMobileConfirmShipment");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.DifarmaMobileConfirmShipment, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -283,7 +283,7 @@ public class RequestHelper {
 		
 		if (resourceKey.equals(ResourceKey.changeShipmentStatus)) {
 			payload = helper.changeShipmentStatus(tempData, oLineNos);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: changeShipmentStatus");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.changeShipmentStatus, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -294,7 +294,7 @@ public class RequestHelper {
 			payload = helper.confirmShipment(tempData, oLineNos);
 			
 			payload=setDataInConfirmShipmentPayload(payload, tempData,testData);
-			logger.info("Pre-condition for Test: Mock Confirm Shipment");
+			logger.info("Pre-condition for Test: Confirm Shipment");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: Mock Confirm Shipment");
 			response = helper.createRequest(ResourceKey.confirmShipment, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -303,7 +303,7 @@ public class RequestHelper {
 		if (resourceKey.equals(ResourceKey.DifarmaMobileFinishCustomerPickService)) {
 			payload = helper.DifarmaMobileFinishCustomerPickService(tempData, oLineNos);
 			payload=setDataFinishCustomerPickPayload(payload, tempData);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: DifarmaMobileFinishCustomerPickService");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.DifarmaMobileFinishCustomerPickService, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -312,7 +312,7 @@ public class RequestHelper {
 		
 		if (resourceKey.equals(ResourceKey.syncLoadedInventory)) {
 			payload = helper.syncLoadedInventory(tempData);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: syncLoadedInventory");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.syncLoadedInventory, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -324,7 +324,7 @@ public class RequestHelper {
 			payload = helper.findInventory(tempData, itemData);
 			payload=setDatafindInventoryPayload(payload, tempData,itemData);
 			payload=setItemIdsInfindInventoryPayloadPayload(payload,itemData);
-			//logger.info("Pre-condition for Test: getOrderReleaseList");
+			logger.info("Pre-condition for Test: findInventory");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.findInventory, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
@@ -334,13 +334,46 @@ public class RequestHelper {
 		if (resourceKey.equals(ResourceKey.reserveAvailableInventory)) {
 			payload = helper.reserveAvailableInventory(tempData, itemData);
 			payload=setDatareserveAvailableInventoryPayload(payload, tempData,itemData);
-			payload=setItemIdsInreserveAvailableInventoryPayloadPayload(payload,itemData);
-			logger.info("Pre-condition for Test: getOrderReleaseList");
+			payload=setItemIdsInreserveAvailableInventoryPayload(payload,itemData);
+			logger.info("Pre-condition for Test: reserveAvailableInventory");
 			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
 			response = helper.createRequest(ResourceKey.reserveAvailableInventory, payload);
 			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
 					"Status code for " + ResourceKey.reserveAvailableInventory + " matches with expected code");
 		}
+		if (resourceKey.equals(ResourceKey.triggerAgent)) {
+			payload = helper.triggerAgent(tempData);
+			logger.info("Pre-condition for Test: triggerAgent");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.triggerAgent, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_NO_CONTENT,
+					"Status code for " + ResourceKey.triggerAgent + " matches with expected code");
+		}
+		if (resourceKey.equals(ResourceKey.processOrderPayments)) {
+			payload = helper.processOrderPayments(tempData);
+			logger.info("Pre-condition for Test: processOrderPayments");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.processOrderPayments, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.processOrderPayments + " matches with expected code");
+		}
+		if (resourceKey.equals(ResourceKey.getInventoryReservationList)) {
+			payload = helper.getInventoryReservationList(tempData);
+			logger.info("Pre-condition for Test: getInventoryReservationList");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.getInventoryReservationList, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.getInventoryReservationList + " matches with expected code");
+		}
+		if (resourceKey.equals(ResourceKey.cancelReservation)) {
+			payload = helper.cancelReservation(tempData);
+			logger.info("Pre-condition for Test: cancelReservation");
+			//ExtentFactory.getInstance().getExtent().log(Status.INFO, "Pre-condition: getOrderReleaseList");
+			response = helper.createRequest(ResourceKey.cancelReservation, payload);
+			customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_OK,
+					"Status code for " + ResourceKey.cancelReservation + " matches with expected code");
+		}
+
 		
 		return response;
 
@@ -477,6 +510,7 @@ public class RequestHelper {
 		for (int i = 0; i < crawlNodeList.getLength(); i++) {
 			node = crawlNodeList.item(i);;
 			XMLUtil.setDataInNodeAtt((Element) node, "PromiseLine.LineId", Integer.toString(i+1));
+			XMLUtil.setDataInNodeAtt((Element) node, "PromiseLine.RequiredQty", orderData.get("Promise.PromiseLines.PromiseLine.RequiredQty["+i+"]"));
 		}
 
 		return XMLUtil.convertXMLDocumentToString(finalDoc);
@@ -500,7 +534,7 @@ public class RequestHelper {
 		return XMLUtil.convertXMLDocumentToString(finalDoc);
 	}
 	
-	public String setItemIdsInreserveAvailableInventoryPayloadPayload(String payload, Map<String, String> items) throws Exception {
+	public String setItemIdsInreserveAvailableInventoryPayload(String payload, Map<String, String> items) throws Exception {
 		Document finalDoc = XMLUtil.convertStringToXmlDoc(payload);
 		Node node;
 		NodeList crawlNodeList = finalDoc.getElementsByTagName(MappedTags.reserveAvailableInventory.getActualTag());
