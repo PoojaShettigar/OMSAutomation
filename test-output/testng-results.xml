@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results skipped="0" failed="1" ignored="0" retried="1" total="2" passed="0">
   <reporter-output>
   </reporter-output>
@@ -137,6 +138,36 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- sendReports -->
       </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality -->
+=======
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13912" started-at="2022-01-28T14:33:02 IST" finished-at="2022-01-28T14:33:16 IST">
+    <groups>
+      <group name="Regression">
+        <method signature="test.testApi()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.test@58134517]" name="testApi" class="com.perfaware.automation.oms.sterling.common.testcases.test"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test name="Default test" duration-ms="13912" started-at="2022-01-28T14:33:02 IST" finished-at="2022-01-28T14:33:16 IST">
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.test">
+        <test-method status="PASS" signature="initialSetup()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.test@58134517]" name="initialSetup" is-config="true" duration-ms="1630" started-at="2022-01-28T14:33:01 IST" finished-at="2022-01-28T14:33:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialSetup -->
+        <test-method status="PASS" signature="initiate()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.test@58134517]" name="initiate" is-config="true" duration-ms="74" started-at="2022-01-28T14:33:02 IST" finished-at="2022-01-28T14:33:03 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiate -->
+        <test-method status="PASS" signature="testApi()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.test@58134517]" name="testApi" duration-ms="13591" started-at="2022-01-28T14:33:03 IST" finished-at="2022-01-28T14:33:16 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testApi -->
+        <test-method status="PASS" signature="sendReports()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.test@58134517]" name="sendReports" is-config="true" duration-ms="9372" started-at="2022-01-28T14:33:16 IST" finished-at="2022-01-28T14:33:26 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendReports -->
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.test -->
+>>>>>>> dcc5674b1d688ec4edd42313b0c0c11b8897bb43
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

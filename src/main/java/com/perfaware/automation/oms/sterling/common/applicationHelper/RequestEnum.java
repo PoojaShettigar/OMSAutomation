@@ -36,7 +36,10 @@ public class RequestEnum {
 		syncLoadedInventory,
 		loadInventoryMismatch,
 		findInventory,
-		reserveAvailableInventory;
+		reserveAvailableInventory,
+		triggerAgent,
+		getInventoryReservationList,
+		cancelReservation;
 	
 		
 		

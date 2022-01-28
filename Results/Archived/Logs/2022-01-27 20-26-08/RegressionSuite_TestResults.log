@@ -1,0 +1,61 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: reserveAvailableInventory
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="FCVColombia" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID="PICK_CCC1003916"/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="013582" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="1" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="880303" KitCode="" KitQty="" LevelOfService="" LineId="2" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="2" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="193503" KitCode="" KitQty="" LevelOfService="" LineId="3" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="3" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 899
+Date: Thu, 27 Jan 2022 14:55:58 GMT
+
+<PromiseHeader AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="01" OrganizationCode="FCVColombia" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <PromiseLines TotalNumberOfRecords="3">
+    <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FillQuantity="" FulfillmentType="" IsBundleParent="N" IsSubOnOrderAllowed="N" ItemGroupCode="PROD" ItemID="193503" KitQty="0" LevelOfService="" LineId="3" MinShipByDate="" NewItemID="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="3" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <Reservations AvailableQty="0.00" QtyToBeReserved="3.00" TotalReservedQty="0"/>
+    </PromiseLine>
+    <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FillQuantity="" FulfillmentType="" IsBundleParent="N" IsSubOnOrderAllowed="N" ItemGroupCode="PROD" ItemID="013582" KitQty="0" LevelOfService="" LineId="1" MinShipByDate="" NewItemID="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="1" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <Reservations AvailableQty="0.00" QtyToBeReserved="1.00" TotalReservedQty="0"/>
+    </PromiseLine>
+    <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FillQuantity="" FulfillmentType="" IsBundleParent="N" IsSubOnOrderAllowed="N" ItemGroupCode="PROD" ItemID="880303" KitQty="0" LevelOfService="" LineId="2" MinShipByDate="" NewItemID="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="2" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <Reservations AvailableQty="0.00" QtyToBeReserved="2.00" TotalReservedQty="0"/>
+    </PromiseLine>
+  </PromiseLines>
+</PromiseHeader>
+
+Test successfully completed : testApi[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.test]

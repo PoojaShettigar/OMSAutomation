@@ -59,7 +59,9 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 		TestData[] testDataTypes = TestData.values();
 		for (TestData testDataType : testDataTypes) {
 			testData.put(testDataType.name(), helper.getDetails(file, worksheet, testDataType.name()));
+	
 		}
+		
 	}
 	
 	@Test(groups= {"Regression"})
@@ -79,13 +81,20 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 		for(int i =0;i<split.length;i++) {
 			nooflines = nooflines+Integer.valueOf(split[i]);
 		}
-		System.out.println(orderNo);
-		apiMethods.manageItem(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		apiMethods.adjustInventory(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		response=apiMethods.createOrder(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		apiMethods.resolveHold(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		apiMethods.scheduleAndReleaseOrder(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		apiMethods.BopisOrderFulfillment(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+		
+		  apiMethods.manageItem(helper, orderTypes, noOfLines, response, tempData,
+		  orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.adjustInventory(helper, orderTypes, noOfLines, response, tempData,
+		  orderNo, logger, testData, itemData, softAssert);
+		  response=apiMethods.createOrder(helper, orderTypes, noOfLines, response,
+		  tempData, orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.resolveHold(helper, orderTypes, noOfLines, response, tempData,
+		  orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.scheduleAndReleaseOrder(helper, orderTypes, noOfLines, response,
+		  tempData, orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.BopisOrderFulfillment(helper, orderTypes, noOfLines, response,
+		  tempData, orderNo, logger, testData, itemData, softAssert);
+		 
 	}
 	
 	

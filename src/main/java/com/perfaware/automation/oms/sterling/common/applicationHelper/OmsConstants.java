@@ -16,7 +16,8 @@ public enum OmsConstants {
 	OrderStaus_InTransitToCustomer("In Transit to Customer"),
 	OrderStatus_ReadyforCustomer("Ready for Customer"),
 	OrderStatus_CustomerPickedUp("Customer Picked Up"),
-	OrderStatus_DeliveredToCustomer("Delivered To Customer");
+	OrderStatus_DeliveredToCustomer("Delivered To Customer"),
+	InventoryReservation_DemandType("RESERVED");
 
 
 

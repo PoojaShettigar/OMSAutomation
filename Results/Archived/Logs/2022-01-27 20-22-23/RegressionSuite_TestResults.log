@@ -1,0 +1,2808 @@
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Error while sending reserveAvailableInventory request.
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Error while sending reserveAvailableInventory request.
+Test failed : testApi
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:543)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:415)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2072)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.StatusCodeBasedLoggingFilter.filter(StatusCodeBasedLoggingFilter.java:112)
+	at io.restassured.filter.log.ResponseLoggingFilter.filter(ResponseLoggingFilter.java:31)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1678)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:177)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at com.perfaware.automation.oms.sterling.common.requestPayloads.RestAssuredRequest.sendAPIRequest(RestAssuredRequest.java:34)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.ApplicationMethods.createRequest(ApplicationMethods.java:76)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:340)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:666)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="012642" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 13:51:25 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="458986" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 13:51:26 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:341)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:666)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Test failed : testApi
+java.lang.IndexOutOfBoundsException: Index: 3, Size: 2
+	at java.util.ArrayList.rangeCheck(Unknown Source)
+	at java.util.ArrayList.get(Unknown Source)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:661)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="860303" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 13:59:13 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="965925" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 13:59:14 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:341)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:670)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="316106" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:00:11 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="300655" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:00:13 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:341)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:670)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="999040" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:02:24 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="514411" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:02:26 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:341)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:670)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="620645" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:03:39 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="644690" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:03:41 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:341)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:671)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="860388" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:06:08 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="552882" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:06:10 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:345)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:672)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Error while sending reserveAvailableInventory request.
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Error while sending reserveAvailableInventory request.
+Test failed : testApi
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:543)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:415)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2072)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.StatusCodeBasedLoggingFilter.filter(StatusCodeBasedLoggingFilter.java:112)
+	at io.restassured.filter.log.ResponseLoggingFilter.filter(ResponseLoggingFilter.java:31)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1678)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:177)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at com.perfaware.automation.oms.sterling.common.requestPayloads.RestAssuredRequest.sendAPIRequest(RestAssuredRequest.java:34)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.ApplicationMethods.createRequest(ApplicationMethods.java:76)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:344)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:672)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="FCVColombia" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="015961" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 210
+Connection: Close
+Date: Thu, 27 Jan 2022 14:08:21 GMT
+
+<Errors>
+  <Error ErrorCode="OMP10092" ErrorDescription="Invalid Required Quantity" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Invalid Required Quantity"/>
+    <Attribute Name="ErrorCode" Value="OMP10092"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="RequiredQty" Value="0.0"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="FCVColombia" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="252580" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 210
+Connection: Close
+Date: Thu, 27 Jan 2022 14:08:22 GMT
+
+<Errors>
+  <Error ErrorCode="OMP10092" ErrorDescription="Invalid Required Quantity" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Invalid Required Quantity"/>
+    <Attribute Name="ErrorCode" Value="OMP10092"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="RequiredQty" Value="0.0"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:345)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:672)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="593348" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:10:55 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="005595" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:10:56 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:342)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:675)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="602414" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:12:56 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="515335" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:12:58 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:342)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:671)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="696445" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:13:57 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="645451" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:13:58 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:342)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:671)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="621344" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:17:02 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: getOrderReleaseList
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="845063" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 199
+Connection: Close
+Date: Thu, 27 Jan 2022 14:17:03 GMT
+
+<Errors>
+  <Error ErrorCode="YFS10513" ErrorDescription="OrganizationCode is mandatory" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="OrganizationCode is mandatory"/>
+    <Attribute Name="ErrorCode" Value="YFS10513"/>
+    <Attribute Name="HttpCode" Value="400"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:344)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:671)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: reserveAvailableInventory
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="FCVColombia" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="980106" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 210
+Connection: Close
+Date: Thu, 27 Jan 2022 14:19:17 GMT
+
+<Errors>
+  <Error ErrorCode="OMP10092" ErrorDescription="Invalid Required Quantity" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Invalid Required Quantity"/>
+    <Attribute Name="ErrorCode" Value="OMP10092"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="RequiredQty" Value="0.0"/>
+  </Error>
+</Errors>
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: reserveAvailableInventory
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="FCVColombia" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="198991" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 400 Bad Request
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 210
+Connection: Close
+Date: Thu, 27 Jan 2022 14:19:19 GMT
+
+<Errors>
+  <Error ErrorCode="OMP10092" ErrorDescription="Invalid Required Quantity" HttpCode="400">
+    <Attribute Name="ErrorDescription" Value="Invalid Required Quantity"/>
+    <Attribute Name="ErrorCode" Value="OMP10092"/>
+    <Attribute Name="HttpCode" Value="400"/>
+    <Attribute Name="RequiredQty" Value="0.0"/>
+  </Error>
+</Errors>
+
+Test failed : testApi
+java.lang.AssertionError: Status code for reserveAvailableInventory matches with expected code expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:907)
+	at org.testng.asserts.Assertion$26.doAssert(Assertion.java:338)
+	at org.testng.asserts.Assertion.executeAssert(Assertion.java:25)
+	at org.testng.asserts.Assertion.doAssert(Assertion.java:12)
+	at org.testng.asserts.Assertion.assertEquals(Assertion.java:334)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:341)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:671)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Test successfully completed : TC01_XML_BOPIS_SL_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC02_XML_BOPIS_ML_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+Error while sending manageItem request.
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :TC02_XML_BOPIS_ML_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+Error while sending manageItem request.
+Test failed : TC02_XML_BOPIS_ML_OrderFulfillment
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:543)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:415)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2072)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.StatusCodeBasedLoggingFilter.filter(StatusCodeBasedLoggingFilter.java:112)
+	at io.restassured.filter.log.ResponseLoggingFilter.filter(ResponseLoggingFilter.java:31)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1678)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:177)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at com.perfaware.automation.oms.sterling.common.requestPayloads.RestAssuredRequest.sendAPIRequest(RestAssuredRequest.java:34)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.ApplicationMethods.createRequest(ApplicationMethods.java:76)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:82)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.manageItem(APIMethods.java:431)
+	at com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment.TC02_XML_BOPIS_ML_OrderFulfillment(XML_BOPIS_OrderFulfillment.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : TC02_XML_BOPIS_ML_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: reserveAvailableInventory
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Error while sending reserveAvailableInventory request.
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: reserveAvailableInventory
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Error while sending reserveAvailableInventory request.
+Test failed : testApi
+java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:543)
+	at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:415)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:180)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:326)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:605)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:440)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.apache.http.client.HttpClient$execute$0.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder.doRequest(RequestSpecificationImpl.groovy:2072)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:350)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1183)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.StatusCodeBasedLoggingFilter.filter(StatusCodeBasedLoggingFilter.java:112)
+	at io.restassured.filter.log.ResponseLoggingFilter.filter(ResponseLoggingFilter.java:31)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.log.RequestLoggingFilter.filter(RequestLoggingFilter.java:140)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1672)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1678)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1268)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:819)
+	at groovy.lang.GroovyObject.invokeMethod(GroovyObject.java:39)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:45)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:177)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at com.perfaware.automation.oms.sterling.common.requestPayloads.RestAssuredRequest.sendAPIRequest(RestAssuredRequest.java:34)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.ApplicationMethods.createRequest(ApplicationMethods.java:76)
+	at com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper.requestCreationInOMS(RequestHelper.java:340)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.reserveAvailableInventory(APIMethods.java:675)
+	at com.perfaware.automation.oms.sterling.common.testcases.test.testApi(test.java:94)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:79)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+-------------------------------------------------------------------------------------------------------------------------
+Starting new testcase :testApi
+Pre-condition for Test: reserveAvailableInventory
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/reserveAvailableInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Promise AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="" OrganizationCode="FCVColombia" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <ReservationParameters AllowMultipleReservations="" AllowPartialReservation="" ExpirationDate="" ReservationID=""/>
+  <PromiseLines>
+    <PromiseLine BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="" DepartmentCode="" DistributionRuleId="" FillQuantity="" FreightTerms="" FulfillmentType="" GiftWrap="" GroupID="" IsForwardingAllowed="" IsProcurementAllowed="" ItemID="919559" KitCode="" KitQty="" LevelOfService="" LineId="1" MinShipByDate="" OrderLineReference="" ProcureFromNode="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="1" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <ShipToAddress AddressLine1="" AddressLine2="" AddressLine3="" AddressLine4="" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="" Company="" Country="" DayFaxNo="" DayPhone="" Department="" EMailID="" EveningFaxNo="" EveningPhone="" FirstName="" IsCommercialAddress="" JobTitle="" LastName="" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" State="" Suffix="" TaxGeoCode="" Title="" ZipCode=""/>
+    </PromiseLine>
+  </PromiseLines>
+</Promise>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 846
+Date: Thu, 27 Jan 2022 14:52:13 GMT
+
+<PromiseHeader AggregateSupplyOfNonRequestedTag="Y" AllocationRuleID="" CarrierServiceCode="" CheckCapacity="" CheckInventory="Y" ConsiderCurrentSlot="" ConsiderSupplementalCapacity="Y" CustomerID="" DeliveryDateBased="Y" DemandType="" DependencyShippingRule="" DetermineCarrierService="" DetermineHighestPriorityNodeForBackOrderedQty="" DetermineReturnMethod="" DistanceToConsider="" DistanceUOMToConsider="" DistributionRuleId="" EnterpriseCode="" FillQuantity="" FulfillmentType="" IgnoreMinNotificationTime="Y" IgnorePromised="Y" IgnoreUnpromised="Y" IsIntendToUpdate="Y" IsPartialSubstitutionAllowed="Y" IsSubstitutionAllowed="" LevelOfService="" MaximumRecords="" OptimizationType="01" OrganizationCode="FCVColombia" ReceivingNode="" ReqEndDate="" ReqStartDate="" ReturnMultipleSrvcSlots="Y" ReturnSlotsWithUnavailableCapacity="" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" ShipTogetherInRatio="" SourcingClassification="" UseItemCost="" UseLandedCost="" UseUnplannedInventory="">
+  <PromiseLines TotalNumberOfRecords="1">
+    <PromiseLine AutoReplacedByPreferredSubstitute="N" BundleFulfillmentMode="" BundleParentLineId="" CarrierServiceCode="" DeliveryMethod="SHP" DistributionRuleId="" FillQuantity="" FulfillmentType="" IsBundleParent="N" IsSubOnOrderAllowed="N" ItemGroupCode="PROD" ItemID="919559" KitQty="0" LevelOfService="" LineId="1" MinShipByDate="" NewItemID="" ProductClass="" ReceivingNode="" ReqEndDate="" ReqStartDate="" RequiredQty="1" SCAC="" ScacAndServiceKey="" Segment="" SegmentType="" ShipNode="" UnitOfMeasure="">
+      <Reservations AvailableQty="0.00" QtyToBeReserved="1.00" TotalReservedQty="0"/>
+    </PromiseLine>
+  </PromiseLines>
+</PromiseHeader>
+
+Test successfully completed : testApi[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.test]

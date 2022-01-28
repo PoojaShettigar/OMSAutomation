@@ -1055,6 +1055,7 @@ public class ApplicationMethods {
 		XMLUtil.setDataInNodeAtt(doc.getDocumentElement(), "Promise.FulfillmentType", testdata.get("Promise.FulfillmentType"));
 		XMLUtil.setDataInNodeAtt(doc.getDocumentElement(), "Promise.OrganizationCode", testdata.get("Promise.OrganizationCode"));
 		XMLUtil.setDataInNodeAtt(doc.getDocumentElement(), "Promise.ReservationParameters.ReservationID", testdata.get("Promise.ReservationParameters.ReservationID"));
+		
 		Document docforShipmentlines = XMLUtil
 				.createDocFromNode((Element) XMLUtil.getNodeByTagName(doc, MappedTags.reserveAvailableInventory.getParentTag()));
 		
@@ -1088,6 +1089,50 @@ public class ApplicationMethods {
 			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
 		}
 		
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	/**
+	 * This function return payload for triggerAgent
+	 * 
+	 * @author Perfaware
+	 * @param data  - data to set in the xml              
+	 * 
+	 */
+	public String triggerAgent(Map<String, String> data) throws Exception {
+		String filePath = getFilePath(null, MappedTags.triggerAgent.getMasterXmlFilePath(), true);
+		Document finalDoc = XMLUtil.readXmlFile(filePath);
+		Node node = finalDoc.getDocumentElement();
+		for (Map.Entry<String, String> entry : data.entrySet()) {
+			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	
+	public String processOrderPayments(Map<String, String> data) throws Exception {
+		String filePath = getFilePath(null, MappedTags.processOrderPayments.getMasterXmlFilePath(), true);
+		Document finalDoc = XMLUtil.readXmlFile(filePath);
+		Node node = finalDoc.getDocumentElement();
+		for (Map.Entry<String, String> entry : data.entrySet()) {
+			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	public String getInventoryReservationList(Map<String, String> data) throws Exception {
+		String filePath = getFilePath(null, MappedTags.getInventoryReservationList.getMasterXmlFilePath(), true);
+		Document finalDoc = XMLUtil.readXmlFile(filePath);
+		Node node = finalDoc.getDocumentElement();
+		for (Map.Entry<String, String> entry : data.entrySet()) {
+			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
+		}
+		return XMLUtil.convertXMLDocumentToString(finalDoc);
+	}
+	public String cancelReservation(Map<String, String> data) throws Exception {
+		String filePath = getFilePath(null, MappedTags.cancelReservation.getMasterXmlFilePath(), true);
+		Document finalDoc = XMLUtil.readXmlFile(filePath);
+		Node node = finalDoc.getDocumentElement();
+		for (Map.Entry<String, String> entry : data.entrySet()) {
+			XMLUtil.setDataInNodeAtt((Element) node, entry.getKey(), entry.getValue());
+		}
 		return XMLUtil.convertXMLDocumentToString(finalDoc);
 	}
 
