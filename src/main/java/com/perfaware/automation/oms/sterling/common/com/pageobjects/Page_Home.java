@@ -31,6 +31,8 @@ public class Page_Home {
 	private By lnkCreateOrder=By.xpath("//div[@uid='bCreate']//a[text()='Create Order']");
 	//private By drpEnterprise=By.xpath("//div[@uid='orgList']//input[@class='dijitReset dijitInputInner']");
 	
+	private By lnkCreateConsumer=By.xpath("//div[@uid='pnlCreateLinks']//div[@uid='bCreateConsumer']//a");
+	
 	@FindBy(xpath="//div[@uid='orgList']//input[@class='dijitReset dijitInputInner']")
 	@CacheLookup
 	private WebElement drpEnterprise;
@@ -42,18 +44,20 @@ public class Page_Home {
 	public String clickCreateOrder() {
 		jsUtil.elementClick(this.driver, lnkCreateOrder, "Creare Order link");
 		return uiUtil.getWindowHandle(this.driver);
-
+	}
+	
+	public Page_CreateConsumer clickCreateConsumer() {
+		jsUtil.elementClick(this.driver,lnkCreateConsumer , "Creare Consumer link");
+		return new Page_CreateConsumer(this.driver);
 	}
 	
 	public void selectEenterprise(String input) throws InterruptedException {
-
 		drpEnterprise.sendKeys(Keys.chord(Keys.CONTROL,"a",Keys.DELETE));
 		uiUtil.enterInput(drpEnterprise, input, "Enterprise");
 		drpEnterprise.sendKeys(Keys.BACK_SPACE);
-	    Thread.sleep(2000);
+		uiUtil.waitForPageLoad(2);
 	    drpEnterprise.sendKeys(Keys.ARROW_DOWN);
-	    drpEnterprise.sendKeys(Keys.ENTER);
-		
+	    drpEnterprise.sendKeys(Keys.ENTER);		
 	}
 	
 	public Page_CustomerSearch clickApply() {

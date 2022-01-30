@@ -23,11 +23,15 @@ public class Page_CustomerDetails {
 		PageFactory.initElements(driver, this);
 	}
 	
+	@FindBy(xpath="//div[@uid='pnlPrimaryInfo']//span[@uid='lblContactName']")
+	@CacheLookup
+	private WebElement lblCustomerName;
+	
 	@FindBy(xpath="//span[contains(@uid,'lblContactName')]")
 	@CacheLookup
 	private WebElement lblContactName;
 	
-	@FindBy(xpath="//div[contains(@uid,'lnkEmailAddress')]//div[@class='scLinkAlignment dijitInline']//div[@role='presentation']//a[@class='idxLinkDerived idxLink']")
+	@FindBy(xpath="//div[contains(@uid,'lnkEmailAddress')]//div[@class='scLinkAlignment dijitInline']//div[@role='presentation']")
 	@CacheLookup
 	private WebElement lblEmailaddress;
 	
@@ -39,19 +43,19 @@ public class Page_CustomerDetails {
 	@CacheLookup
 	private WebElement lblRUTID;
 	
-	public void captureContactName() {
-		uiUtil.webElementGetText(lblContactName,"Contact Name");
+	public String captureContactName() {
+		return uiUtil.webElementGetText(lblContactName,"Contact Name");
 	}
 	
-	public void captureEmailaddress() {
-		uiUtil.webElementGetText(lblEmailaddress,"Email address");
+	public String captureEmailaddress() {
+		return uiUtil.webElementGetText(lblEmailaddress,"Email address");
 	}
 	
-	public void captureMobilePhone() {
-		uiUtil.webElementGetText(lblMobilePhone,"Mobile Phone");
+	public String captureMobilePhone() {
+		return uiUtil.webElementGetText(lblMobilePhone,"Mobile Phone");
 	}
 	
-	public void captureRUTID() {
-		uiUtil.webElementGetText(lblRUTID,"RUT ID");
+	public String captureRUTID() {
+		return uiUtil.webElementGetText(lblRUTID,"RUT ID");
 	}
 }

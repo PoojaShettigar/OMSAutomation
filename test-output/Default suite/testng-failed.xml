@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality">
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch">
         <methods>
-          <include name="TC04_COM_LoginFunctionality"/>
+          <include name="TC06_COM_CreateConsumer"/>
           <include name="sendReports"/>
-          <include name="initialSetup"/>
-          <include name="initiate"/>
           <include name="driverInitialization"/>
+          <include name="initialSetup"/>
           <include name="tearDown"/>
+          <include name="initiate"/>
         </methods>
-      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality -->
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -17,7 +17,7 @@ import com.aventstack.extentreports.Status;
 import com.perfaware.automation.oms.sterling.common.applicationHelper.OrderTypes;
 import com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper;
 import com.perfaware.automation.oms.sterling.common.applicationHelper.TestData;
-import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_COM_Login;
+import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login;
 import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Home;
 import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_OrderSummary;
 import com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion;

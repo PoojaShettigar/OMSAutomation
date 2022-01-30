@@ -4,7 +4,6 @@
   	<test thread-count="5" name="OMS" parallel="methods" >
 	    <classes> 
 	     	<class name="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment"/> 
-	     	<class name="com.perfaware.automation.oms.sterling.common.testcases.COM_LoginFunctionality"/>
 	    </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

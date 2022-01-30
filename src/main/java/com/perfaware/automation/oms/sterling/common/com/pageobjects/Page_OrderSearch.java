@@ -40,7 +40,7 @@ public class Page_OrderSearch {
 	@CacheLookup
 	private WebElement txtbxOrderDateTo;
 	
-	@FindBy(xpath="//div[contains(@uid,'txt_orderDateTo')]//input[@class='dijitReset dijitInputInner']")
+	@FindBy(xpath="//div[contains(@uid,'cmbHoldType')]//input[@class='dijitReset dijitInputInner']")
 	@CacheLookup
 	private WebElement txtbxHoldTypes;
 	
@@ -68,21 +68,22 @@ public class Page_OrderSearch {
 	@CacheLookup
 	private WebElement txtbxPostalCode;
 	
-	@FindBy(xpath="//div[contains(@uid,'txt_postalCode')]//input[@class='dijitReset dijitInputInner']")
+	@FindBy(xpath="//div[@uid='radDraftOrderFlag']//label[text()='Confirmed order']")
 	@CacheLookup
-	private WebElement rbtnConfirmedorder;
+	private WebElement rbtnConfirmedOrder;
 	
-	@FindBy(xpath="//div[contains(@uid,'txt_postalCode')]//input[@class='dijitReset dijitInputInner']")
+	@FindBy(xpath="//div[@uid='radDraftOrderFlag']//label[text()='Draft order']")
 	@CacheLookup
 	private WebElement rbtnDraftOrder;
 	
-	@FindBy(xpath="//div[contains(@uid,'txt_postalCode')]//input[@class='dijitReset dijitInputInner']")
+	@FindBy(xpath="//div[@uid='radReadFromHistory']//label[text()='Recent orders']")
 	@CacheLookup
 	private WebElement rbtnRecentOrder;
 	
-	@FindBy(xpath="//div[contains(@uid,'txt_postalCode')]//input[@class='dijitReset dijitInputInner']")
+	@FindBy(xpath="//div[@uid='radReadFromHistory']//label[text()='Archived orders']")
 	@CacheLookup
 	private WebElement rbtnArchivedOrder;
+	
 	
 	public void enterEnterpriseCode(String enterpriseCode) {
 		uiUtil.enterInput(txtbxEnterpriseCode, enterpriseCode, "Enterprise Code");
@@ -133,7 +134,7 @@ public class Page_OrderSearch {
 	}
 	
 	public void clickConfirmedOrder() {
-		uiUtil.elementClick(rbtnConfirmedorder , "ConfirmedOrder radio button");
+		uiUtil.elementClick(rbtnConfirmedOrder , "ConfirmedOrder radio button");
 	}
 	
 	public void clickDraftdOrder() {

@@ -23,7 +23,10 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 import org.apache.commons.io.FileUtils;
+import org.testng.asserts.Assertion;
 
+import com.aventstack.extentreports.util.Assert;
+import com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion;
 import com.perfaware.automation.oms.sterling.common.fileReader.PropertyFileReader;
 import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentManager;
 
@@ -169,4 +172,12 @@ public class Utilities {
 	         System.out.println("Email sent");
     }
   	
+    public void resultValidationSoftAssertion(String excpectedResult, String actualResult ,String validationOn,SoftAssertion softAssert) {
+    
+    	if (actualResult.equalsIgnoreCase(excpectedResult)) {
+			softAssert.assertTrue(true, validationOn+" "+actualResult);			
+		} else {
+			softAssert.assertTrue(false, "mismatch in expected result "+excpectedResult +"and actual result is "+ actualResult);
+		}
+    }
 }

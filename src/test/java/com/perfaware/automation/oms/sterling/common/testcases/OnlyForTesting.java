@@ -30,7 +30,7 @@ import com.perfaware.automation.oms.sterling.common.utils.Utilities;
 
 import io.restassured.internal.support.FileReader;
 import io.restassured.response.Response;
-public class test  extends TestCaseBase{
+public class OnlyForTesting  extends TestCaseBase{
 	static String className = new Throwable().getStackTrace()[1].getClassName();
 	public static final Logger logger = Logger.getLogger(className);
 	protected Map<String, List<Map<String, String>>> testData;

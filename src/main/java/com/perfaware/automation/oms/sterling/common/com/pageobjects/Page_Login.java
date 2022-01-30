@@ -11,11 +11,11 @@ import org.testng.Assert;
 import com.aventstack.extentreports.Status;
 import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
 import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
-public class Page_COM_Login {
+public class Page_Login {
 	private WebDriver driver;
 	UIUtilities uiUtil;
 	
-	public Page_COM_Login(WebDriver driver) {
+	public Page_Login(WebDriver driver) {
 		this.driver=driver;
 		uiUtil=new UIUtilities();
 		PageFactory.initElements(driver, this);

@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
 import com.perfaware.automation.oms.sterling.common.applicationHelper.OrderTypes;
 import com.perfaware.automation.oms.sterling.common.applicationHelper.RequestHelper;
 import com.perfaware.automation.oms.sterling.common.applicationHelper.TestData;
-import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_COM_Login;
+import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login;
 import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Home;
 import com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion;
 import com.perfaware.automation.oms.sterling.common.driverFactory.BrowserFactory;
@@ -32,7 +32,7 @@ import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 import io.restassured.internal.support.FileReader;
 import io.restassured.response.Response;
 
-public class COM_LoginFunctionality extends TestCaseBase {
+public class COM_Login extends TestCaseBase {
 	static String className = new Throwable().getStackTrace()[1].getClassName();
 	public static final Logger logger = Logger.getLogger(className);
 	private static final TimeUnit SECONDS = null;
@@ -85,7 +85,7 @@ public class COM_LoginFunctionality extends TestCaseBase {
 	public void TC04_COM_LoginFunctionality() throws Exception {
 		uiUtil=new UIUtilities();
 		COMTestMethods comMethods=new COMTestMethods();
-		Page_COM_Login loginObj = new Page_COM_Login(DriverFactory.getInstance().getDriver());
+		Page_Login loginObj = new Page_Login(DriverFactory.getInstance().getDriver());
 		comMethods.comLogin("admin1",PropertyFileReader.propertyMap.get("com_password"),loginObj);
 		uiUtil.waitForPageLoad(10);
 		loginObj.captureLoginError();

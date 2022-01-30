@@ -82,18 +82,12 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 			nooflines = nooflines+Integer.valueOf(split[i]);
 		}
 		
-		  apiMethods.manageItem(helper, orderTypes, noOfLines, response, tempData,
-		  orderNo, logger, testData, itemData, softAssert);
-		  apiMethods.adjustInventory(helper, orderTypes, noOfLines, response, tempData,
-		  orderNo, logger, testData, itemData, softAssert);
-		  response=apiMethods.createOrder(helper, orderTypes, noOfLines, response,
-		  tempData, orderNo, logger, testData, itemData, softAssert);
-		  apiMethods.resolveHold(helper, orderTypes, noOfLines, response, tempData,
-		  orderNo, logger, testData, itemData, softAssert);
-		  apiMethods.scheduleAndReleaseOrder(helper, orderTypes, noOfLines, response,
-		  tempData, orderNo, logger, testData, itemData, softAssert);
-		  apiMethods.BopisOrderFulfillment(helper, orderTypes, noOfLines, response,
-		  tempData, orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.manageItem(helper, orderTypes, noOfLines, response, tempData,orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.adjustInventory(helper, orderTypes, noOfLines, response, tempData,orderNo, logger, testData, itemData, softAssert);
+		  response=apiMethods.createOrder(helper, orderTypes, noOfLines, response,tempData, orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.resolveHold(helper, orderTypes, noOfLines, response, tempData,orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.scheduleAndReleaseOrder(helper, orderTypes, noOfLines, response,tempData, orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.BopisOrderFulfillment(helper, orderTypes, noOfLines, response,tempData, orderNo, logger, testData, itemData, softAssert);
 		 
 	}
 	
