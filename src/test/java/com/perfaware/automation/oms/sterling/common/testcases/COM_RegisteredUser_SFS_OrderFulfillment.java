@@ -28,7 +28,6 @@ import com.perfaware.automation.oms.sterling.common.fileReader.PropertyFileReade
 import com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods;
 import com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods;
 import com.perfaware.automation.oms.sterling.common.testcaseUtils.TestCaseBase;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
 import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 
 import io.restassured.internal.support.FileReader;

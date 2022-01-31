@@ -3,6 +3,8 @@
 <suite name="OMS UI Test Suite">	
   	<test thread-count="5" name="OMS" parallel="methods" >
 	    <classes> 
+	     	<class name="com.perfaware.automation.oms.sterling.common.testcases.COM_Login"/> 
+	     	<class name="com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch"/> 
 	     	<class name="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment"/> 
 	    </classes>
   </test> <!-- Test -->

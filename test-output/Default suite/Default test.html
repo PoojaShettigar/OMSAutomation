@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/1</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Jan 29 20:57:12 IST 2022</td>
+<td>Started on:</td><td>Mon Jan 31 09:48:25 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>185 seconds (185614 ms)</td>
+<tr><td>Total time:</td><td>60 seconds (60119 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,19 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch.TC06_COM_CreateConsumer()'><b>TC06_COM_CreateConsumer</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch</td>
-<td></td>
-<td>79</td>
-<td>com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -88,32 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch.TC06_COM_CreateConsumer()'><b>TC06_COM_CreateConsumer</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch</td>
-<td><div><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Ver detalles del cliente?}
-  (Session info: chrome=97.0.4692.99): Ver detalles del cliente?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57316}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dcfed8b6ea17b0a0257eb29460f7ab7f
-*** Element info: {Using=xpath, value=//span[contains(@uid,&apos;lblContactName&apos;)]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy18.getText(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.utils.UIUtilities.webElementGetText(UIUtilities.java:87)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_CustomerDetails.captureContactName(Page_CustomerDetails.java:47)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.validateCustomerDetails(COMTestMethods.java:198)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_CustomerCreation(COMTestMethods.java:192)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch.TC06_COM_CreateConsumer(COM_OrderSearch.java:89)
+<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality()'><b>TC04_COM_LoginFunctionality</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_Login</td>
+<td><div><pre>java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login.captureLoginError(Page_Login.java:71)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality(COM_Login.java:93)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -142,32 +113,16 @@ Session ID: dcfed8b6ea17b0a0257eb29460f7ab7f
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1698746141", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1698746141'><pre>org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Ver detalles del cliente?}
-  (Session info: chrome=97.0.4692.99): Ver detalles del cliente?
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57316}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dcfed8b6ea17b0a0257eb29460f7ab7f
-*** Element info: {Using=xpath, value=//span[contains(@uid,&apos;lblContactName&apos;)]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy18.getText(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.utils.UIUtilities.webElementGetText(UIUtilities.java:87)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_CustomerDetails.captureContactName(Page_CustomerDetails.java:47)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.validateCustomerDetails(COMTestMethods.java:198)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_CustomerCreation(COMTestMethods.java:192)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch.TC06_COM_CreateConsumer(COM_OrderSearch.java:89)
+</pre></div><a href='#' onClick='toggleBox("stack-trace65305091", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace65305091'><pre>java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login.captureLoginError(Page_Login.java:71)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality(COM_Login.java:93)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -197,8 +152,8 @@ Session ID: dcfed8b6ea17b0a0257eb29460f7ab7f
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>79</td>
-<td>com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c</td></tr>
+<td>20</td>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_Login@57d5872c</td></tr>
 </table><p>
 </body>
 </html>

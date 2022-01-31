@@ -6,7 +6,6 @@ import org.testng.asserts.Assertion;
 import org.testng.asserts.IAssert;
 import org.testng.collections.Lists;
 import com.aventstack.extentreports.Status;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
 
 public class HardAssertion extends Assertion{
 	private List<String> assert_messages = Lists.newArrayList();

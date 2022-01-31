@@ -1,120 +1,261 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" retried="1" total="2" passed="1">
+<testng-results skipped="0" failed="3" ignored="4" total="8" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="185614" started-at="2022-01-29T20:57:12 IST" finished-at="2022-01-29T21:00:17 IST">
+  <suite name="OMS UI Test Suite" duration-ms="187847" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:03:25 IST">
     <groups>
       <group name="Regression">
-        <method signature="COM_OrderSearch.TC06_COM_CreateConsumer()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="TC06_COM_CreateConsumer" class="com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch"/>
+        <method signature="COM_CustomerSearch.TC06_COM_CreateConsumer()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e]" name="TC06_COM_CreateConsumer" class="com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch"/>
+        <method signature="COM_Login.TC04_COM_LoginFunctionality()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="TC04_COM_LoginFunctionality" class="com.perfaware.automation.oms.sterling.common.testcases.COM_Login"/>
+        <method signature="COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment" class="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment"/>
       </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment" class="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test name="Default test" duration-ms="185614" started-at="2022-01-29T20:57:12 IST" finished-at="2022-01-29T21:00:17 IST">
-      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch">
-        <test-method status="PASS" signature="initialSetup()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="initialSetup" is-config="true" duration-ms="2566" started-at="2022-01-29T20:57:09 IST" finished-at="2022-01-29T20:57:12 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initialSetup -->
-        <test-method status="PASS" signature="initiate()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="initiate" is-config="true" duration-ms="96" started-at="2022-01-29T20:57:12 IST" finished-at="2022-01-29T20:57:12 IST">
+    <test name="OMS" duration-ms="187847" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:03:25 IST">
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch">
+        <test-method status="PASS" signature="initiate()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e]" name="initiate" is-config="true" duration-ms="271" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:00:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initiate -->
-        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="driverInitialization" is-config="true" duration-ms="13440" started-at="2022-01-29T20:57:12 IST" finished-at="2022-01-29T20:57:26 IST">
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e]" name="driverInitialization" is-config="true" duration-ms="17635" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:00:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInitialization -->
-        <test-method status="SKIP" signature="TC06_COM_CreateConsumer()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="TC06_COM_CreateConsumer" duration-ms="79030" retried="true" started-at="2022-01-29T20:57:26 IST" finished-at="2022-01-29T20:58:45 IST">
-          <exception class="org.openqa.selenium.UnhandledAlertException">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-01-31T13:01:55 IST" finished-at="2022-01-31T13:01:55 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e]" name="driverInitialization" is-config="true" duration-ms="16233" started-at="2022-01-31T13:01:55 IST" finished-at="2022-01-31T13:02:11 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitialization -->
+        <test-method status="PASS" signature="TC06_COM_CreateConsumer()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e]" name="TC06_COM_CreateConsumer" duration-ms="73619" started-at="2022-01-31T13:02:11 IST" finished-at="2022-01-31T13:03:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC06_COM_CreateConsumer -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-01-31T13:03:25 IST" finished-at="2022-01-31T13:03:25 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch -->
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_Login">
+        <test-method status="PASS" signature="initialSetup()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="initialSetup" is-config="true" duration-ms="2991" started-at="2022-01-31T13:00:14 IST" finished-at="2022-01-31T13:00:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialSetup -->
+        <test-method status="PASS" signature="initiate()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="initiate" is-config="true" duration-ms="286" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:00:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiate -->
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="driverInitialization" is-config="true" duration-ms="21536" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:00:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitialization -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="tearDown" is-config="true" duration-ms="4194" started-at="2022-01-31T13:01:03 IST" finished-at="2022-01-31T13:01:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="driverInitialization" is-config="true" duration-ms="11204" started-at="2022-01-31T13:01:08 IST" finished-at="2022-01-31T13:01:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitialization -->
+        <test-method status="FAIL" signature="TC04_COM_LoginFunctionality()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="TC04_COM_LoginFunctionality" duration-ms="13796" started-at="2022-01-31T13:01:19 IST" finished-at="2022-01-31T13:01:33 IST">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[unexpected alert open: {Alert text : Ver detalles del cliente?}
-  (Session info: chrome=97.0.4692.99): Ver detalles del cliente?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-FEJVQKG', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57316}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dcfed8b6ea17b0a0257eb29460f7ab7f
-*** Element info: {Using=xpath, value=//span[contains(@uid,'lblContactName')]}]]>
+              <![CDATA[expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Ver detalles del cliente?}
-  (Session info: chrome=97.0.4692.99): Ver detalles del cliente?
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-FEJVQKG', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57316}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: dcfed8b6ea17b0a0257eb29460f7ab7f
-*** Element info: {Using=xpath, value=//span[contains(@uid,'lblContactName')]}
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy18.getText(Unknown Source)
-at com.perfaware.automation.oms.sterling.common.utils.UIUtilities.webElementGetText(UIUtilities.java:87)
-at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_CustomerDetails.captureContactName(Page_CustomerDetails.java:47)
-at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.validateCustomerDetails(COMTestMethods.java:198)
-at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_CustomerCreation(COMTestMethods.java:192)
-at com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch.TC06_COM_CreateConsumer(COM_OrderSearch.java:89)
+              <![CDATA[java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login.captureLoginError(Page_Login.java:71)
+at com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality(COM_Login.java:93)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 at java.lang.reflect.Method.invoke(Unknown Source)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
 at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.util.ArrayList.forEach(Unknown Source)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TC06_COM_CreateConsumer -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="tearDown" is-config="true" duration-ms="1" started-at="2022-01-29T20:58:45 IST" finished-at="2022-01-29T20:58:45 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="driverInitialization" is-config="true" duration-ms="13171" started-at="2022-01-29T20:58:45 IST" finished-at="2022-01-29T20:58:58 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- driverInitialization -->
-        <test-method status="PASS" signature="TC06_COM_CreateConsumer()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="TC06_COM_CreateConsumer" duration-ms="79479" started-at="2022-01-29T20:58:58 IST" finished-at="2022-01-29T21:00:17 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC06_COM_CreateConsumer -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-01-29T21:00:17 IST" finished-at="2022-01-29T21:00:17 IST">
+        </test-method> <!-- TC04_COM_LoginFunctionality -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="tearDown" is-config="true" duration-ms="3065" started-at="2022-01-31T13:01:33 IST" finished-at="2022-01-31T13:01:36 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="sendReports()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch@57d5872c]" name="sendReports" is-config="true" duration-ms="9002" started-at="2022-01-29T21:00:18 IST" finished-at="2022-01-29T21:00:27 IST">
+        <test-method status="PASS" signature="sendReports()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be]" name="sendReports" is-config="true" duration-ms="10151" started-at="2022-01-31T13:03:25 IST" finished-at="2022-01-31T13:03:35 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sendReports -->
-      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_OrderSearch -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_Login -->
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment">
+        <test-method status="PASS" signature="initiate()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="initiate" is-config="true" duration-ms="378" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:00:17 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initiate -->
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="driverInitialization" is-config="true" duration-ms="17573" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:00:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitialization -->
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="driverInitialization" is-config="true" duration-ms="17592" started-at="2022-01-31T13:00:17 IST" finished-at="2022-01-31T13:00:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitialization -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="tearDown" is-config="true" duration-ms="910" started-at="2022-01-31T13:01:47 IST" finished-at="2022-01-31T13:01:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="driverInitialization" is-config="true" duration-ms="11992" started-at="2022-01-31T13:01:48 IST" finished-at="2022-01-31T13:02:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitialization -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="tearDown" is-config="true" duration-ms="990" started-at="2022-01-31T13:01:52 IST" finished-at="2022-01-31T13:01:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="driverInitialization()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="driverInitialization" is-config="true" duration-ms="14019" started-at="2022-01-31T13:01:53 IST" finished-at="2022-01-31T13:02:07 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitialization -->
+        <test-method status="FAIL" signature="TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment" duration-ms="64680" started-at="2022-01-31T13:02:00 IST" finished-at="2022-01-31T13:03:04 IST">
+          <exception class="org.openqa.selenium.JavascriptException">
+            <message>
+              <![CDATA[javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=97.0.4692.99)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FEJVQKG', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57946}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e485846b372a71d86ffa8a1096825b8]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=97.0.4692.99)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FEJVQKG', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57946}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e485846b372a71d86ffa8a1096825b8
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:114)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.JavascriptException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment -->
+        <test-method status="FAIL" signature="TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment" duration-ms="66668" started-at="2022-01-31T13:02:07 IST" finished-at="2022-01-31T13:03:14 IST">
+          <exception class="org.openqa.selenium.JavascriptException">
+            <message>
+              <![CDATA[javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=97.0.4692.99)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FEJVQKG', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58005}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ce04a528c2aa5cdc21706847c821ed6]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading 'click')
+  (Session info: chrome=97.0.4692.99)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-FEJVQKG', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_321'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58005}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ce04a528c2aa5cdc21706847c821ed6
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:132)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.JavascriptException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="tearDown" is-config="true" duration-ms="834" started-at="2022-01-31T13:03:05 IST" finished-at="2022-01-31T13:03:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc]" name="tearDown" is-config="true" duration-ms="907" started-at="2022-01-31T13:03:14 IST" finished-at="2022-01-31T13:03:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment -->
+    </test> <!-- OMS -->
+  </suite> <!-- OMS UI Test Suite -->
 </testng-results>

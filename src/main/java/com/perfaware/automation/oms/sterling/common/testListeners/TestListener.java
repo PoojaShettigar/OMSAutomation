@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -19,16 +20,19 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
+import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.ExtentColor;
+import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.perfaware.automation.oms.sterling.common.driverFactory.DriverFactory;
 import com.perfaware.automation.oms.sterling.common.fileReader.PropertyFileReader;
 import com.perfaware.automation.oms.sterling.common.testcaseUtils.TestCaseBase;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
 import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentManager;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
 import com.perfaware.automation.oms.sterling.common.utils.Utilities;
 
 import io.restassured.RestAssured;
@@ -49,25 +53,32 @@ public class TestListener implements ITestListener {
 	static ExtentReports report;
 	ExtentTest test;
 	Utilities util=new Utilities();
+	static ThreadLocal<Integer> flag = new ThreadLocal<Integer>();
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		logger.info("-------------------------------------------------------------------------------------------------------------------------");
+		flag.set(1);
 		logger.info("Starting new testcase :" + result.getMethod().getMethodName());
-		test = report.createTest(result.getMethod().getMethodName());
-		ExtentFactory.getInstance().setExtent(test);
+		ExtentTestManager.startTest(result.getMethod().getMethodName());
+		if (result.getMethod().getDescription() != null) {
+			String summary = result.getMethod().getDescription().replaceAll("\n", "<BR>");
+			ExtentTestManager.getTest().log(Status.INFO, "Testcase Summary : <BR>" + summary);
+		}
 	}
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		logger.info("Test successfully completed : " + result.getMethod().getMethodName() + result.getTestClass());
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, "Test Case: "+result.getMethod().getMethodName()+ " is Completed.");
-		ExtentFactory.getInstance().removeExtentObject();
+		logger.info("Test successfully passed : " + result.getMethod().getMethodName() + result.getTestClass());
+		ExtentTestManager.getTest().log(Status.PASS,MarkupHelper.createLabel(result.getName() + " PASSED.", ExtentColor.GREEN));
+		//updateStatusInTM4J(result, "Pass");
+		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Test Case: "+result.getMethod().getMethodName()+ " is Failed.");
-		ExtentFactory.getInstance().getExtent().log(Status.FAIL, result.getThrowable());
+		
+		ExtentTestManager.getTest().log(Status.FAIL,
+				MarkupHelper.createLabel(result.getName() + " FAILED ", ExtentColor.RED));
+		ExtentTestManager.getTest().fail(result.getThrowable());
 		logger.error("Test failed : " + result.getName());
 		StringWriter sw = new StringWriter();
 		result.getThrowable().printStackTrace(new PrintWriter(sw));
@@ -86,10 +97,10 @@ public class TestListener implements ITestListener {
 			System.out.println(System.getProperty("user.dir"));
 			File destFile = new File(screenshotPath);
 			util.copyFile(srcFile, destFile);
-			ExtentFactory.getInstance().getExtent().addScreenCaptureFromPath(screenshotPath, "Test case failure screenshot");
-			ExtentFactory.getInstance().removeExtentObject();
+			ExtentTestManager.getTest().addScreenCaptureFromPath(screenshotPath, "Test case failure screenshot");
+
 		} catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 		}
 		
 		//updateStatusInTM4J(result, "Fail");
@@ -97,8 +108,21 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		ExtentFactory.getInstance().getExtent().log(Status.SKIP, "Test Case: "+result.getMethod().getMethodName()+ " is skipped.");
-		ExtentFactory.getInstance().removeExtentObject();
+		if (flag.get() == 0) {
+			ExtentTestManager.startTest(result.getMethod().getMethodName());
+			if (result.getMethod().getDescription() != null) {
+				String summary = result.getMethod().getDescription().replaceAll("\n", "<BR>");
+				ExtentTestManager.getTest().log(Status.INFO, "Testcase Summary : <BR>" + summary);
+			}
+			logger.info("Test skipped : " + result.getName() + result.getTestClass());
+			ExtentTestManager.getTest().log(Status.SKIP,
+					MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
+		} else {
+			logger.info("Test skipped : " + result.getName() + result.getTestClass());
+			ExtentTestManager.getTest().log(Status.SKIP,
+					MarkupHelper.createLabel(result.getName() + " SKIPPED ", ExtentColor.ORANGE));
+			ExtentManager.extentReports.removeTest(ExtentTestManager.getTest());
+		}
 	}
 
 	@Override
@@ -114,7 +138,7 @@ public class TestListener implements ITestListener {
 	@Override
 	public void onStart(ITestContext context) {
 		try {
-			 report = ExtentManager.setupExtentReport();
+			// report = ExtentManager.setupExtentReport();
 			/*try {
 			PropertyReader.propertyMap = new PropertyReader()
 					.getProperties(curDir + "/src/test/resources/config.Properties");
@@ -152,11 +176,14 @@ public class TestListener implements ITestListener {
 
 	@Override
 	public void onFinish(ITestContext context) {
-		try {
-			report.flush();
-		} catch (Exception e) {
-			LOGGER.error("Error while printing report at desired location.");
-			throw e;
+		flag.set(0);
+		Iterator<ITestResult> skippedTestCases = context.getSkippedTests().getAllResults().iterator();
+		while (skippedTestCases.hasNext()) {
+			ITestResult skippedTestCase = skippedTestCases.next();
+			ITestNGMethod method = skippedTestCase.getMethod();
+			if (context.getSkippedTests().getResults(method).size() > 0) {
+				skippedTestCases.remove();
+			}
 		}
 	}
 	

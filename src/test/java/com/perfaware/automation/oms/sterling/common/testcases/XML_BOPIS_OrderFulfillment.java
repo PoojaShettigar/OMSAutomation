@@ -13,6 +13,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.perfaware.automation.oms.sterling.common.applicationHelper.OrderTypes;
@@ -30,6 +31,7 @@ import com.perfaware.automation.oms.sterling.common.utils.Utilities;
 
 import io.restassured.internal.support.FileReader;
 import io.restassured.response.Response;
+import java.lang.reflect.Method;
 
 public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 	static String className = new Throwable().getStackTrace()[1].getClassName();
@@ -45,7 +47,6 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 
 	@BeforeClass(alwaysRun=true)
 	public void initiate() throws Exception {
-
 		helper = new RequestHelper();
 		excelFilePath = curDir + PropertyFileReader.propertyMap.get("XMLOrderTestdata");
 		file = new FileInputStream(excelFilePath);
@@ -54,6 +55,8 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 		initializeTestData();
 	}
 
+
+	
 	public void initializeTestData() throws Exception {
 		testData = new HashMap<String, List<Map<String, String>>>();
 		TestData[] testDataTypes = TestData.values();
@@ -84,7 +87,7 @@ public class XML_BOPIS_OrderFulfillment extends TestCaseBase {
 		
 		  apiMethods.manageItem(helper, orderTypes, noOfLines, response, tempData,orderNo, logger, testData, itemData, softAssert);
 		  apiMethods.adjustInventory(helper, orderTypes, noOfLines, response, tempData,orderNo, logger, testData, itemData, softAssert);
-		  response=apiMethods.createOrder(helper, orderTypes, noOfLines, response,tempData, orderNo, logger, testData, itemData, softAssert);
+		  response = apiMethods.createOrder(helper, orderTypes, noOfLines, response,tempData, orderNo, logger, testData, itemData, softAssert);
 		  apiMethods.resolveHold(helper, orderTypes, noOfLines, response, tempData,orderNo, logger, testData, itemData, softAssert);
 		  apiMethods.scheduleAndReleaseOrder(helper, orderTypes, noOfLines, response,tempData, orderNo, logger, testData, itemData, softAssert);
 		  apiMethods.BopisOrderFulfillment(helper, orderTypes, noOfLines, response,tempData, orderNo, logger, testData, itemData, softAssert);

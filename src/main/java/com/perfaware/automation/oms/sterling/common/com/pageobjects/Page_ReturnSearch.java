@@ -88,6 +88,10 @@ public class Page_ReturnSearch {
 	@CacheLookup
 	private WebElement txtbxLastFourDigitCC;
 	
+	@FindBy(xpath="//span[@uid='SST_SearchButton']//span[@role='button']")
+	@CacheLookup
+	private WebElement rbtnSearch;
+	
 	public void enterEnterpriseCode(String enterpriseCode) {
 		uiUtil.enterInput(txtbxEnterpriseCode, enterpriseCode, "Enterprise Code");
 	}
@@ -156,4 +160,7 @@ public class Page_ReturnSearch {
 		uiUtil.enterInput(txtbxLastFourDigitCC, creditCardNo, "Last four digits of credit card");
 	}
 
+	public void clickSearch() {
+		uiUtil.elementClick(rbtnSearch , "Search button");
+	}
 }

@@ -1,16 +1,11 @@
 package com.perfaware.automation.oms.sterling.common.utils;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
 import com.aventstack.extentreports.Status;
-import com.perfaware.automation.oms.sterling.common.driverFactory.DriverFactory;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
 
 public class JavascriptExecutorUtilies {
 	JavascriptExecutor jse;
@@ -24,9 +19,9 @@ public class JavascriptExecutorUtilies {
 			jse.executeScript("arguments[0].value='';", webElement);
 			uiUtil.enterInput(webElement, keysToSend, "Enterprise");
 
-			ExtentFactory.getInstance().getExtent().log(Status.PASS, element +"- selected as: "+keysToSend);
+			ExtentTestManager.getTest().log(Status.PASS, element +"- selected as: "+keysToSend);
 		} catch (Exception e) {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Value enter in field: "+element + " is failed due to exception: "+e);
+			ExtentTestManager.getTest().log(Status.FAIL, "Value enter in field: "+element + " is failed due to exception: "+e);
 		}
 	}
 	

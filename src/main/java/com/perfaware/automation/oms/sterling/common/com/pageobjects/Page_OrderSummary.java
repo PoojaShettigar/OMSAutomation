@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
 import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 
 public class Page_OrderSummary {
@@ -37,7 +37,7 @@ public class Page_OrderSummary {
 	
 	public String captureOrderNo() {
 		String orderNo= uiUtil.webElementGetText(txtOrderNo, "OrderNumber");
-		ExtentFactory.getInstance().getExtent().pass(MarkupHelper.createLabel(orderNo, ExtentColor.BLUE));
+		ExtentTestManager.getTest().pass(MarkupHelper.createLabel(orderNo, ExtentColor.BLUE));
 		return orderNo;
 		
 	}
@@ -58,7 +58,7 @@ public class Page_OrderSummary {
 			  }
 			}
 		
-		ExtentFactory.getInstance().getExtent().pass(MarkupHelper.createLabel(orderStatus, ExtentColor.BLUE));
+		ExtentTestManager.getTest().pass(MarkupHelper.createLabel(orderStatus, ExtentColor.BLUE));
 		
 	} 
 	

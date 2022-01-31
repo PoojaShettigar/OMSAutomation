@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.Status;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
 import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 public class Page_Login {
 	private WebDriver driver;
@@ -60,7 +60,7 @@ public class Page_Login {
 			return new Page_Home(this.driver);
 		} catch (Exception e) {
 			//log failure in extent
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Unable to click on Login button due to exception: "+e);
+			ExtentTestManager.getTest().log(Status.FAIL, "Unable to click on Login button due to exception: "+e);
 			return null;
 		}
 		

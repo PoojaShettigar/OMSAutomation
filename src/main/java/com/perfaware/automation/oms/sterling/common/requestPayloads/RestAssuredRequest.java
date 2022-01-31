@@ -2,7 +2,8 @@ package com.perfaware.automation.oms.sterling.common.requestPayloads;
 
 import org.apache.log4j.Logger;
 import com.aventstack.extentreports.Status;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
+
 import io.restassured.response.Response;
 
 public class RestAssuredRequest {
@@ -18,8 +19,8 @@ public class RestAssuredRequest {
 				Response resp=null;	 				
 				payload.httpRequest.headers(payload.headers);			
 			   	LOGGER.info("Calling "+payload.requestType+" request with end point : "+payload.resource);	   	
-			    ExtentFactory.getInstance().getExtent().log(Status.PASS, "Calling "+payload.requestType+" request with end point : "+payload.resource);
-			    
+			    //ExtentFactory.getInstance().getExtent().log(Status.PASS, "Calling "+payload.requestType+" request with end point : "+payload.resource);
+			   	ExtentTestManager.getTest().log(Status.INFO, "Calling request with end point : "+payload.resource);
 				switch (payload.requestType.toLowerCase()) {
 			   	case "get":
 					resp = payload.httpRequest
@@ -58,7 +59,8 @@ public class RestAssuredRequest {
 					break;
 				} 
 				payload.logRequestResponse();
-				ExtentFactory.getInstance().getExtent().log(Status.PASS, "API Status Code received: "+String.valueOf(resp.getStatusCode()));
+				ExtentTestManager.getTest().log(Status.INFO, "API Status Code received: "+String.valueOf(resp.getStatusCode()));
+				//ExtentFactory.getInstance().getExtent().log(Status.PASS, "API Status Code received: "+String.valueOf(resp.getStatusCode()));
 				return resp;
 				
 			

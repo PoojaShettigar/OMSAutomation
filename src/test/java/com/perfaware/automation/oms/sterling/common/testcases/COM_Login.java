@@ -12,6 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.perfaware.automation.oms.sterling.common.applicationHelper.OrderTypes;
@@ -31,6 +32,7 @@ import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 
 import io.restassured.internal.support.FileReader;
 import io.restassured.response.Response;
+
 
 public class COM_Login extends TestCaseBase {
 	static String className = new Throwable().getStackTrace()[1].getClassName();
@@ -78,7 +80,7 @@ public class COM_Login extends TestCaseBase {
 
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		//DriverFactory.getInstance().closeBrowser();
+		DriverFactory.getInstance().closeBrowser();
 	}
 	
 	@Test(groups= {"Regression"})

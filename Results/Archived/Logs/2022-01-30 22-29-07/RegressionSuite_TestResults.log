@@ -1,0 +1,7 @@
+Error while printing report at desired location.
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Test skipped : TC01_XML_BOPIS_SL_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Starting new testcase :testApi
+Test skipped : testApi[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.OnlyForTesting]
+Starting new testcase :testApi

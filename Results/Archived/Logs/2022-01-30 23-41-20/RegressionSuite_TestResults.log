@@ -1,0 +1,2169 @@
+HTML report created : Regression Suite - OMS Automation Execution Report
+HTML report saved at D:\AUTOMATION\OMSAutomation/Results/Current/Test Report/2022-01-30 23-40-49//RegressionSuite_TestResults.html
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="302309" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="563003682860"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:10:58 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="302309" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:10:59 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC21852642" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="302309" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="35970.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="35970.00" RequestAmount="35970.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 163
+Date: Sun, 30 Jan 2022 18:11:01 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022013018110169405607" OrderNo="COCC21852642"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC21852642"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3955
+Date: Sun, 30 Jan 2022 18:11:03 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" BillToID="00198505" BuyerOrganizationCode="FCV.CO" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="tremere27@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-30T18:11:01+00:00" OrderHeaderKey="2022013018110169405607" OrderName="" OrderNo="COCC21852642" OrderType="PICK" OriginalTax="0.00" OriginalTotalAmount="38960.00" OtherCharges="2990.00" PaymentStatus="PAID" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CO" ShipToID="00198505" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2022-01-30T18:11:01+00:00" ReportingConversionRate="1.00" TotalAmount="38960.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="3" OrderHeaderKey="2022013018110169405607" OrderLineKey="2022013018110169405609" OrderedQty="3" OriginalOrderedQty="3" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="3" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="3" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="302309" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="302309" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="3" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="35970.00" ListPrice="11990.00" OrderedPricingQty="3" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110169405607" OrderLineKey="2022013018110169405609" OrderLineScheduleKey="202201301814110169405628" Quantity="3" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110169405607" OrderLineKey="2022013018110169405609" OrderLineScheduleKey="202201301814110169405628" OrderReleaseStatusKey="202201301808110169405629" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885971" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="35970.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="38960.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022013018110169405617" ChargeType="CHARGE" CollectionDate="2022-01-30T18:11:01+00:00" CreditAmount="35970.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110169405607" OrderInvoiceKey="" PaymentKey="202201301856110169405615" RequestAmount="35970.00" SettledAmount="0.00" Status="CLOSED" TransactionDate="2022-01-30T18:11:01+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions>
+        <CreditCardTransaction AuthAmount="35970.00" AuthAvs="" AuthCode="1234546089" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="2022-01-30T18:11:01+00:00" CVVAuthCode="" ChargeTransactionKey="2022013018110169405617" CreditCardTransactionKey="202201301838110169405619" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="35970.00" TranRequestTime="2022-01-30T18:11:01+00:00" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="CHARGE"/>
+      </CreditCardTransactions>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" AuthorizationID="" BookAmount="38960.00" ChargeTransactionKey="2022013018110169405634" ChargeType="CREATE_ORDER" CollectionDate="2022-01-30T18:11:01+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110169405607" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="OPEN" TransactionDate="2022-01-30T18:11:01+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="Y"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022013018110169405607" OrderLineKey="2022013018110169405609" OrderLineScheduleKey="202201301814110169405628" OrderReleaseStatusKey="202201301808110169405629" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test skipped : TC01_XML_BOPIS_SL_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="054884" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="015080309481"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:11:06 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="054884" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:11:07 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC03206021" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="054884" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="35970.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="35970.00" RequestAmount="35970.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 163
+Date: Sun, 30 Jan 2022 18:11:08 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022013018110869405706" OrderNo="COCC03206021"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC03206021"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3956
+Date: Sun, 30 Jan 2022 18:11:10 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" BillToID="00198505" BuyerOrganizationCode="FCV.CO" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="tremere27@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-30T18:11:08+00:00" OrderHeaderKey="2022013018110869405706" OrderName="" OrderNo="COCC03206021" OrderType="PICK" OriginalTax="0.00" OriginalTotalAmount="38960.00" OtherCharges="2990.00" PaymentStatus="PAID" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CO" ShipToID="00198505" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2022-01-30T18:11:08+00:00" ReportingConversionRate="1.00" TotalAmount="38960.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="3" OrderHeaderKey="2022013018110869405706" OrderLineKey="2022013018110869405709" OrderedQty="3" OriginalOrderedQty="3" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="3" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="3" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="054884" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="054884" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="3" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="35970.00" ListPrice="11990.00" OrderedPricingQty="3" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110869405706" OrderLineKey="2022013018110869405709" OrderLineScheduleKey="202201301877110869405725" Quantity="3" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110869405706" OrderLineKey="2022013018110869405709" OrderLineScheduleKey="202201301877110869405725" OrderReleaseStatusKey="202201301860110869405727" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885971" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="35970.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="38960.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022013018110869405717" ChargeType="CHARGE" CollectionDate="2022-01-30T18:11:08+00:00" CreditAmount="35970.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110869405706" OrderInvoiceKey="" PaymentKey="202201301809110869405716" RequestAmount="35970.00" SettledAmount="0.00" Status="CLOSED" TransactionDate="2022-01-30T18:11:08+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions>
+        <CreditCardTransaction AuthAmount="35970.00" AuthAvs="" AuthCode="1234546089" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="2022-01-30T18:11:08+00:00" CVVAuthCode="" ChargeTransactionKey="2022013018110869405717" CreditCardTransactionKey="202201301859110869405719" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="35970.00" TranRequestTime="2022-01-30T18:11:08+00:00" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="CHARGE"/>
+      </CreditCardTransactions>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" AuthorizationID="" BookAmount="38960.00" ChargeTransactionKey="2022013018110869405730" ChargeType="CREATE_ORDER" CollectionDate="2022-01-30T18:11:08+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110869405706" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="OPEN" TransactionDate="2022-01-30T18:11:08+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="Y"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022013018110869405706" OrderLineKey="2022013018110869405709" OrderLineScheduleKey="202201301877110869405725" OrderReleaseStatusKey="202201301860110869405727" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion.onAssertSuccess(SoftAssertion.java:15)
+	at org.testng.asserts.SoftAssert.doAssert(SoftAssert.java:21)
+	at org.testng.asserts.Assertion.assertTrue(Assertion.java:82)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.createOrder(APIMethods.java:547)
+	at com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment.TC01_XML_BOPIS_SL_OrderFulfillment(XML_BOPIS_OrderFulfillment.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:239)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.TestCaseBase.run(TestCaseBase.java:206)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:253)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:594)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+Test failed : TC01_XML_BOPIS_SL_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:92)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+Starting new testcase :TC02_XML_BOPIS_ML_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="164125" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="266909556156"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="120865" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="299031996040"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="193163" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="641414996119"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:10:58 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="164125" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="120865" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="2" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="193163" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="1" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:10:59 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC43341528" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="164125" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="2" PrimeLineNo="2" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="120865" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="1" PrimeLineNo="3" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="193163" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="71940.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="71940.00" RequestAmount="71940.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 165
+Date: Sun, 30 Jan 2022 18:11:01 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022013018110169405610" OrderNo="COCC43341528"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC43341528"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 4393
+Date: Sun, 30 Jan 2022 18:11:04 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" BillToID="00198505" BuyerOrganizationCode="FCV.CO" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="tremere27@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-30T18:11:01+00:00" OrderHeaderKey="2022013018110169405610" OrderName="" OrderNo="COCC43341528" OrderType="PICK" OriginalTax="0.00" OriginalTotalAmount="74930.00" OtherCharges="2990.00" PaymentStatus="PAID" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CO" ShipToID="00198505" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2022-01-30T18:11:01+00:00" ReportingConversionRate="1.00" TotalAmount="74930.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="3" OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405611" OrderedQty="3" OriginalOrderedQty="3" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="3" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="3" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="164125" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="164125" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="3" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="35970.00" ListPrice="11990.00" OrderedPricingQty="3" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405611" OrderLineScheduleKey="202201301870110169405642" Quantity="3" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405611" OrderLineScheduleKey="202201301870110169405642" OrderReleaseStatusKey="202201301897110169405643" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="2" OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405612" OrderedQty="2" OriginalOrderedQty="2" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="2" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="2" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="120865" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="120865" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="23980.00" ListPrice="11990.00" OrderedPricingQty="2" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405612" OrderLineScheduleKey="202201301897110169405640" Quantity="2" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="23980.00" LineTotal="23980.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="23980.00" LineTotal="23980.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405612" OrderLineScheduleKey="202201301897110169405640" OrderReleaseStatusKey="202201301860110169405641" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="2" TotalQuantity="2">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="3.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="1" OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405613" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="3" Purpose="" RemainingQty="1" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="193163" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="193163" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="11990.00" ListPrice="11990.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405613" OrderLineScheduleKey="202201301869110169405644" Quantity="1" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="11990.00" LineTotal="11990.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="11990.00" LineTotal="11990.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405613" OrderLineScheduleKey="202201301869110169405644" OrderReleaseStatusKey="202201301824110169405645" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885971" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="71940.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="74930.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022013018110169405622" ChargeType="CHARGE" CollectionDate="2022-01-30T18:11:01+00:00" CreditAmount="71940.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110169405610" OrderInvoiceKey="" PaymentKey="202201301877110169405621" RequestAmount="71940.00" SettledAmount="0.00" Status="CLOSED" TransactionDate="2022-01-30T18:11:01+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions>
+        <CreditCardTransaction AuthAmount="71940.00" AuthAvs="" AuthCode="1234546089" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="2022-01-30T18:11:01+00:00" CVVAuthCode="" ChargeTransactionKey="2022013018110169405622" CreditCardTransactionKey="202201301819110169405623" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="71940.00" TranRequestTime="2022-01-30T18:11:01+00:00" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="CHARGE"/>
+      </CreditCardTransactions>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" AuthorizationID="" BookAmount="74930.00" ChargeTransactionKey="2022013018110169405649" ChargeType="CREATE_ORDER" CollectionDate="2022-01-30T18:11:01+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110169405610" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="OPEN" TransactionDate="2022-01-30T18:11:01+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="74930.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="71940.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="74930.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="71940.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="Y"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405611" OrderLineScheduleKey="202201301870110169405642" OrderReleaseStatusKey="202201301897110169405643" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405612" OrderLineScheduleKey="202201301897110169405640" OrderReleaseStatusKey="202201301860110169405641" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="2" TotalQuantity="2">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022013018110169405610" OrderLineKey="2022013018110169405613" OrderLineScheduleKey="202201301869110169405644" OrderReleaseStatusKey="202201301824110169405645" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test skipped : TC02_XML_BOPIS_ML_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]
+Starting new testcase :TC02_XML_BOPIS_ML_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="484994" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="831989020982"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="565398" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="496120442221"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="939355" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="510582832236"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:11:06 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="484994" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="565398" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="2" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="939355" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="1" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:11:07 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC36459434" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="484994" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="2" PrimeLineNo="2" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="565398" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="1" PrimeLineNo="3" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="939355" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="71940.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="71940.00" RequestAmount="71940.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 164
+Date: Sun, 30 Jan 2022 18:11:08 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022013018110869405707" OrderNo="COCC36459434"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC36459434"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 4398
+Date: Sun, 30 Jan 2022 18:11:10 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" BillToID="00198505" BuyerOrganizationCode="FCV.CO" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="tremere27@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-30T18:11:08+00:00" OrderHeaderKey="2022013018110869405707" OrderName="" OrderNo="COCC36459434" OrderType="PICK" OriginalTax="0.00" OriginalTotalAmount="74930.00" OtherCharges="2990.00" PaymentStatus="PAID" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CO" ShipToID="00198505" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2022-01-30T18:11:08+00:00" ReportingConversionRate="1.00" TotalAmount="74930.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="3" OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405711" OrderedQty="3" OriginalOrderedQty="3" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="3" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="3" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="484994" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="484994" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="3" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="35970.00" ListPrice="11990.00" OrderedPricingQty="3" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405711" OrderLineScheduleKey="202201301827110869405731" Quantity="3" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405711" OrderLineScheduleKey="202201301827110869405731" OrderReleaseStatusKey="202201301859110869405733" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="2.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="2" OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405712" OrderedQty="2" OriginalOrderedQty="2" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="2" Purpose="" RemainingQty="2" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="2" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="565398" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="565398" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="2" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="23980.00" ListPrice="11990.00" OrderedPricingQty="2" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405712" OrderLineScheduleKey="202201301804110869405735" Quantity="2" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="23980.00" LineTotal="23980.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="23980.00" LineTotal="23980.00" OptionPrice="0.00" PricingQty="2.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405712" OrderLineScheduleKey="202201301804110869405735" OrderReleaseStatusKey="202201301888110869405737" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="2" TotalQuantity="2">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="3.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="1" OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405713" OrderedQty="1" OriginalOrderedQty="1" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="3" Purpose="" RemainingQty="1" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="1" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="939355" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="939355" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="1" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="11990.00" ListPrice="11990.00" OrderedPricingQty="1" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405713" OrderLineScheduleKey="202201301871110869405739" Quantity="1" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="11990.00" LineTotal="11990.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="11990.00" LineTotal="11990.00" OptionPrice="0.00" PricingQty="1.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405713" OrderLineScheduleKey="202201301871110869405739" OrderReleaseStatusKey="202201301822110869405742" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885971" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="71940.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="74930.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022013018110869405721" ChargeType="CHARGE" CollectionDate="2022-01-30T18:11:08+00:00" CreditAmount="71940.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110869405707" OrderInvoiceKey="" PaymentKey="202201301831110869405720" RequestAmount="71940.00" SettledAmount="0.00" Status="CLOSED" TransactionDate="2022-01-30T18:11:08+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions>
+        <CreditCardTransaction AuthAmount="71940.00" AuthAvs="" AuthCode="1234546089" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="2022-01-30T18:11:08+00:00" CVVAuthCode="" ChargeTransactionKey="2022013018110869405721" CreditCardTransactionKey="202201301865110869405722" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="71940.00" TranRequestTime="2022-01-30T18:11:08+00:00" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="CHARGE"/>
+      </CreditCardTransactions>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" AuthorizationID="" BookAmount="74930.00" ChargeTransactionKey="2022013018110869405749" ChargeType="CREATE_ORDER" CollectionDate="2022-01-30T18:11:08+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110869405707" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="OPEN" TransactionDate="2022-01-30T18:11:08+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="74930.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="71940.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="74930.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="71940.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="Y"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405711" OrderLineScheduleKey="202201301827110869405731" OrderReleaseStatusKey="202201301859110869405733" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405712" OrderLineScheduleKey="202201301804110869405735" OrderReleaseStatusKey="202201301888110869405737" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="2" TotalQuantity="2">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+    <OrderStatus OrderHeaderKey="2022013018110869405707" OrderLineKey="2022013018110869405713" OrderLineScheduleKey="202201301871110869405739" OrderReleaseStatusKey="202201301822110869405742" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="1" TotalQuantity="1">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test failed : TC02_XML_BOPIS_ML_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion.onAssertSuccess(SoftAssertion.java:15)
+	at org.testng.asserts.SoftAssert.doAssert(SoftAssert.java:21)
+	at org.testng.asserts.Assertion.assertTrue(Assertion.java:82)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.createOrder(APIMethods.java:547)
+	at com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment.TC02_XML_BOPIS_ML_OrderFulfillment(XML_BOPIS_OrderFulfillment.java:125)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:239)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.TestCaseBase.run(TestCaseBase.java:206)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:253)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:594)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+Test failed : TC02_XML_BOPIS_ML_OrderFulfillment
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:92)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+Starting new testcase :testApi
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="898635" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="536540058593"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:10:58 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="898635" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:10:59 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC25843019" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="898635" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="35970.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="35970.00" RequestAmount="35970.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 163
+Date: Sun, 30 Jan 2022 18:11:01 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022013018110169405606" OrderNo="COCC25843019"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC25843019"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3952
+Date: Sun, 30 Jan 2022 18:11:03 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" BillToID="00198505" BuyerOrganizationCode="FCV.CO" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="tremere27@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-30T18:11:01+00:00" OrderHeaderKey="2022013018110169405606" OrderName="" OrderNo="COCC25843019" OrderType="PICK" OriginalTax="0.00" OriginalTotalAmount="38960.00" OtherCharges="2990.00" PaymentStatus="PAID" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CO" ShipToID="00198505" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2022-01-30T18:11:01+00:00" ReportingConversionRate="1.00" TotalAmount="38960.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="3" OrderHeaderKey="2022013018110169405606" OrderLineKey="2022013018110169405608" OrderedQty="3" OriginalOrderedQty="3" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="3" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="3" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="898635" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="898635" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="3" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="35970.00" ListPrice="11990.00" OrderedPricingQty="3" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110169405606" OrderLineKey="2022013018110169405608" OrderLineScheduleKey="202201301855110169405624" Quantity="3" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110169405606" OrderLineKey="2022013018110169405608" OrderLineScheduleKey="202201301855110169405624" OrderReleaseStatusKey="202201301820110169405626" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885971" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="35970.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="38960.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022013018110169405616" ChargeType="CHARGE" CollectionDate="2022-01-30T18:11:01+00:00" CreditAmount="35970.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110169405606" OrderInvoiceKey="" PaymentKey="202201301819110169405614" RequestAmount="35970.00" SettledAmount="0.00" Status="CLOSED" TransactionDate="2022-01-30T18:11:01+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions>
+        <CreditCardTransaction AuthAmount="35970.00" AuthAvs="" AuthCode="1234546089" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="2022-01-30T18:11:01+00:00" CVVAuthCode="" ChargeTransactionKey="2022013018110169405616" CreditCardTransactionKey="202201301827110169405618" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="35970.00" TranRequestTime="2022-01-30T18:11:01+00:00" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="CHARGE"/>
+      </CreditCardTransactions>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:01+00:00" AuthorizationID="" BookAmount="38960.00" ChargeTransactionKey="2022013018110169405630" ChargeType="CREATE_ORDER" CollectionDate="2022-01-30T18:11:01+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110169405606" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="OPEN" TransactionDate="2022-01-30T18:11:01+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="Y"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022013018110169405606" OrderLineKey="2022013018110169405608" OrderLineScheduleKey="202201301855110169405624" OrderReleaseStatusKey="202201301820110169405626" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:01+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test skipped : testApi[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.OnlyForTesting]
+Starting new testcase :testApi
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="339228" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="195515504169"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:11:06 GMT
+
+Pre-condition for Test: Adjust Inventory 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/adjustInventory
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Items>
+  <Item AdjustmentType="ADJUSTMENT" ItemID="339228" OrganizationCode="FCVColombiaInc" ProductClass="REGULAR" Quantity="3" ShipNode="457" SupplyType="ONHAND" UnitOfMeasure="EACH"/>
+</Items>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:11:07 GMT
+
+Pre-condition for Test: Create Order 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/createOrder
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/createOrder
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order AllocationRuleID="DIF_SCH" BillToID="00198505" CustomerContactID="" CustomerEMailID="tremere27@gmail.com" CustomerFirstName="test" CustomerLastName="test" CustomerPhoneNo="" DocumentType="0001" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" OrderNo="COCC39983662" OrderType="ONLINE" PaymentRuleId="FCVCOL_WEB_CARD_RULE" PaymentStatus="PAID" SellerOrganizationCode="FCV.CO">
+  <PriceInfo Currency="COP"/>
+  <Extn ExtnRUNRUTNIT="1010102239"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" IsManual="Y"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" Tax="477" TaxName="SHIPPING_TAX" TaxableFlag="Y"/>
+  </HeaderTaxes>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" MobilePhone="(+57) 1111111111" State="Bogota"/>
+  <OrderLines>
+    <OrderLine DeliveryMethod="PICK" IsFirmPredefinedNode="Y" IsProcurementAllowed="Y" ItemGroupCode="PROD" LevelOfService="NextDay" LineType="CnC" OrderedQty="3" PrimeLineNo="1" ReqShipDate="2021-11-03T13:31:37.000Z" ShipNode="457" SubLineNo="1">
+      <Item CostCurrency="COP" ItemID="339228" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ProductClass="REGULAR" UnitCost="11990" UnitOfMeasure="EACH"/>
+      <LinePriceInfo IsPriceLocked="Y" ListPrice="11990" UnitPrice="11990"/>
+      <Promotions>
+        <Promotion PromotionId="001"/>
+      </Promotions>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" Latitude="4.69381580" Longitude="-74.07590060" MobilePhone="(+57) 1111111111" State="Bogota"/>
+      <Extn ExtnIsNightShipping="" ExtnIsPickUpByAuthPerson="N" ExtnIsPrescriptionHoldRequired="N" ExtnIsPrescriptionVerified="Y" ExtnVerifyPrescriptionAtPick="N"/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" Tax="1914" TaxName="SalesTax" TaxableFlag="Y"/>
+      </LineTaxes>
+    </OrderLine>
+  </OrderLines>
+  <PaymentMethods>
+    <PaymentMethod ChargeSequence="1" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" DisplayCreditCardNo="7522" FirstName="371180" LastName="Gino Beltran" MaxChargeLimit="35970.00" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentReference4="3" PaymentReference5="" PaymentReference6="MercadoPago" PaymentReference7="" PaymentReference8="" PaymentReference9="486481632" PaymentType="CREDIT_CARD" UnlimitedCharges="N">
+      <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine4="Bogota" City="Bogota" Country="CO" DayPhone="(+57) 1111111111" EMailID="test_user_66074730@testuser.com" FirstName="test" LastName="test" State="Bogota"/>
+      <PaymentDetailsList>
+        <PaymentDetails AuthCode="1234546089" AuthorizationID="" ChargeType="CHARGE" ProcessedAmount="35970.00" RequestAmount="35970.00" RequestProcessed="Y"/>
+      </PaymentDetailsList>
+    </PaymentMethod>
+  </PaymentMethods>
+</Order>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 164
+Date: Sun, 30 Jan 2022 18:11:08 GMT
+
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="2022013018110869405708" OrderNo="COCC39983662"/>
+
+Pre-condition for Test: getOrderDetails
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/getOrderDetails
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<Order DocumentType="0001" EnterpriseCode="FCVColombia" OrderHeaderKey="" OrderNo="COCC39983662"/>
+
+API Response received : 
+HTTP/1.1 200 OK
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Type: application/xml; charset=UTF-8
+Content-Encoding: gzip
+Content-Language: en-US
+Content-Length: 3961
+Date: Sun, 30 Jan 2022 18:11:10 GMT
+
+<Order AllocationRuleID="DIF_SCH" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" BillToID="00198505" BuyerOrganizationCode="FCV.CO" CarrierAccountNo="" CarrierServiceCode="" ChainType="" ChargeActualFreightFlag="N" CustCustPONo="" CustomerEMailID="tremere27@gmail.com" CustomerPONo="" DeliveryCode="" Division="" DocumentType="0001" DraftOrderFlag="N" EnteredBy="00198505" EnterpriseCode="FCVColombia" EntryType="CustomerOnWeb" FreightTerms="" HasDeliveryLines="N" HasProductLines="Y" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" MaxOrderStatus="1100" MaxOrderStatusDesc="Created" MinOrderStatus="1100" MinOrderStatusDesc="Created" NotifyAfterShipmentFlag="N" OrderDate="2022-01-30T18:11:08+00:00" OrderHeaderKey="2022013018110869405708" OrderName="" OrderNo="COCC39983662" OrderType="PICK" OriginalTax="0.00" OriginalTotalAmount="38960.00" OtherCharges="2990.00" PaymentStatus="PAID" PendingTransferIn="0.00" PersonalizeCode="" PriorityCode="" PriorityNumber="0" Purpose="" ReturnByGiftRecipient="" SCAC="" ScacAndService="" ScacAndServiceKey="" SearchCriteria1="" SearchCriteria2="" SellerOrganizationCode="FCV.CO" ShipToID="00198505" Status="Created" TaxExemptFlag="N" TaxExemptionCertificate="" TaxJurisdiction="" TaxPayerId="" TermsCode="" TotalAdjustmentAmount="0.00" isHistory="N">
+  <AllowedModifications>
+    <Modification ModificationType="REMOVE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="ORDER_NAME" ThroughOverride="N"/>
+    <Modification ModificationType="CONTACT_INFO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ITERATION" ThroughOverride="Y"/>
+    <Modification ModificationType="BILLTO" ThroughOverride="N"/>
+    <Modification ModificationType="TAX" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_PROMOTION" ThroughOverride="N"/>
+    <Modification ModificationType="SHIPTO" ThroughOverride="N"/>
+    <Modification ModificationType="FREIGHT_TERMS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_STATUS" ThroughOverride="Y"/>
+    <Modification ModificationType="ADD_LINE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER" ThroughOverride="N"/>
+    <Modification ModificationType="ADDITIONADDR" ThroughOverride="N"/>
+    <Modification ModificationType="SOLDTO" ThroughOverride="N"/>
+    <Modification ModificationType="REQ_SHIP_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_STATUS" ThroughOverride="N"/>
+    <Modification ModificationType="ADD_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_NOTE" ThroughOverride="Y"/>
+    <Modification ModificationType="CARRIER_ACCOUNT_NO" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_ORDER_DATE" ThroughOverride="N"/>
+    <Modification ModificationType="REMOVE_NOTE" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_SCHEDULE" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD" ThroughOverride="N"/>
+    <Modification ModificationType="SPECIAL_SERVICE" ThroughOverride="N"/>
+    <Modification ModificationType="RULE_ID" ThroughOverride="N"/>
+    <Modification ModificationType="PRICE" ThroughOverride="N"/>
+    <Modification ModificationType="CARRIER_SERVICE_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="PAYMENT_METHOD" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_CUSTOM_ATTRIBUTES" ThroughOverride="N"/>
+    <Modification ModificationType="RELEASE" ThroughOverride="N"/>
+    <Modification ModificationType="SHIP_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="ANSWER_SET" ThroughOverride="N"/>
+    <Modification ModificationType="MARKFOR" ThroughOverride="N"/>
+    <Modification ModificationType="RECEIVING_NODE" ThroughOverride="N"/>
+    <Modification ModificationType="SHORT" ThroughOverride="N"/>
+    <Modification ModificationType="BUYER_USER_ID" ThroughOverride="Y"/>
+    <Modification ModificationType="OTHERS" ThroughOverride="N"/>
+    <Modification ModificationType="DELIVERY_CODE" ThroughOverride="N"/>
+    <Modification ModificationType="LEVEL_OF_SERVICE" ThroughOverride="Y"/>
+    <Modification ModificationType="CANCEL" ThroughOverride="N"/>
+    <Modification ModificationType="CHANGE_INSTRUCTION" ThroughOverride="N"/>
+    <Modification ModificationType="HOLD_TYPE" ThroughOverride="N"/>
+    <Modification ModificationType="REFERENCES" ThroughOverride="N"/>
+  </AllowedModifications>
+  <PriceInfo Currency="COP" EnterpriseCurrency="COP" ReportingConversionDate="2022-01-30T18:11:08+00:00" ReportingConversionRate="1.00" TotalAmount="38960.00"/>
+  <OrderLines>
+    <OrderLine AllocationDate="2021-11-03" ApptStatus="" AwaitingDeliveryRequest="N" CanAddServiceLines="N" CarrierAccountNo="" CarrierServiceCode="" CustomerLinePONo="" CustomerPONo="" DeliveryCode="" DeliveryMethod="PICK" DepartmentCode="" FreightTerms="" FulfillmentType="" HasDeliveryLines="N" HasServiceLines="N" HoldFlag="N" HoldReasonCode="" ImportLicenseNo="" InvoicedQty="0" IsBundleParent="N" ItemGroupCode="PROD" KitCode="" LineSeqNo="1.1" LineType="CnC" MaxLineStatus="1100" MaxLineStatusDesc="Created" MinLineStatus="1100" MinLineStatusDesc="Created" OpenQty="3" OrderHeaderKey="2022013018110869405708" OrderLineKey="2022013018110869405710" OrderedQty="3" OriginalOrderedQty="3" OtherCharges="0.00" PackListType="" PersonalizeCode="" PersonalizeFlag="" PickableFlag="Y" PrimeLineNo="1" Purpose="" RemainingQty="3" ReqShipDate="2021-11-03T13:31:37+00:00" ReservationID="" ReservationPool="" SCAC="" ScacAndService="" ScacAndServiceKey="" Segment="" SegmentType="" SerialNo="" ShipNode="457" ShipToID="00198505" ShipTogetherNo="" SplitQty="0" Status="Created" StatusQuantity="3" SubLineNo="1" SubstituteItemID="" SubstituteItemUOM="" isHistory="N">
+      <Item CostCurrency="COP" CountryOfOrigin="" CustomerItem="339228" CustomerItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ECCNNo="" HarmonizedCode="" ISBN="" ItemDesc="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ItemID="339228" ItemShortDesc="Stevia Endulzante Natural X 200 Ta Caja X 200" ItemWeight="0.00" ItemWeightUOM="LBS" ManufacturerItem="" ManufacturerItemDesc="" ManufacturerName="RB HEALTH COLOMBIA SAS" NMFCClass="" NMFCCode="" NMFCDescription="" ProductClass="REGULAR" ProductLine="" ScheduleBCode="" SupplierItem="" SupplierItemDesc="" TaxProductCode="" UPCCode="" UnitCost="11990.00" UnitOfMeasure="EACH"/>
+      <LinePriceInfo ActualPricingQty="3" DiscountPercentage="0.00" InvoicedPricingQty="0" IsPriceLocked="Y" LineTotal="35970.00" ListPrice="11990.00" OrderedPricingQty="3" PricingQtyConversionFactor="0" PricingUOM="EACH" RetailPrice="0.00" SettledAmount="0.00" SettledQuantity="0" TaxableFlag="N" UnitPrice="11990.00"/>
+      <OrderLineOptions/>
+      <WorkOrders NumberOfWorkOrders="0"/>
+      <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+      <Instructions NumberOfInstructions="0"/>
+      <References/>
+      <KitLines NumberOfKitLines="0"/>
+      <ProductItems/>
+      <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+      <Notes NumberOfNotes="0"/>
+      <ServiceAssociations/>
+      <ProductAssociations/>
+      <DeliveryAssociations/>
+      <Schedules>
+        <Schedule ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" OrderHeaderKey="2022013018110869405708" OrderLineKey="2022013018110869405710" OrderLineScheduleKey="202201301843110869405728" Quantity="3" ScheduleNo="1" TagNumber=""/>
+      </Schedules>
+      <LineOverallTotals Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineInvoicedTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="0.00" LineTotal="0.00" OptionPrice="0.00" PricingQty="0.00" Tax="0.00" UnitPrice="0.00"/>
+      <LineRemainingTotals AdditionalLinePriceTotal="0.00" Charges="0.00" Discount="0.00" ExtendedPrice="35970.00" LineTotal="35970.00" OptionPrice="0.00" PricingQty="3.00" Tax="0.00" UnitPrice="11990.00"/>
+      <LineCharges/>
+      <LineTaxes>
+        <LineTax ChargeCategory="TAX" ChargeName="SALES_TAX" ChargeNameKey="20200210111055508944842" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="1914.00" Tax="1914.00" TaxName="SalesTax" TaxPercentage="0.00"/>
+        <TaxSummary>
+          <TaxSummaryDetail InvoicedTax="0.00" OverallTax="1914.00" RemainingTax="1914.00" TaxName="SalesTax"/>
+        </TaxSummary>
+      </LineTaxes>
+      <OrderStatuses>
+        <OrderStatus OrderHeaderKey="2022013018110869405708" OrderLineKey="2022013018110869405710" OrderLineScheduleKey="202201301843110869405728" OrderReleaseStatusKey="202201301853110869405732" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+          <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber="">
+            <KitDetails/>
+          </Details>
+        </OrderStatus>
+      </OrderStatuses>
+      <CapacityAllocations/>
+    </OrderLine>
+  </OrderLines>
+  <Instructions NumberOfInstructions="0"/>
+  <PersonInfoShipTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="(+57) 1111111111" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885970" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <PersonInfoBillTo AddressLine1="Carrera 70 # 99-8" AddressLine2="" AddressLine3="" AddressLine4="Bogota" AddressLine5="" AddressLine6="" AlternateEmailID="" Beeper="" City="Bogota" Company="" Country="CO" DayFaxNo="" DayPhone="(+57) 1111111111" Department="" EMailID="test_user_66074730@testuser.com" EveningFaxNo="" EveningPhone="" FirstName="test" JobTitle="" LastName="test" MiddleName="" MobilePhone="" OtherPhone="" PersonID="" PersonInfoKey="2021112515060161885971" State="Bogota" Suffix="" Title="" ZipCode=""/>
+  <AdditionalAddresses NumberOfAdditionalAddresses="0"/>
+  <References/>
+  <PaymentMethods>
+    <PaymentMethod CheckNo="" CheckReference="" CreditCardExpDate="20251101" CreditCardName="Luis Gino Beltran" CreditCardNo="371180" CreditCardType="AMEX" CustomerPONo="" DisplayCreditCardNo="7522" DisplayCustomerAccountNo="" DisplayPaymentReference1="" DisplaySvcNo="" FundsAvailable="0.00" GetFundsAvailableUserExitInvoked="N" PaymentReference1="" PaymentReference2="MPAGO_CREDIT" PaymentReference3="1023936477" PaymentType="CREDIT_CARD"/>
+  </PaymentMethods>
+  <ChargeTransactionDetails AdditionalExpectedAuthorizations="0.00" TotalCredits="35970.00" TotalDebits="0.00" TotalOpenAuthorizations="0.00" TotalOpenBookings="38960.00" TotalTransferredIn="0.00" TotalTransferredOut="0.00">
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" AuthorizationID="" BookAmount="0.00" ChargeTransactionKey="2022013018110869405715" ChargeType="CHARGE" CollectionDate="2022-01-30T18:11:08+00:00" CreditAmount="35970.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="Y" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110869405708" OrderInvoiceKey="" PaymentKey="202201301837110869405714" RequestAmount="35970.00" SettledAmount="0.00" Status="CLOSED" TransactionDate="2022-01-30T18:11:08+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions>
+        <CreditCardTransaction AuthAmount="35970.00" AuthAvs="" AuthCode="1234546089" AuthReturnCode="" AuthReturnFlag="" AuthReturnMessage="" AuthTime="2022-01-30T18:11:08+00:00" CVVAuthCode="" ChargeTransactionKey="2022013018110869405715" CreditCardTransactionKey="202201301810110869405718" InternalReturnCode="" InternalReturnFlag="" InternalReturnMessage="" ParentKey="" Reference1="" Reference2="" RequestId="" TranAmount="35970.00" TranRequestTime="2022-01-30T18:11:08+00:00" TranReturnCode="" TranReturnFlag="" TranReturnMessage="" TranType="CHARGE"/>
+      </CreditCardTransactions>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+    <ChargeTransactionDetail AuditTransactionID="" AuthorizationExpirationDate="2022-01-30T18:11:08+00:00" AuthorizationID="" BookAmount="38960.00" ChargeTransactionKey="2022013018110869405741" ChargeType="CREATE_ORDER" CollectionDate="2022-01-30T18:11:08+00:00" CreditAmount="0.00" DebitAmount="0.00" DistributedAmount="0.00" HoldAgainstBook="" OpenAuthorizedAmount="0.00" OrderHeaderKey="2022013018110869405708" OrderInvoiceKey="" PaymentKey="" RequestAmount="0.00" SettledAmount="0.00" Status="OPEN" TransactionDate="2022-01-30T18:11:08+00:00" TransferFromOhKey="" TransferToOhKey="" UserExitStatus="">
+      <InvoiceCollectionDetails/>
+      <CreditCardTransactions/>
+      <TransferToOrder/>
+      <TransferFromOrder/>
+    </ChargeTransactionDetail>
+  </ChargeTransactionDetails>
+  <ProductServiceAssocs/>
+  <OverallTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <InvoicedTotals GrandCharges="0.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="0.00" HdrCharges="0.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="0.00" LineSubTotal="0.00"/>
+  <RemainingTotals GrandCharges="2990.00" GrandDiscount="0.00" GrandTax="0.00" GrandTotal="38960.00" HdrCharges="2990.00" HdrDiscount="0.00" HdrTax="0.00" HdrTotal="2990.00" LineSubTotal="35970.00"/>
+  <HeaderCharges>
+    <HeaderCharge ChargeAmount="2990.00" ChargeCategory="SHIPPING" ChargeName="SHIPPING_CHARGE" ChargeNameKey="20200210110952508937952" InvoicedChargeAmount="0.00" IsBillable="Y" IsDiscount="N" Reference="" RemainingChargeAmount="2990.00"/>
+  </HeaderCharges>
+  <HeaderTaxes>
+    <HeaderTax ChargeCategory="TAX" ChargeName="SHIPPING_TAX" ChargeNameKey="20200210111104508945910" InvoicedTax="0.00" Reference_1="" Reference_2="" Reference_3="" RemainingTax="477.00" Tax="477.00" TaxName="SHIPPING_TAX" TaxPercentage="0.00" TaxableFlag="Y"/>
+    <TaxSummary>
+      <TaxSummaryDetail InvoicedTax="0.00" OverallTax="477.00" RemainingTax="477.00" TaxName="SHIPPING_TAX"/>
+    </TaxSummary>
+  </HeaderTaxes>
+  <OrderStatuses>
+    <OrderStatus OrderHeaderKey="2022013018110869405708" OrderLineKey="2022013018110869405710" OrderLineScheduleKey="202201301843110869405728" OrderReleaseStatusKey="202201301853110869405732" PipelineKey="202004200551401016291479" ShipNode="457" Status="1100" StatusDate="2022-01-30T18:11:08+00:00" StatusDescription="Created" StatusQty="3" TotalQuantity="3">
+      <Details ExpectedDeliveryDate="2021-11-03T13:31:37+00:00" ExpectedShipmentDate="2021-11-03T13:31:37+00:00" TagNumber=""/>
+    </OrderStatus>
+  </OrderStatuses>
+  <ExchangeOrders/>
+</Order>
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion.onAssertSuccess(SoftAssertion.java:15)
+	at org.testng.asserts.SoftAssert.doAssert(SoftAssert.java:21)
+	at org.testng.asserts.Assertion.assertTrue(Assertion.java:82)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.APIMethods.createOrder(APIMethods.java:547)
+	at com.perfaware.automation.oms.sterling.common.testcases.OnlyForTesting.testApi(OnlyForTesting.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:239)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.TestCaseBase.run(TestCaseBase.java:206)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:253)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:594)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+Test failed : testApi
+java.lang.NullPointerException
+	at com.perfaware.automation.oms.sterling.common.testListeners.TestListener.onTestFailure(TestListener.java:92)
+	at org.testng.internal.TestListenerHelper.runTestListeners(TestListenerHelper.java:96)
+	at org.testng.internal.TestInvoker.runTestResultListener(TestInvoker.java:219)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:656)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+

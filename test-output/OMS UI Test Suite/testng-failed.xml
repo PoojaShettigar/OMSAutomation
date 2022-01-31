@@ -3,6 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [OMS UI Test Suite]">
   <test thread-count="5" name="OMS(failed)" parallel="methods">
     <classes>
+      <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_Login">
+        <methods>
+          <include name="sendReports"/>
+          <include name="initialSetup"/>
+          <include name="tearDown"/>
+          <include name="driverInitialization"/>
+          <include name="TC04_COM_LoginFunctionality"/>
+          <include name="initiate"/>
+        </methods>
+      </class> <!-- com.perfaware.automation.oms.sterling.common.testcases.COM_Login -->
       <class name="com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment">
         <methods>
           <include name="TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment"/>

@@ -82,8 +82,11 @@ public class Page_OrderSearch {
 	
 	@FindBy(xpath="//div[@uid='radReadFromHistory']//label[text()='Archived orders']")
 	@CacheLookup
-	private WebElement rbtnArchivedOrder;
+	private WebElement rbtnArchivedOrder;	
 	
+	@FindBy(xpath="//span[@uid='SST_SearchButton']//span[@role='button']")
+	@CacheLookup
+	private WebElement rbtnSearch;
 	
 	public void enterEnterpriseCode(String enterpriseCode) {
 		uiUtil.enterInput(txtbxEnterpriseCode, enterpriseCode, "Enterprise Code");
@@ -147,5 +150,9 @@ public class Page_OrderSearch {
 	
 	public void clickArchivedOrder() {
 		uiUtil.elementClick(rbtnArchivedOrder , "ArchivedOrder radio button");
+	}
+	
+	public void clickSearch() {
+		uiUtil.elementClick(rbtnSearch , "Search button");
 	}
 }

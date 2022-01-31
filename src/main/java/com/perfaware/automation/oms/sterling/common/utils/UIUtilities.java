@@ -15,7 +15,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.perfaware.automation.oms.sterling.common.driverFactory.DriverFactory;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
 
 public class UIUtilities {
 	WebDriverWait wait;
@@ -23,15 +23,15 @@ public class UIUtilities {
 	public void enterInput(WebElement webElement,String keysToSend,String element) {
 		webElement.clear();
 		webElement.sendKeys(keysToSend);
-		ExtentFactory.getInstance().getExtent().log(Status.PASS, element +"- Ented value as: "+keysToSend);
+		ExtentTestManager.getTest().log(Status.PASS, element +"- Ented value as: "+keysToSend);
 //		try {
 //			webElement.clear();
 //			webElement.sendKeys(keysToSend);
 //			//log success message in exgent report
-//			ExtentFactory.getInstance().getExtent().log(Status.PASS, element +"- Ented value as: "+keysToSend);
+//			ExtentTestManager.getTest().log(Status.PASS, element +"- Ented value as: "+keysToSend);
 //		} catch (Exception e) {
 //			//log failure in extent
-//			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Value enter in field: "+element + " is failed due to exception: "+e);
+//			ExtentTestManager.getTest().log(Status.FAIL, "Value enter in field: "+element + " is failed due to exception: "+e);
 //			
 //		}
 	}
@@ -45,15 +45,15 @@ public class UIUtilities {
 
 	public void elementClick(WebElement webElement,String element) {
 		webElement.click();
-		ExtentFactory.getInstance().getExtent().log(Status.PASS, element+"- Clicked Successfully! ");
+		ExtentTestManager.getTest().log(Status.PASS, element+"- Clicked Successfully! ");
 //		try {
 //			webElement.click();
 //			//log success message in exgent report
-//			ExtentFactory.getInstance().getExtent().log(Status.PASS, element+"- Clicked Successfully! ");
-//			//ExtentFactory.getInstance().getExtent().pass(MarkupHelper.createLabel("Clicked Successfully", ExtentColor.BLUE));
+//			ExtentTestManager.getTest().log(Status.PASS, element+"- Clicked Successfully! ");
+//			//ExtentTestManager.getTest().pass(MarkupHelper.createLabel("Clicked Successfully", ExtentColor.BLUE));
 //		} catch (Exception e) {
 //			//log failure in extent
-//			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Unable to click on field: " +element +" due to exception: "+e);	
+//			ExtentTestManager.getTest().log(Status.FAIL, "Unable to click on field: " +element +" due to exception: "+e);	
 //		}
 	}
 	
@@ -61,9 +61,9 @@ public class UIUtilities {
 		try {
 			actions = new Actions(driver); 
 		    actions.moveToElement(webElement).click().perform(); 
-			ExtentFactory.getInstance().getExtent().log(Status.PASS, element+"- Clicked Successfully! ");
+			ExtentTestManager.getTest().log(Status.PASS, element+"- Clicked Successfully! ");
 		} catch (Exception e) {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Unable to click on field: " +element +" due to exception: "+e);
+			ExtentTestManager.getTest().log(Status.FAIL, "Unable to click on field: " +element +" due to exception: "+e);
 		}
 	}
 	
@@ -74,7 +74,7 @@ public class UIUtilities {
 
 		}
 		catch (Exception e) {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, element+" not vosible "+e);
+			ExtentTestManager.getTest().log(Status.FAIL, element+" not vosible "+e);
 			
 		}
 		return null;
@@ -85,7 +85,7 @@ public class UIUtilities {
 	public String webElementGetText(WebElement webElement,String element) {
 		String text = "";
 		text = webElement.getText();
-		ExtentFactory.getInstance().getExtent().pass(MarkupHelper.createLabel(element+" retrived is: "+text, ExtentColor.BLUE));
+		ExtentTestManager.getTest().pass(MarkupHelper.createLabel(element+" retrived is: "+text, ExtentColor.BLUE));
 
 		return text;
 	}
@@ -95,7 +95,7 @@ public class UIUtilities {
 			return driver.getTitle();
 		}
 		catch(Exception e) {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "getPageTitle failed due to "+ e);
+			ExtentTestManager.getTest().log(Status.FAIL, "getPageTitle failed due to "+ e);
 			return null;
 		}	
 	}
@@ -105,7 +105,7 @@ public class UIUtilities {
 			driver.switchTo().alert().accept();
 		}
 		catch(Exception e) {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "No such alert to accept"+ e);
+			//ExtentFactory.getInstance().getExtent().log(Status.FAIL, "No such alert to accept"+ e);
 			
 		}	
 	}
@@ -115,7 +115,7 @@ public class UIUtilities {
 			driver.switchTo().alert().dismiss();
 		}
 		catch(Exception e) {
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "No such alert to close"+ e);
+			//ExtentFactory.getInstance().getExtent().log(Status.FAIL, "No such alert to close"+ e);
 			
 		}
 	}

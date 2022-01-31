@@ -9,7 +9,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.aventstack.extentreports.Status;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
 import com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies;
 import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 public class Page_CustomerDetails {

@@ -12,11 +12,13 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import com.perfaware.automation.oms.sterling.common.utils.XMLUtil;
+import com.aventstack.extentreports.Status;
 import com.perfaware.automation.oms.sterling.common.applicationHelper.RequestEnum.ResourceKey;
 import com.perfaware.automation.oms.sterling.common.customAssertions.HardAssertion;
 import com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion;
 import com.perfaware.automation.oms.sterling.common.fileReader.ExcelFileReader;
 import com.perfaware.automation.oms.sterling.common.pojo.TestCaseDetails;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
 import com.perfaware.automation.oms.sterling.common.utils.Utilities;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -78,7 +80,7 @@ public class RequestHelper {
 			payload = helper.manageItem(itemData);
 			if (payload != null) {
 				logger.info("Pre-condition for Test: Load Item ");
-				//ExtentFactory.getInstance().getExtent().log(Status.PASS, "Pre-condition: Load Item");				
+				ExtentTestManager.getTest().log(Status.INFO, "Pre-condition: Load Item");			
 				response = helper.createRequest(ResourceKey.manageItem, payload);
 				
 				customAssert.assertEquals(response.getStatusCode(), HttpStatus.SC_NO_CONTENT,

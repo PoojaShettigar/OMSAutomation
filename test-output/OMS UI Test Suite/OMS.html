@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>OMS</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/2/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/3/4</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Jan 28 17:05:57 IST 2022</td>
+<td>Started on:</td><td>Mon Jan 31 13:00:17 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>206 seconds (206365 ms)</td>
+<tr><td>Total time:</td><td>187 seconds (187847 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,47 +75,37 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment()'><b>TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@uid=&apos;extn_StartPayment&apos;]//span[text()=&apos;Pay Using MercadoPago&apos;]&quot;}
+<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment()'><b>TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td>
+<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
   (Session info: chrome=97.0.4692.99)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1f7e0e74d7deab3275a30321ae3eea13
-*** Element info: {Using=xpath, value=//span[@uid=&apos;extn_StartPayment&apos;]//span[text()=&apos;Pay Using MercadoPago&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58005}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ce04a528c2aa5cdc21706847c821ed6
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy18.click(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.utils.UIUtilities.elementClick(UIUtilities.java:47)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_PaymentConfirmation.clickPayUsingMercadoPagoButton(Page_PaymentConfirmation.java:52)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comProvidePayment(COMTestMethods.java:135)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:66)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:115)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:132)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace336494659", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace336494659'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@uid=&apos;extn_StartPayment&apos;]//span[text()=&apos;Pay Using MercadoPago&apos;]&quot;}
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1589193069", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1589193069'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
   (Session info: chrome=97.0.4692.99)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50431}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 1f7e0e74d7deab3275a30321ae3eea13
-*** Element info: {Using=xpath, value=//span[@uid=&apos;extn_StartPayment&apos;]//span[text()=&apos;Pay Using MercadoPago&apos;]}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58005}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 0ce04a528c2aa5cdc21706847c821ed6
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -126,18 +116,12 @@ Session ID: 1f7e0e74d7deab3275a30321ae3eea13
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy18.click(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.utils.UIUtilities.elementClick(UIUtilities.java:47)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_PaymentConfirmation.clickPayUsingMercadoPagoButton(Page_PaymentConfirmation.java:52)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comProvidePayment(COMTestMethods.java:135)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:66)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:115)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:132)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -154,28 +138,26 @@ Session ID: 1f7e0e74d7deab3275a30321ae3eea13
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>87</td>
-<td>com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@57d5872c</td></tr>
+<td>66</td>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc</td></tr>
 <tr>
-<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment()'><b>TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.selectShippingOptions(Page_FulfillmentSummary.java:58)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:118)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:61)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:133)
+<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality()'><b>TC04_COM_LoginFunctionality</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_Login</td>
+<td><div><pre>java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login.captureLoginError(Page_Login.java:71)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality(COM_Login.java:93)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1749947265", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1749947265'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.selectShippingOptions(Page_FulfillmentSummary.java:58)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:118)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:61)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:133)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace597518378", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace597518378'><pre>java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login.captureLoginError(Page_Login.java:71)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality(COM_Login.java:93)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -192,8 +174,87 @@ Session ID: 1f7e0e74d7deab3275a30321ae3eea13
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>74</td>
-<td>com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@57d5872c</td></tr>
+<td>13</td>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be</td></tr>
+<tr>
+<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment()'><b>TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td>
+<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=97.0.4692.99)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57946}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e485846b372a71d86ffa8a1096825b8
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:114)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2088325571", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2088325571'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=97.0.4692.99)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57946}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6e485846b372a71d86ffa8a1096825b8
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>64</td>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch.TC06_COM_CreateConsumer()'><b>TC06_COM_CreateConsumer</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch</td>
+<td></td>
+<td>73</td>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -203,25 +264,23 @@ Session ID: 1f7e0e74d7deab3275a30321ae3eea13
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment()'><b>TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.selectShippingOptions(Page_FulfillmentSummary.java:58)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:118)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:61)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:133)
+<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality()'><b>TC04_COM_LoginFunctionality</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_Login</td>
+<td><div><pre>java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login.captureLoginError(Page_Login.java:71)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality(COM_Login.java:93)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2051905103", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2051905103'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.selectShippingOptions(Page_FulfillmentSummary.java:58)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:118)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:61)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:133)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace66233594", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace66233594'><pre>java.lang.AssertionError: expected [Invalid Credentials passed. Please try again...] but found [The combination of user name and password you entered does not match any existing accounts. Please try again.]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Login.captureLoginError(Page_Login.java:71)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_Login.TC04_COM_LoginFunctionality(COM_Login.java:93)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -238,28 +297,204 @@ Session ID: 1f7e0e74d7deab3275a30321ae3eea13
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
-<td>86</td>
-<td>com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@57d5872c</td></tr>
+<td>24</td>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_Login@36f0f1be</td></tr>
 <tr>
 <td title='com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment()'><b>TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td>
-<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.selectShippingOptions(Page_FulfillmentSummary.java:58)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:118)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:61)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:115)
+<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=97.0.4692.99)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57650}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6883229fd7b644e36b3327d23528380d
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:114)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.lang.Thread.run(Unknown Source)
-... Removed 12 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace702187809", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace702187809'><pre>java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.selectShippingOptions(Page_FulfillmentSummary.java:58)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:118)
-	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:61)
-	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:115)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1806895243", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1806895243'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=97.0.4692.99)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57650}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 6883229fd7b644e36b3327d23528380d
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC05_COM_RegisteredUser_SFS_SL_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>71</td>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc</td></tr>
+<tr>
+<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment()'><b>TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment</td>
+<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=97.0.4692.99)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: de21c9303aab4c14b949cbb462a79f24
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:132)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace576786073", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace576786073'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of null (reading &apos;click&apos;)
+  (Session info: chrome=97.0.4692.99)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57651}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: de21c9303aab4c14b949cbb462a79f24
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:489)
+	at com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies.elementClick(JavascriptExecutorUtilies.java:29)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_FulfillmentSummary.clickShippingOptionsButton(Page_FulfillmentSummary.java:40)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.comSelectfulfillmentSummary(COMTestMethods.java:122)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_RegisteredUser_OrderCreation(COMTestMethods.java:67)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment.TC03_COM_RegisteredUser_SFS_ML_OrderFulfillment(COM_RegisteredUser_SFS_OrderFulfillment.java:132)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+</pre></div></td>
+<td>77</td>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@75f9eccc</td></tr>
+<tr>
+<td title='com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch.TC06_COM_CreateConsumer()'><b>TC06_COM_CreateConsumer</b><br>Test class: com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(@uid,&apos;lblContactName&apos;)]&quot;}
+  (Session info: chrome=97.0.4692.99)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57652}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ea1a64ed28d7cf97d5e742f68d9e37c7
+*** Element info: {Using=xpath, value=//span[contains(@uid,&apos;lblContactName&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at com.perfaware.automation.oms.sterling.common.utils.UIUtilities.webElementGetText(UIUtilities.java:87)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_CustomerDetails.captureContactName(Page_CustomerDetails.java:46)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.validateCustomerDetails(COMTestMethods.java:198)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_CustomerCreation(COMTestMethods.java:192)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch.TC06_COM_CreateConsumer(COM_CustomerSearch.java:89)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 16 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace230666610", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace230666610'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[contains(@uid,&apos;lblContactName&apos;)]&quot;}
+  (Session info: chrome=97.0.4692.99)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-FEJVQKG&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_321&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 97.0.4692.99, chrome: {chromedriverVersion: 97.0.4692.71 (adefa7837d02a..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57652}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: ea1a64ed28d7cf97d5e742f68d9e37c7
+*** Element info: {Using=xpath, value=//span[contains(@uid,&apos;lblContactName&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at com.perfaware.automation.oms.sterling.common.utils.UIUtilities.webElementGetText(UIUtilities.java:87)
+	at com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_CustomerDetails.captureContactName(Page_CustomerDetails.java:46)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.validateCustomerDetails(COMTestMethods.java:198)
+	at com.perfaware.automation.oms.sterling.common.testcaseUtils.COMTestMethods.COM_CustomerCreation(COMTestMethods.java:192)
+	at com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch.TC06_COM_CreateConsumer(COM_CustomerSearch.java:89)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -277,7 +512,7 @@ Session ID: 1f7e0e74d7deab3275a30321ae3eea13
 	at java.lang.Thread.run(Unknown Source)
 </pre></div></td>
 <td>80</td>
-<td>com.perfaware.automation.oms.sterling.common.testcases.COM_RegisteredUser_SFS_OrderFulfillment@57d5872c</td></tr>
+<td>com.perfaware.automation.oms.sterling.common.testcases.COM_CustomerSearch@525f1e4e</td></tr>
 </table><p>
 </body>
 </html>

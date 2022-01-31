@@ -28,10 +28,10 @@ import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_Home;
 import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_OrderSummary;
 import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_PaymentConfirmation;
 import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_PaymentMercadoPago;
+import com.perfaware.automation.oms.sterling.common.com.pageobjects.Page_ReturnSearch;
 import com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion;
 import com.perfaware.automation.oms.sterling.common.driverFactory.DriverFactory;
 import com.perfaware.automation.oms.sterling.common.fileReader.PropertyFileReader;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
 import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 import com.perfaware.automation.oms.sterling.common.utils.Utilities;
 import com.perfaware.automation.oms.sterling.common.utils.XMLUtil;
@@ -40,45 +40,7 @@ import com.sun.deploy.uitoolkit.impl.fx.ui.UITextArea;
 import io.restassured.response.Response;
 
 public class COMTestMethods {
-	public String COM_RegisteredUser_OrderCreation(HashMap<String, Map<String, String>> comData,String tcId,UIUtilities uiUtil, RequestHelper helper, OrderTypes orderTypes, String noOfLines, Response response, Map<String, String> tempData,Logger logger, Map<String, List<Map<String, String>>> comTestData, Map<String, String> itemData, SoftAssertion softAssert) throws Exception {		
-		Map<String, String> data = comData.get(tcId);
-		uiUtil.waitForPageLoad(3);
-		Page_Login loginObj = new Page_Login(DriverFactory.getInstance().getDriver());
-		Page_Home homeObj=comLogin(PropertyFileReader.propertyMap.get("com_username"),PropertyFileReader.propertyMap.get("com_password"),loginObj);
-		
-		uiUtil.waitForPageLoad(7);
-		//CreateOrder Page
-		String parentWindowId=homeObj.clickCreateOrder();
-		uiUtil.waitForPageLoad(7); 
-		
-		//Select Enterprise
-		comSelectEnterprise(data.get("Enterprise"),homeObj,uiUtil);
-		uiUtil.waitForPageLoad(5);	
-		
-		//Search Registered Customer
-		Page_CustomerSearch customerSearchObj=new Page_CustomerSearch(DriverFactory.getInstance().getDriver());
-		comCustomeSearchWithEmail(data.get("EmailAddress"), customerSearchObj, uiUtil);
-		uiUtil.waitForPageLoad(6);
-		
-		//Add Products to cart
-		Page_AddProducts addProductsObj=new Page_AddProducts(DriverFactory.getInstance().getDriver());
-	
-		//Select Fulfillment option
-		Page_FulfillmentSummary fulfillmentSummaryObj=comAddProductsToCart(addProductsObj, uiUtil, data);
-		comSelectfulfillmentSummary(data.get("ShippingOptions"), fulfillmentSummaryObj, uiUtil);
 
-		//Provide Payment info
-		Page_PaymentConfirmation paymentObj=new Page_PaymentConfirmation(DriverFactory.getInstance().getDriver());
-		uiUtil.waitForPageLoad(5);
-		Page_OrderSummary summary=comProvidePayment(data, paymentObj, uiUtil, parentWindowId);
-		
-		//OrderSummary Page
-		uiUtil.waitForPageLoad(20);
-		String orderNo= summary.captureOrderNo();
-		
-		return orderNo;
-	}
-	
 	public  Page_Home comLogin(String userName,String password, Page_Login loginObj) throws Exception {
 		//Login Page
 		loginObj.enterUsername(userName);
@@ -93,7 +55,7 @@ public class COMTestMethods {
 		homeObj.clickApply(); 
 	}
 	
-	public void comCustomeSearchWithEmail(String emailAddress, Page_CustomerSearch customerSearchObj,UIUtilities uiUtil) throws Exception {
+	public void comCustomerSearchWithEmail(String emailAddress, Page_CustomerSearch customerSearchObj,UIUtilities uiUtil) throws Exception {
 		//Search Customer Page
 		customerSearchObj.enterEmailAddress(emailAddress);
 		customerSearchObj.clickSearchButton();
@@ -208,14 +170,81 @@ public class COMTestMethods {
 		
 	}
 	
-	public void orderSearchByOrderNo(String orderNo) {
+	public void orderSearchByOrderNo(String orderNumber) {
 		Page_OrderSearch orderSearchObj = new Page_OrderSearch(DriverFactory.getInstance().getDriver());
+		orderSearchObj.enterOrderNumber(orderNumber);
+		orderSearchObj.clickSearch();
 		
 	}
 	
-	public void orderSearchByCustomer() {
+	public void orderSearchByCustomerDetails(HashMap<String, Map<String, String>> comData,String tcId) {
+		Map<String, String> data = comData.get(tcId);
+		Page_OrderSearch orderSearchObj = new Page_OrderSearch(DriverFactory.getInstance().getDriver());
+		
+		orderSearchObj.enterEmailAddress(data.get("EmailAddress"));
+		orderSearchObj.enterFirstName(data.get("FirstName"));
+		orderSearchObj.enterLastName(data.get("Lastname"));
+		orderSearchObj.clickSearch();
 		
 	}
+	
+	public void returnOrderSearchByOrderNo(String returnOrderNumber) {
+		Page_ReturnSearch returnOrderSearchObj = new Page_ReturnSearch(DriverFactory.getInstance().getDriver());
+		returnOrderSearchObj.enterReturnOrderNumber(returnOrderNumber);
+		returnOrderSearchObj.clickSearch();
+		
+	}
+	
+	public void returnOrderSearchByCustomerDetails(HashMap<String, Map<String, String>> comData,String tcId) {
+		Map<String, String> data = comData.get(tcId);
+		Page_ReturnSearch returnOrderSearchObj = new Page_ReturnSearch(DriverFactory.getInstance().getDriver());
+		
+		returnOrderSearchObj.enterEmailAddress(data.get("EmailAddress"));
+		returnOrderSearchObj.enterFirstName(data.get("FirstName"));
+		returnOrderSearchObj.enterLastName(data.get("Lastname"));
+		returnOrderSearchObj.clickSearch();
+		
+	}
+	
+	public String COM_RegisteredUser_OrderCreation(HashMap<String, Map<String, String>> comData,String tcId,UIUtilities uiUtil, RequestHelper helper, OrderTypes orderTypes, String noOfLines, Response response, Map<String, String> tempData,Logger logger, Map<String, List<Map<String, String>>> comTestData, Map<String, String> itemData, SoftAssertion softAssert) throws Exception {		
+		Map<String, String> data = comData.get(tcId);
+		uiUtil.waitForPageLoad(3);
+		Page_Login loginObj = new Page_Login(DriverFactory.getInstance().getDriver());
+		Page_Home homeObj=comLogin(PropertyFileReader.propertyMap.get("com_username"),PropertyFileReader.propertyMap.get("com_password"),loginObj);
+		
+		uiUtil.waitForPageLoad(7);
+		//CreateOrder Page
+		String parentWindowId=homeObj.clickCreateOrder();
+		uiUtil.waitForPageLoad(7); 
+		
+		//Select Enterprise
+		comSelectEnterprise(data.get("Enterprise"),homeObj,uiUtil);
+		uiUtil.waitForPageLoad(5);	
+		
+		//Search Registered Customer
+		Page_CustomerSearch customerSearchObj=new Page_CustomerSearch(DriverFactory.getInstance().getDriver());
+		comCustomerSearchWithEmail(data.get("EmailAddress"), customerSearchObj, uiUtil);
+		uiUtil.waitForPageLoad(6);
+		
+		//Add Products to cart
+		Page_AddProducts addProductsObj=new Page_AddProducts(DriverFactory.getInstance().getDriver());
+	
+		//Select Fulfillment option
+		Page_FulfillmentSummary fulfillmentSummaryObj=comAddProductsToCart(addProductsObj, uiUtil, data);
+		comSelectfulfillmentSummary(data.get("ShippingOptions"), fulfillmentSummaryObj, uiUtil);
+
+		//Provide Payment info
+		Page_PaymentConfirmation paymentObj=new Page_PaymentConfirmation(DriverFactory.getInstance().getDriver());
+		uiUtil.waitForPageLoad(5);
+		Page_OrderSummary summary=comProvidePayment(data, paymentObj, uiUtil, parentWindowId);
+		
+		//OrderSummary Page
+		uiUtil.waitForPageLoad(20);
+		String orderNo= summary.captureOrderNo();
+		
+		return orderNo;
+	}
+	
 }
 
 

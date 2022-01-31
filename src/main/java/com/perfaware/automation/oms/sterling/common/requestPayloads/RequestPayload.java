@@ -11,7 +11,7 @@ import org.apache.log4j.Logger;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.perfaware.automation.oms.sterling.common.fileReader.PropertyFileReader;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
 
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -170,9 +170,11 @@ public class RequestPayload {
 	public void logRequestResponse() {
 		LOGGER.info("API Request sent : ");
 		LOGGER.info(requestWriter.get().toString());
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, MarkupHelper.createCodeBlock(requestWriter.get().toString()));
+		ExtentTestManager.getTest().log(Status.INFO, MarkupHelper.createCodeBlock(requestWriter.get().toString()));
+		//ExtentFactory.getInstance().getExtent().log(Status.INFO, MarkupHelper.createCodeBlock(requestWriter.get().toString()));
 		LOGGER.info("API Response received : ");
 		LOGGER.info(responseWriter.get().toString());
-		ExtentFactory.getInstance().getExtent().log(Status.INFO, MarkupHelper.createCodeBlock(responseWriter.get().toString()));
+		ExtentTestManager.getTest().log(Status.INFO, MarkupHelper.createCodeBlock(responseWriter.get().toString()));
+		//ExtentFactory.getInstance().getExtent().log(Status.INFO, MarkupHelper.createCodeBlock(responseWriter.get().toString()));
 	}
 }

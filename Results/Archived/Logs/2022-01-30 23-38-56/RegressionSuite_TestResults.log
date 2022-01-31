@@ -1,0 +1,98 @@
+HTML report created : Regression Suite - OMS Automation Execution Report
+HTML report saved at D:\AUTOMATION\OMSAutomation/Results/Current/Test Report/2022-01-30 23-38-38//RegressionSuite_TestResults.html
+Starting new testcase :TC01_XML_BOPIS_SL_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="385338" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="328694082303"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:08:46 GMT
+
+Test successfully passed : TC01_XML_BOPIS_SL_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]
+Starting new testcase :TC02_XML_BOPIS_ML_OrderFulfillment
+Pre-condition for Test: Load Item 
+Calling POST request with end point : https://localhost:9443/smcfs/restapi/invoke/manageItem
+API Request sent : 
+Request method:	POST
+Request URI:	https://localhost:9443/smcfs/restapi/invoke/manageItem
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/xml
+				Authorization=Basic YWRtaW46cGFzc3dvcmQ=
+				Content-Type=application/xml
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+<ItemList>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="948402" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="330301245953"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="330449" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="042029340152"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+  <Item Action="Manage" AssociateItemToCategories="N" ItemGroupCode="PROD" ItemID="506696" OrganizationCode="FCVColombiaInc" UnitOfMeasure="EACH">
+    <PrimaryInformation ColorCode="" Description="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ExtendedDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" ImageID="ImglogoCV_OMS.jpg" ImageLocation="https://www.cruzverde.com.co/dw/image/v2/BDPM_PRD/on/demandware.static/-/Sites-masterCatalog_Colombia/default/dw2418520f/images/large/" IsDeliveryAllowed="Y" IsPickupAllowed="Y" IsProcurementAllowed="N" IsReturnable="Y" IsShippingAllowed="Y" ItemType="MP" ManufacturerName="RB HEALTH COLOMBIA SAS" ShortDescription="Gaviscon (5+2.67+1.6)% Suspension Oral Frasco X 300mL Menta" Status="3000"/>
+    <InventoryParameters ATPRule="FCVColombia_ATP" InventoryMonitorRule="FCVColombia_RTAMATP" NodeLevelInventoryMonitorRule="FCVColombia_RTAMATP"/>
+    <ItemAliasList>
+      <ItemAlias Action="Modify" AliasName="EAN_VENDOR1" AliasValue="333353814384"/>
+    </ItemAliasList>
+    <Extn ExtnIsBioEquivalent="N" ExtnIsRegulatedItem="N" ExtnItemAroma="" ExtnItemCategory="OTHER" ExtnItemChemicalName="Sod " ExtnItemChemicalWeight="" ExtnItemDetails="" ExtnItemFormat="" ExtnItemVolUOM="cm3" ExtnItemVolume="0"/>
+  </Item>
+</ItemList>
+
+API Response received : 
+HTTP/1.1 204 No Content
+X-FRAME-OPTIONS: SAMEORIGIN
+X-UA-Compatible: IE=EmulateIE8
+Access-Control-Allow-Origin: *
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Credentials: true
+Content-Language: en-US
+Content-Length: 0
+Date: Sun, 30 Jan 2022 18:08:46 GMT
+
+Test successfully passed : TC02_XML_BOPIS_ML_OrderFulfillment[TestClass name=class com.perfaware.automation.oms.sterling.common.testcases.XML_BOPIS_OrderFulfillment]

@@ -1,3 +1,4 @@
+
 package com.perfaware.automation.oms.sterling.common.applicationHelper;
 
 import java.text.SimpleDateFormat;
@@ -21,7 +22,7 @@ import com.perfaware.automation.oms.sterling.common.pojo.TestCaseDetails;
 import com.perfaware.automation.oms.sterling.common.requestPayloads.RequestPayload;
 import com.perfaware.automation.oms.sterling.common.requestPayloads.RestAssuredRequest;
 import com.perfaware.automation.oms.sterling.common.testcaseUtils.TestCaseBase;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
+import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentTestManager;
 import com.perfaware.automation.oms.sterling.common.utils.Utilities;
 import com.perfaware.automation.oms.sterling.common.utils.XMLUtil;
 import io.restassured.http.Method;
@@ -77,7 +78,7 @@ public class ApplicationMethods {
 			return res;
 		} catch (Exception e) {
 			LOGGER.error("Error while sending " + key.toString() + " request.");
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Error while sending "+key.toString() + " request.");
+			ExtentTestManager.getTest().log(Status.FAIL, "Error while sending "+key.toString() + " request.");
 			throw e;
 		}
 	}
@@ -102,7 +103,7 @@ public class ApplicationMethods {
 			return res;
 		} catch (Exception e) {
 			LOGGER.error("Error while sending " + key.toString() + " request.");
-			ExtentFactory.getInstance().getExtent().log(Status.FAIL, "Error while sending "+key.toString() + " request.");
+			ExtentTestManager.getTest().log(Status.FAIL, "Error while sending "+key.toString() + " request.");
 			throw e;
 		}
 	}

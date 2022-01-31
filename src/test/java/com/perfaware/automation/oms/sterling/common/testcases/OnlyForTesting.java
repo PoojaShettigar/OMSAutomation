@@ -85,34 +85,33 @@ public class OnlyForTesting  extends TestCaseBase{
 		}
 		System.out.println(orderNo);
 		
-		apiMethods.manageItemAndAdjustInventory(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		response = apiMethods.createOrder(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		//apiMethods.resolveHold(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		apiMethods.scheduleAndReleaseOrder(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
-		response = apiMethods.getOrderDetails(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);		
-		apiMethods.getOrderReleaseList(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+//		apiMethods.manageItemAndAdjustInventory(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+//		response = apiMethods.createOrder(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+//		apiMethods.resolveHold(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+//		apiMethods.scheduleAndReleaseOrder(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
+//		response = apiMethods.getOrderDetails(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);		
+//		apiMethods.getOrderReleaseList(helper, orderTypes, noOfLines, response, tempData, orderNo, logger, testData, itemData, softAssert);
 		
-		/*
-		 * apiMethods.manageItem(helper, orderTypes, noOfLines, response, tempData,
-		 * orderNo, logger, testData, itemData, softAssert);
-		 * apiMethods.adjustInventory(helper, orderTypes, noOfLines, response, tempData,
-		 * orderNo, logger, testData, itemData, softAssert);
-		 * response=apiMethods.createOrder(helper, orderTypes, noOfLines, response,
-		 * tempData, orderNo, logger, testData, itemData, softAssert);
-		 * response=apiMethods.getInventoryReservationList(helper, orderTypes,
-		 * noOfLines, response, tempData, orderNo, logger, testData, itemData,
-		 * softAssert);
-		 * System.out.println("response to testcase class----"+(response.asString()));
-		 * apiMethods.cancelReservation(helper, orderTypes, noOfLines, response,
-		 * tempData, orderNo, logger, testData, itemData, softAssert);
-		 * apiMethods.getInventoryReservationList(helper, orderTypes, noOfLines,
-		 * response, tempData, orderNo, logger, testData, itemData, softAssert);
-		 * response = apiMethods.reserveAvailableInventory(helper, orderTypes,
-		 * noOfLines, response, tempData, orderNo, logger, testData, itemData,
-		 * softAssert); apiMethods.getInventoryReservationList(helper, orderTypes,
-		 * noOfLines, response, tempData, orderNo, logger, testData, itemData,
-		 * softAssert);
-		 */
+		
+		  apiMethods.manageItem(helper, orderTypes, noOfLines, response, tempData,
+		  orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.adjustInventory(helper, orderTypes, noOfLines, response, tempData,
+		  orderNo, logger, testData, itemData, softAssert);
+		  response=apiMethods.createOrder(helper, orderTypes, noOfLines, response,
+		  tempData, orderNo, logger, testData, itemData, softAssert);
+		  response=apiMethods.getInventoryReservationList(helper, orderTypes,
+		  noOfLines, response, tempData, orderNo, logger, testData, itemData,
+		  softAssert);
+		  apiMethods.cancelReservation(helper, orderTypes, noOfLines, response,
+		  tempData, orderNo, logger, testData, itemData, softAssert);
+		  apiMethods.getInventoryReservationList(helper, orderTypes, noOfLines,
+		  response, tempData, orderNo, logger, testData, itemData, softAssert);
+		  response = apiMethods.reserveAvailableInventory(helper, orderTypes,
+		  noOfLines, response, tempData, orderNo, logger, testData, itemData,
+		  softAssert); apiMethods.getInventoryReservationList(helper, orderTypes,
+		  noOfLines, response, tempData, orderNo, logger, testData, itemData,
+		  softAssert);
+		 
 	}
 
 }

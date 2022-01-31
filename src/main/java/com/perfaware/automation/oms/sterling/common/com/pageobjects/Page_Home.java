@@ -12,7 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.aventstack.extentreports.Status;
 import com.perfaware.automation.oms.sterling.common.driverFactory.DriverFactory;
-import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentFactory;
 import com.perfaware.automation.oms.sterling.common.utils.JavascriptExecutorUtilies;
 import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 

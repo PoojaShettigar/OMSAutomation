@@ -12,11 +12,18 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.testng.IHookCallBack;
+import org.testng.IHookable;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.perfaware.automation.oms.sterling.common.customAssertions.SoftAssertion;
 import com.perfaware.automation.oms.sterling.common.customExceptions.NoSuchResourceException;
 import com.perfaware.automation.oms.sterling.common.driverFactory.BrowserFactory;
 import com.perfaware.automation.oms.sterling.common.driverFactory.DriverFactory;
@@ -26,14 +33,20 @@ import com.perfaware.automation.oms.sterling.common.pojo.ApiDetails;
 import com.perfaware.automation.oms.sterling.common.testreportsUtils.ExtentManager;
 import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 import com.perfaware.automation.oms.sterling.common.utils.Utilities;
-
+import org.testng.Reporter;
 import io.restassured.RestAssured;
 
-public class TestCaseBase {
+public class TestCaseBase{
 	protected static String curDir = System.getProperty("user.dir");
 	public static HashMap<String, String> realAPIResource;
 	private static final Logger LOGGER = Logger.getLogger(TestCaseBase.class);
 	private static HashMap<String,String> testcase_jiras;
+	public ThreadLocal<String> testCaseName = new ThreadLocal<>();
+	private static final String SOFT_ASSERT = "softAssert";
+	ExtentSparkReporter sparkReport;
+	ExtentReports extent;
+	ExtentTest extentTest;
+	Utilities utilities;
 	public  FileInputStream file_jira;
 	public  XSSFWorkbook workbook_jira;
 	public  XSSFSheet worksheet_jira;
@@ -44,7 +57,7 @@ public class TestCaseBase {
 
 	@BeforeSuite(alwaysRun=true)
 	public void initialSetup() throws Exception {
-	
+
 		initializeKeywords();
 		initializePropertyFiles();
 		
@@ -108,6 +121,7 @@ public class TestCaseBase {
 		}
 		ExtentManager.reportFolder = currentFolder + "/"
 				+ (util.getCurrentDateTime().replaceAll("/", "-").replaceAll(":", "-"));
+		ExtentManager.getReporter();
 	}
 
 	/**
@@ -172,6 +186,41 @@ public class TestCaseBase {
 	
 	@AfterSuite(alwaysRun=true)
 	public void sendReports() throws MessagingException {
-		util.sendReportInEmail();
+		try {
+			ExtentManager.printResults();
+			util.sendReportInEmail();
+			//ReportLogger.printReport();
+		} catch (Exception e) {
+			LOGGER.error("Error while printing report at desired location.");
+			throw e;
+		}
+		
 	}
+
+
+//	@Override
+//	public void run(IHookCallBack callBack, ITestResult testResult) {
+//		SoftAssertion softAssert = new SoftAssertion();
+//		testResult.setAttribute(SOFT_ASSERT, softAssert);
+//		callBack.runTestMethod(testResult);
+//		softAssert = get(testResult);
+//		try {
+//			softAssert.assertAll();
+//		} catch (AssertionError e) {
+//			testResult.setThrowable(e);
+//			testResult.setStatus(ITestResult.FAILURE);
+//		}
+//	}
+//
+//	public static SoftAssertion get() {
+//		return get(Reporter.getCurrentTestResult());
+//	}
+//
+//	private static SoftAssertion get(ITestResult result) {
+//		Object object = result.getAttribute(SOFT_ASSERT);
+//		if (object instanceof SoftAssertion) {
+//			return (SoftAssertion) object;
+//		}
+//		throw new IllegalStateException("Could not find a soft assertion object");
+//	}
 }

@@ -27,7 +27,7 @@ import com.perfaware.automation.oms.sterling.common.utils.UIUtilities;
 
 import io.restassured.response.Response;
  
-public class COM_OrderSearch extends TestCaseBase {
+public class COM_CustomerSearch extends TestCaseBase {
 	static String className = new Throwable().getStackTrace()[1].getClassName();
 	public static final Logger logger = Logger.getLogger(className);
 	private static final TimeUnit SECONDS = null;
@@ -75,7 +75,7 @@ public class COM_OrderSearch extends TestCaseBase {
 
 	@AfterMethod(alwaysRun=true)
 	public void tearDown() {
-		//DriverFactory.getInstance().closeBrowser();
+		DriverFactory.getInstance().closeBrowser();
 	}
 	
 	@Test(groups= {"Regression"})
